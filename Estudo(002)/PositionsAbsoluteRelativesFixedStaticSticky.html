@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PositionsAbsoluteRelativesFixedStaticSticky</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            height: 2000px;
+        }
+        div {
+            height: 250px;
+            width: 250px;
+            background: pink;
+            margin: 10px;
+            text-align: center;
+            line-height: 250px;
+        }
+        #div1 {
+            margin: 0px;
+            position: absolute;
+            background: rgb(99, 255, 201);
+            right: 10px;
+            top: 280px;
+        }
+        #div2 {
+            margin: 0px;
+            background: rgb(122, 240, 87);
+            position: relative;
+            left: 50%;            transform: translateX(-50%);
+        }
+        #div3 {
+            position: static;
+            background: rgb(209, 127, 50);
+        }
+        #div4 {
+            margin: 0px;
+            position: fixed;
+            background: rgb(236, 52, 77);
+            transform: translate(-50%);
+            left: 50%;
+            right: 50%;
+            top: 280px;          
+        }
+        #div5 {
+            margin: 0px;
+            position: sticky;
+            background: rgb(128, 62, 216);
+            bottom: 0px;
+            right: 0px;
+        }
+        #conteiner {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>Absolute</p>
+    </div>
+    <div id="conteiner">
+        <div id="div2">
+            <p>Relative</p>
+        </div>
+    </div>
+    <hr>
+    <div id="div3">
+        <p>Static</p>
+    </div>
+    <div id="div4">
+        <p>Fixed</p>
+    </div>
+    <hr>
+    <div id="div5">
+        <p>Sticky</p>
+    </div>
+    <p>
+        Vaginas peludas são muito boas tbm, adoraria "<abbr title="Masturbar > Chupar > Foder">provar</abbr>" uma buceta assim...
+    </p>
+</body>
+</html>

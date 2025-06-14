@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            padding: 10px;
+        }
+        header {
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+            width: 100%;
+            background: #EED85C;
+            margin: 0px 0px 10px 0px;
+        }
+        #Aside1 {
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+            width: 100%;
+            background: #5D6C69;
+            margin: 0px 0px 10px 0px;
+        }
+        section {
+            text-align: center;
+            line-height: 100px;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 10px;
+            margin: 0px 0px 10px 0px;
+        }
+        section > article {
+            height: 100px;
+            background: #F1698B;
+            flex: 1 0 250px;
+        }
+        main {
+            text-align: center;
+            line-height: 400px;
+            display: flex;
+            flex-flow: row wrap;    
+            gap: 10px;
+            margin: 0px 0px 10px 0px;
+        }
+        figure {
+            height: 400px;
+            flex: 1 0 200px;
+            background: #62BCE7;
+        }
+        #Article3 {
+            height: 400px;
+            flex: 5 0 400px;
+            color: white;
+            background: #1B1515;
+        }
+        #Aside2 {
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: #A3D55A;
+            margin: 0px 0px 10px 0px;
+        }
+        footer {
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: #F5D265;
+        }
+        @media (max-width: 645px) {
+            main > figure {
+                line-height: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <aside id="Aside1">
+        Aside 1
+    </aside>
+    <section>
+        <article id="Article1">
+            Article 1
+        </article>
+        <article id="Article2">
+            Article 2
+        </article>
+    </section>
+    <main>
+        <figure>
+            Figure 
+        </figure>
+        <article id="Article3">
+            Article 3
+        </article>
+    </main>
+    <aside id="Aside2">
+        Aside 2
+    </aside>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

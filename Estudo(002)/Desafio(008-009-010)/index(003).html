@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação(003)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1em 'Playwrite DK Loopet';
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        div {
+            margin: 10px 0px 0px 0px;
+            height: 55px;
+            width: 275px;
+            background: lightseagreen;
+            animation: Notificação 4s ease-out 0s 1 normal forwards;
+        }
+        h1 {
+            text-align: center;
+            line-height: 55px;
+        }
+
+        @keyframes Notificação {
+            0% {
+                opacity: 0;
+            }    
+            50% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            Há mensagens não vistas!!!
+        </h1>
+    </div>
+</body>
+</html>
