@@ -17,34 +17,40 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
         }
         div {
-            margin: 10px 0px 0px 0px;
+            margin: 10px;
             height: 55px;
-            width: 275px;
+            width: 425px;
             background: lightseagreen;
-            animation: Notificação 4s ease-out 0s 1 normal forwards;
+            transition: all 0.1s ease-out 0s;
+            border: 2px solid rgba(255, 255, 255, 0);
+            animation: EsquerdaDireita 5s ease 0s infinite normal backwards ;
+        }
+        @keyframes EsquerdaDireita {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        div:hover {
+            animation-play-state: paused;
+            background: black;
+            color: white;
+            border: 2px solid rgb(114, 114, 114);
         }
         h1 {
             text-align: center;
             line-height: 55px;
         }
-
         @keyframes Notificação {
-            0% {
-                opacity: 0;
-            }    
-            50% {
-                opacity: 1;
-            }
-            80% {
-                opacity: 1;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 0;
-            }
+            
         }
 
     </style>
@@ -52,7 +58,7 @@
 <body>
     <div>
         <h1>
-            Há mensagens não vistas!!!
+            ME PARE PASSANDO O MOUSE POR MIM
         </h1>
     </div>
 </body>
