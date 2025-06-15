@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1.25em 'Playwrite DK Loopet';
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #50cdff;
+        }
+        figure {
+            margin: 10px;
+            height: 500px;
+            width: 750px;
+            overflow: hidden;
+            background: rgb(87, 127, 255);
+            box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.842);
+        }
+        figure > div {
+            height: 100%;
+            width: 100%;
+            background: #50ff8a;
+        }
+        #Slide1 {
+            background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+            animation: Slide 20s linear 0s infinite normal forwards;
+        }
+        @keyframes Slide {
+            0% {
+                transform: translateX(-100%);
+                background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+            }
+            10% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+            }
+            15% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+            }
+            20% {
+                transform: translateX(0%);
+            }
+            28% {
+                background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+            }
+            29% {
+                transform: translateX(100%);
+                background: url('Recursos/Ft2.jpg') no-repeat center center / cover;
+            }
+            30% {
+                transform: translateX(100%);
+                background: url('Recursos/Ft2.jpg') no-repeat center center / cover;
+            }
+            40% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft2.jpg') no-repeat center center / cover;
+            }
+            45% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft2.jpg') no-repeat center center / cover;
+            }
+            50% {
+                transform: translateX(0%);
+            }
+            58% {
+                background: url('Recursos/Ft2.jpg') no-repeat center center / cover;
+            }
+            59% {
+                transform: translateX(-100%);
+                background: url('Recursos/Ft3.jpg') no-repeat center center / cover;
+            }
+            60% {
+                transform: translateX(-100%);
+                background: url('Recursos/Ft3.jpg') no-repeat center center / cover;
+            }
+            70% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft3.jpg') no-repeat center center / cover;
+            }
+            75% {
+                transform: translateX(0%);
+                background: url('Recursos/Ft3.jpg') no-repeat center center / cover;
+            }
+            80% {
+                transform: translateX(0%);
+            }
+            88.99% {
+                background: url('Recursos/Ft3.jpg') no-repeat center center / cover;
+            }
+            89% {
+                transform: translateX(100%);
+                background: url('Recursos/Ft1.jpg') no-repeat center center / cover;
+                opacity: 1;
+            }
+            89.1% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Vejamos se aprendi ou não</h1>
+    <figure>
+        <div id="Slide1">
+
+        </div>
+        <div id="Slide2">
+
+        </div>
+        <div id="Slide3">
+
+        </div>
+    </figure>
+</body>
+</html>
