@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font: normal normal 1em 'Roboto';
+}
+
+body {
+    padding: 70px 0px 0px 0px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;  
+    background: rgba(255, 255, 255, 0.521);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0px 0px 15px black;
+    z-index: 2;
+}
+header > div {
+    height: 70px;
+    flex: 1 1 250px;
+    background: rgba(0, 0, 0, 0) url('Recursos/Logo.png') no-repeat center center / 120px;
+}
+header > nav {
+    gap: 10px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-evenly;
+}
+nav > a {
+    color: black;
+    text-decoration: none;
+}
+nav > a:hover {
+    color: #BB18AF;
+}
+
+/*==========================*/
+
+#Banner {
+    width: 100%;
+    height: 667px;
+    background: rgba(0, 0, 0, 0) url('Recursos/Fundo1.jpg') no-repeat center center / cover;
+}
+#Sobre {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#Sobre > #box-Sobre, p {
+    text-indent: 25px;
+    padding: 10px;
+    flex: 1 1 40vw;
+    line-height: 21px;
+}
+#Sobre > picture {
+    flex: 1 1 50vw;
+    position: relative;
+    height: 450px;
+    width: 750px;
+    background: black url('Recursos/FtSessãoSobre.jpg')
+    no-repeat center center / cover;
+}
+#LogoSobre {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 80px;
+    width: 80px;
+    flex: 1 1 350px;
+    background: rgba(0, 0, 0, 0) url('Recursos/Logo.png') no-repeat center center / 120px;
+    backdrop-filter: blur(10px);
+}
+
+/*=====================*/
+
+#Galeria {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0px;
+} 
+#Galeria > div {
+    height: 450px;
+    width: 480px;
+}
+#Cards1 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card1.jpg') no-repeat center center / cover;
+}
+#Cards2 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card2.jpg') no-repeat center center / cover;
+}
+#Cards3 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card3.jpg') no-repeat center center / cover;
+}
+#Cards4 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card4.jpg') no-repeat center center / cover;
+}
+#Cards5 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card5.jpg') no-repeat center center / cover;
+}
+#Cards6 {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url('Recursos/Card6.jpg') no-repeat center center / cover;
+}
+.ArticleGaleria1, .ArticleGaleria2, .ArticleGaleria3, .ArticleGaleria4, .ArticleGaleria5, .ArticleGaleria6 {
+    height: 900px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.623), rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0));
+    transform: translateY(0%);
+    transition: all 0.3s linear 0s;
+}
+.ArticleGaleria1:hover, .ArticleGaleria2:hover, .ArticleGaleria3:hover, .ArticleGaleria4:hover, .ArticleGaleria5:hover, .ArticleGaleria6:hover {
+    transform: translateY(-50%);
+}
+.ArticleGaleria1, .ArticleGaleria2, .ArticleGaleria3, .ArticleGaleria4, .ArticleGaleria5, .ArticleGaleria6  > h1 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    padding: 500px 0px 0px 0px;
+    margin: 0px 0px 25px 0px;
+}
+footer {
+    color: white;
+    padding: 10px;
+    position: relative;
+    height: 475;
+    width: 100%;
+    background: #2F2A22;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#s1 {
+    flex: 1 1 0px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+nav {
+    height: 475px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+nav> p {
+    height: 10px;
+    line-height: 0px;
+}
+#s2 {
+    flex: 1 1 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
