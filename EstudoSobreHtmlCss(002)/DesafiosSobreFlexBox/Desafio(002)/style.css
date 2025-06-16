@@ -113,6 +113,20 @@ main > aside > a {
 
 /*============================*/
 
+.EfeitoParaCima {
+    animation: ParaCima 3s ease 0s 1 normal none;
+}
+@keyframes ParaCima {
+    0% {
+        transform: translateY(22.5%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/*============================*/
+
 @media (max-width: 850px) {
     main > h1 {
         font-size: 25vw;

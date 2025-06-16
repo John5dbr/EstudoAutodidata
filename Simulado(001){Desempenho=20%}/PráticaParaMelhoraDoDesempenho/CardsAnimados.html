@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PraticandoCardsAnimados</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        #Galeria {
+            margin: 25px auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 900px;
+            gap: 10px;
+            font: normal normal 1em 'Roboto';
+        }
+        .FundoAnimado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            width: 250px;
+            animation: FundoAnimado 1s ease-in-out 0s infinite normal backwards;
+        }
+        @keyframes FundoAnimado {
+            0% {
+                background: linear-gradient(to top, rgb(126, 126, 126), rgb(83, 83, 83));
+            }
+            25% {
+                background: linear-gradient(to top, rgb(126, 126, 126), rgb(92, 92, 92));
+            }
+            50% {
+                background: linear-gradient(to right, rgb(126, 126, 126), rgb(102, 102, 102));
+            }
+            75% {
+                background: linear-gradient(to bottom, rgb(126, 126, 126), rgb(83, 83, 83));
+            }
+            100% {
+                background: linear-gradient(to left, rgb(126, 126, 126), rgb(97, 97, 97));
+            }
+        }
+        .Cards {
+            height: 390px;
+            width: 240px;
+            overflow: hidden;
+        }
+        .ParaCima {
+            position: relative;
+            text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.685);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: left;
+            height: 780px;
+            width: 240px;
+            padding: 465px 10px 75px 10px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.473), rgba(255, 255, 255, 0));
+            transition: all 0.25s ease-in-out 0s;
+        }
+        .ParaCima > h1 {
+            margin: 0px 0px 10px 0px;
+            font: normal bolder 1.85em 'Cabin';
+        }   
+        .ParaCima:hover {
+            transform: translateY(-50%);
+            backdrop-filter: blur(5px);
+        }
+        #FundoCards1 {
+            background: black url('../Recursos/Card1.jpg') no-repeat center center / cover;
+        }
+        #FundoCards2 {
+            background: black url('../Recursos/Card2.jpg') no-repeat center center / cover;
+        }
+        #FundoCards3 {
+            background: black url('../Recursos/Card3.jpg') no-repeat center center / cover;
+        }
+        #FundoCards4 {
+            background: black url('../Recursos/Card4.jpg') no-repeat center center / cover;
+        }
+        #FundoCards5 {
+            background: black url('../Recursos/Card5.jpg') no-repeat center center / cover;
+        }
+        #FundoCards6 {
+            background: black url('../Recursos/Card6.jpg') no-repeat center center / cover;
+        }
+        .ParaCima > div {
+            position: absolute;
+            bottom: 20px;
+            align-self: center;
+            background: black;
+            border: 2px solid white;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s ease 0s;
+        }
+        .ParaCima > div:hover {
+            transform: scale(110%);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.795);
+        }
+        .ParaCima > div > a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="Galeria">
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards1">
+                <picture class="ParaCima">
+                    <h1>Inovação em Mobilidade</h1>
+                    <p>Desenvolvemos soluções inteligentes que conectam pessoas, veículos e cidades, otimizando trajetos e promovendo um trânsito mais eficiente e sustentável.</p>
+                    <div><a href="">Clique Aqui!</a></div>
+                </picture>
+            </article>
+        </article>
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards2">
+                <picture class="ParaCima">
+                    <h1>DashLine – O Futuro do Seu Carro</h1>
+                    <p>Nosso sistema operacional automotivo se adapta ao estilo de direção do usuário, realiza diagnósticos em tempo real e se integra com aplicativos e dispositivos modernos.</p>
+                    <div><a href="">Clique Aqui!</a></div>
+                </picture>
+            </article>
+        </article>
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards3">
+                <picture class="ParaCima">
+                    <h1>Sustentabilidade Integrada</h1>
+                    <p>Unimos tecnologia e consciência ambiental para reduzir emissões, aumentar a eficiência energética e contribuir para um futuro mais verde e inteligente.</p>
+                    <div><a href="">Clique Aqui!</a>   </div>
+                </picture>
+            </article>
+        </article>
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards4">
+                <picture class="ParaCima">
+                    <h1>Parcerias Estratégicas</h1>
+                    <p>A Benecheos cresce em colaboração com startups e universidades, formando uma rede de inovação que amplia o impacto das nossas tecnologias na América Latina.</p>
+                    <div><a href="">Clique Aqui!</a></div>
+                </picture>
+            </article>
+        </article>
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards5">
+                <picture class="ParaCima">
+                    <h1>Conectividade Sem Limites</h1>
+                    <p>Criamos sistemas que mantêm você conectado, com segurança e velocidade, mesmo em ambientes de mobilidade, integrando automação e Internet das Coisas (IoT).</p>
+                    <div><a href="">Clique Aqui!</a></div>
+                </picture>
+            </article>
+        </article>
+        <article class="FundoAnimado">
+            <article class="Cards" id="FundoCards6">
+                <picture class="ParaCima">
+                    <h1>Equipe de Alta Performance</h1>
+                    <p>Contamos com profissionais apaixonados por tecnologia e inovação, comprometidos em transformar ideias em soluções práticas para o dia a dia das pessoas.</p>
+                    <div><a href="">Clique Aqui!</a></div>
+                </picture>
+            </article>
+        </article>
+    </section>
+</body>
+</html>
