@@ -1,0 +1,54 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Cardário Do dia</h1>
+    <ol style="columns: 2; width: 275px;">
+        <li>Macarrão</li>
+        <li>Arroz e feijão</li>
+        <li>Doces</li>
+        <li>Salgados</li>
+        <li>Churrasco</li>
+        <li>Bebibas</li>
+    </ol>
+    <h2>Fique a vontade para escolher</h2>
+    <input style="width: 55px;" type="number" placeholder="Selecione um ^^" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', Click) 
+        function Click() {
+            let Cardapio = document.querySelector('input#input1')
+            let NumberCardapio = Number(Cardapio.value)
+            let resp = document.querySelector('p#resposta')
+            switch (NumberCardapio) {
+                case 1:
+                    resp.innerHTML = 'Trazendo um <strong>macarrão</strong>'
+                    break
+                case 2:
+                    resp.innerHTML = 'Trazendo um <strong>arroz e feijão</strong>'
+                    break
+                case 3:
+                    resp.innerHTML = 'Trazendo um <strong>doces</strong>'
+                    break
+                case 4:
+                    resp.innerHTML = 'Trazendo um <strong>salgados</strong>'
+                    break
+                case 5:
+                    resp.innerHTML = 'Trazendo um <strong>churrasco</strong>'
+                    break
+                case 6:
+                    resp.innerHTML = 'Trazendo um <strong>bebidas</strong>'
+                    break
+                default:
+                    resp.innerHTML = '[ERRO] Número inválido'
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

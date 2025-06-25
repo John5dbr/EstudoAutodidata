@@ -1,0 +1,32 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Identificador de fase da vida</h1>
+    Qual sua idade? 
+    <input type="number" placeholder="idade do usuário" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', Click) 
+        function Click() {
+            let idade = document.getElementById('input1')
+            let numeroidade = Number(idade.value)
+            let resp = document.getElementById('resposta')
+            if (numeroidade < 12) {
+                resp.innerText = 'Vc é criança!'
+            } else if (numeroidade >= 12 && numeroidade <= 17) {
+                resp.innerText = 'Vc é adolescente!'
+            } else if (numeroidade >= 18 && numeroidade <= 59) {
+                resp.innerText = 'Adulto!'
+            } else {
+                resp.innerText = 'Só podia ser um veio broxa msm'
+            }
+        }
+    </script>
+</body>
+</html>

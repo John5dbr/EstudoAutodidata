@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Contando de 1 até 100</p>
+    <button id="botao">Contar</button>
+    <p id="contando">Contando: </p>
+    <script>
+        let botao = document.getElementById('botao')
+        botao.addEventListener('click', Click)
+        function Click() {
+            let contando = document.getElementById('contando')
+            for (let contador = 1; (contador != 51); contador++) {
+                contando.innerHTML += ` ${contador} `
+            }
+        }
+    </script>
+</body>
+</html>

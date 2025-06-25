@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerificadorDeIdade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Verificador De Idade</header>
+    <main>
+        <section id="form">
+            <label for="nasc">Ano de nascimento: </label>
+            <input type="number" name="nasc" id="nascimento" placer="nascimento"> 
+            <br>
+            <label for="sexo">Sexo: </label>
+            <input type="radio" name="sexo" id="sexoM"> Masculino
+            <input type="radio" name="sexo" id="sexoF"> Feminino
+            <br>
+            <button id="botao">Resultado</button>
+        </section>
+        <section id="result">
+            <h2 id="resp"></h2>
+            <div id="imgs">
+            </div>
+        </section>
+    </main>
+    <script>
+        let Infors1 = new Date();
+        let AnoAtual = Number(Infors1.getFullYear());
+        let botao = document.querySelector('button#botao');
+        botao.addEventListener('click', Click)
+        function Click() {
+            let resp = document.querySelector('h2#resp'); 
+            let imgs = document.querySelector('div#imgs'); 
+            let nasc = document.querySelector('input#nascimento');
+            let AnoNasc = Number(nasc.value);
+            let sexoM = document.querySelector('input#sexoM');
+            let m = sexoM.checked;
+            let idade = AnoAtual - AnoNasc;
+            imgs.style = 'margin: 10px 0px; height: 220px; width: 220px; box-shadow: 5px 5px 10px rgb(146, 146, 146); border-radius: 100%;'
+            if (idade >= 1 && idade <= 17) {
+                if (sexoM.checked === true) {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é uma menino criança`
+                    imgs.style.background = "url('Recursos/HomemCriança.jpg') no-repeat top center / cover"
+                } else {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é uma menina criança`
+                    imgs.style.background = "url('Recursos/MulherCriança.jpg') no-repeat top center / cover"
+                }
+            } else if (idade >= 18 && idade <= 49) {
+                if (sexoM.checked === true) {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é um Homem Adulto`
+                    imgs.style.background = "url('Recursos/HomemAdulto.jpg') no-repeat top center / cover"
+                } else {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é uma Mulher Adulta`
+                    imgs.style.background = "url('Recursos/MulherJovem.jpg') no-repeat center center / cover"
+                }   
+            } else {
+                if (sexoM.checked === true) {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é um Homem Idoso`
+                    imgs.style.background = "url('Recursos/HomemVeio.jpg') no-repeat top center / cover"
+                } else {
+                    resp.innerHTML = `Sua idade é ${idade}, sendo assim, vc é uma Mulher Idosa`
+                    imgs.style.background = "url('Recursos/MulherVeio.jpg') no-repeat top center / cover"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

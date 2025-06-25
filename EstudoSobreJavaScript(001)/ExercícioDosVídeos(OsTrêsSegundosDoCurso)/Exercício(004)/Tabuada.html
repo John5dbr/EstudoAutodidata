@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeradorDeTabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Tabuada
+    </header>
+    <main>
+        <form action="algum.php" method="GET">
+            <p>
+                <label for="n1">
+                    Insira um número: <input type="number" name="numero" id="n1" required placeholder=" [ 0 - 10 ] ">
+                </label>
+                <input type="button" value="Gerar" id="botao">
+            </p>
+        </form>
+        <section id="result">
+            <label for="tabuada">
+                Tabuada gerada: <br> <br>
+                <input type="text" name="resp" id="tabuada" placeholder="esperando...">
+            </label>
+        </section>
+    </main>
+    <script>
+        let botao = document.querySelector('input#botao');
+        botao.addEventListener('click', Click) 
+        function Click() {
+            let input1 = document.querySelector('input#n1');
+            let input2 = document.querySelector('input#tabuada');
+            let result = document.querySelector('section#result');
+            let numero = Number(input1.value);
+            if (numero >= 11) {
+                window.alert(`Tu já viu tabuado além do [ 0 - 10 ] animal ?`)
+            } else {
+                for (let cont = 1 ; (cont <= 10) ; cont++) {
+                    result.innerHTML += `${numero} x ${cont} = ${numero*cont} <br>`  
+                }
+            }
+        }
+        /*Ei vagabundo, falta fazer a tabuada aparecer dentro do input*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>let resp = document.querySelector('p#resposta')
+<body>
+    <h1>Classificador de temperatura</h1>
+    Qual a temperatura atual? 
+    <input type="number" placeholder="Temperatura em Celcius" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', Click)
+        function Click() {
+            let tempatual = document.getElementsByName('text1')[0]
+            let valor = Number(tempatual.value)
+            let resp = document.querySelector('p#resposta')
+            if (valor <= 15) {
+                resp.innerText = 'Meio frio né'
+            } else if (valor >= 16 && valor <= 25) {
+                resp.innerText = 'Deveras agradável, não?'
+            } else {
+                resp.innerText = 'Quente até dms...'
+            }
+        }
+    </script>
+</body>
+</html>

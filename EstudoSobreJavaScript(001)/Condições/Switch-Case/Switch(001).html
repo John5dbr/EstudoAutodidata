@@ -1,0 +1,41 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h1>Controle de console gamer</h1>
+    Digite o nome de um console
+    <input type="text" placeholder="console" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', Click) 
+        function Click() {
+            let console = document.querySelector('input#input1');
+            let Rconsole = String(console.value);
+            let resp = document.querySelector('p#resposta');
+            switch (Rconsole) {
+                case ('xbox'):
+                    resp.innerHTML = 'Bom custo-benefício e serviço online excelente!'
+                    break
+                case ('ps5'):
+                    resp.innerHTML = 'Gráficos top, mas o preço é salgado!'
+                    break
+                case ('switch'):
+                    resp.innerHTML = 'Diversão garantida com os exclusivos da Nintendo!'
+                    break
+                case ('pc'):
+                    resp.innerHTML = 'Versatilidade total, de jogos a trabalho.'
+                    break
+                default:
+                    resp.innerHTML = 'Que diabo é isso?'
+                    break
+
+            }
+        }
+    </script>
+</body>
+</html>
