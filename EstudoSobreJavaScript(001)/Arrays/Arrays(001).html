@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1em 'Quicksand', sans-serif;
+        }
+
+        /*===========*/
+
+        body {
+            padding: 25px 0px 0px 0px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            background: #3E86D9;
+        }
+        header {
+            font: normal bold 2.5em 'Quicksand', sans-serif;
+            color: white;
+            margin: 0px 0px 25px 0px;
+        }
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            padding: 25px 25px 25px 25px;
+            height: 460px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.397);
+        } 
+        #form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 10px 0px;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        button {
+            width: 100px;
+            margin: 10px 0px 10px 0px;
+        }
+        #result {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0px 0px 0px;
+        }
+        #result > div {
+            margin: 5px 0px;
+        }
+        #resp {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <header>Seletor de Frutas</header>
+    <main>
+        <section id="form">
+            <button id="+uva" onclick="MaisUva()">+ Uva</button>
+            <button id="+maca" onclick="MaisMaca()">+ Maça</button>
+            <button id="+melancia" onclick="MaisMelancia()">+ Melancia</button>
+            <button id="-uva" onclick="MenosUva()">- Uva</button>
+            <button id="-maca" onclick="MenosMaca()">- Maça</button>
+            <button id="-melancia" onclick="MenosMelancia()">- Melancia</button>
+        </section>
+        <section id="result">
+            <h2 id="resp">Seleção Feita</h2>
+            <div id="Ruva">Quantidade de Uvas: 0x</div>
+            <div id="Rmaca">Quantidade de Macas: 0x</div>
+            <div id="Rmelancia">Quantidade de Melancias: 0x</div>
+        </section>
+    </main>
+    <script>
+        let uva = [0]
+        let maca = [0]
+        let melancia = [0]
+
+        function MaisUva() {
+            if (uva[0] <= -1) {
+                alert('[ERRO] ação inválida')
+            } else {
+                uva[0]++ 
+                let MaisUva = document.getElementById('Ruva')
+                MaisUva.innerHTML = `Quantidade de Uvas: ${uva[0]}x`
+            }
+        }
+        function MaisMaca() {
+            if (maca[0] <= -1) {
+                alert('[ERRO] ação inválida')
+            } else {
+                maca[0]++
+                let MaisMaca = document.getElementById('Rmaca')
+                MaisMaca.innerHTML = `Quantidade de Macas: ${maca[0]}x`
+            }
+        }
+        function MaisMelancia() {
+            if (melancia[0] <= -1) {
+                alert('[ERRO] ação inválida')
+            } else {
+                melancia[0]++
+                let MaisMelancia = document.getElementById('Rmelancia')
+                MaisMelancia.innerHTML = `Quantidade de Melancias: ${melancia[0]}x` 
+            } 
+        }
+        function MenosUva() {
+            if (uva[0] <= 0) {
+                alert('[ERRO] ação inválida')
+            } else {
+                uva[0]--
+                let MenosUva = document.getElementById('Ruva')
+                MenosUva.innerHTML = `Quantidade de Uvas: ${uva[0]}x` 
+            }
+        }
+        function MenosMaca() {
+            if (maca[0] <= 0) {
+                alert('[ERRO] ação inválida')
+            } else {
+                maca[0]--
+                let MenosMaca = document.getElementById('Rmaca')
+                MenosMaca.innerHTML = `Quantidade de Macas: ${maca[0]}x` 
+            }
+        }
+        function MenosMelancia() {
+            if (melancia[0] <= 0) {
+                alert('[ERRO] ação inválida')
+            } else {
+                melancia[0]--
+                let MenosMelancia = document.getElementById('Rmelancia')
+                MenosMelancia.innerHTML = `Quantidade de Melancias: ${melancia[0]}x` 
+            }
+        }
+    </script>
+</body>
+</html>

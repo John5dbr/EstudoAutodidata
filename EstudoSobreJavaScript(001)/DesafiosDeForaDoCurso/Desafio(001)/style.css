@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Knewave';
+    src: url('Recursos/Knewave/Knewave-Regular.ttf') ;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*======================*/
+
+h1 {
+    font: normal normal 4.5em 'Knewave';
+}

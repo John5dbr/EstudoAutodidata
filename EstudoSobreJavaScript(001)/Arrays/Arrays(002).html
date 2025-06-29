@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistroDeAlunos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1em 'Quicksand', sans-serif;
+        }
+
+        /*===========*/
+
+        body {
+            padding: 25px 0px 0px 0px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            background: #3E86D9;
+        }
+        header {
+            font: normal bold 2.5em 'Quicksand', sans-serif;
+            color: white;
+            margin: 0px 0px 25px 0px;
+        }
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            padding: 25px 25px 25px 25px;
+            height: 460px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.397);
+        } 
+        #form {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 125px;
+            padding: 0px 0px 0px 0px;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        button {
+            width: 150px;
+            margin: 10px 0px 10px 0px;
+        }
+        #result {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0px 0px 0px;
+        }
+        #result > div {
+            margin: 5px 0px;
+        }
+        #resp {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <header>Listagem de Alunos</header>
+    <main>
+        <section id="form">
+            <p>
+                <label for="nome">Nome Do Aluno(a): </label>
+                <input type="text" name="nome" id="nome" placeholder=aluno(a)>       
+            </p>
+            <p>
+                <label for="sexo">Sexo do Aluno(a): </label>
+                <input type="radio" name="sexo" id="Masc"> Masculino
+                <input type="radio" name="sexo" id="Femin"> Feminino
+            </p>
+            <p>
+                <button id="botao1">
+                    Salvar dados
+                </button>
+                <button id="botao2">
+                    Número De Alunos
+                </button>
+            </p>
+        </section>
+        <section id="result">
+            <h2 id="resp">Lista De Alunos(as) Salvos</h2> <br>
+            <select name="alunos" id="alunos"></select>
+        </section>
+    </main>
+    <script>    
+        let aluno = [];
+        let cont = 0;
+        let botao = document.getElementById('botao1');
+        botao.addEventListener('click', Click) 
+        function Click() {
+            const alunoS = document.getElementById('alunos');
+            let alunOA = document.createElement('option');
+            /*==============*/
+            let nome = document.getElementById('nome');
+            let NMmsm = nome.value
+            let sexoM = document.getElementById('Masc');
+            /*==============*/
+            alunoS.appendChild(alunOA)
+            if (sexoM.checked == true) {
+                aluno.push(NMmsm, "Masculino")
+                alunOA.textContent += `Aluno: ${NMmsm} | Sexo: Masculino`
+            } else {
+                aluno.push(NMmsm, "Feminino")
+                alunOA.innerHTML += `Aluna: ${NMmsm} | Sexo: Feminino`
+            }
+            /*Falta Melhorar alguns detalhes...*/
+        }
+    </script>
+</body>
+</html>

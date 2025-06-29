@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TextoAnimado-SlideInterativo</title>
+</head>
+<body>
+    <h1>
+        Ué...
+    </h1>
+    <script>
+        let titulo = document.getElementsByTagName('h1')[0]
+        titulo.addEventListener('mouseenter', Title)
+
+        function Title() {
+            let text = document.getElementsByTagName('h1')[0]
+            setTimeout( () => { text.innerHTML = `V` } , 200  );
+            setTimeout( () => { text.innerHTML += `a` } , 400  );
+            setTimeout( () => { text.innerHTML += `s` } , 600  );
+            setTimeout( () => { text.innerHTML += `c` } , 800  );
+            setTimeout( () => { text.innerHTML += `o` } , 1000  );
+        }
+    </script>
+</body>
+</html>

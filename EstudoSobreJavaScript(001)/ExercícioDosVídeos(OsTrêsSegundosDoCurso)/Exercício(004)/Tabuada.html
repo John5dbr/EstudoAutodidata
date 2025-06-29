@@ -22,7 +22,19 @@
         <section id="result">
             <label for="tabuada">
                 Tabuada gerada: <br> <br>
-                <input type="text" name="resp" id="tabuada" placeholder="esperando...">
+                <select name="tabuada" id="tab1">
+                    <option id="op1" class="option" value=""></option>
+                    <option id="op2" class="option" value=""></option>
+                    <option id="op3" class="option" value=""></option>
+                    <option id="op4" class="option" value=""></option>
+                    <option id="op5" class="option" value=""></option>
+                    <option id="op6" class="option" value=""></option>
+                    <option id="op7" class="option" value=""></option>
+                    <option id="op8" class="option" value=""></option>
+                    <option id="op9" class="option" value=""></option>
+                    <option id="op10" class="option" value=""></option>
+                    <option id="op11" class="option" value=""></option>
+                </select>
             </label>
         </section>
     </main>
@@ -30,6 +42,7 @@
         let botao = document.querySelector('input#botao');
         botao.addEventListener('click', Click) 
         function Click() {
+            let tabuada = document.getElementsByTagName('option');
             let input1 = document.querySelector('input#n1');
             let input2 = document.querySelector('input#tabuada');
             let result = document.querySelector('section#result');
@@ -37,12 +50,14 @@
             if (numero >= 11) {
                 window.alert(`Tu já viu tabuado além do [ 0 - 10 ] animal ?`)
             } else {
-                for (let cont = 1 ; (cont <= 10) ; cont++) {
-                    result.innerHTML += `${numero} x ${cont} = ${numero*cont} <br>`  
-                }
+                for (let cont = 0 ; (cont <= 10) ; cont++) {
+                    tabuada[cont].innerHTML = ` `  
+                } 
+                for (let cont = 0 ; (cont <= 10) ; cont++) {
+                    tabuada[cont].innerHTML += `${numero} x ${cont} = ${numero*cont} `  
+                } 
             }
         }
-        /*Ei vagabundo, falta fazer a tabuada aparecer dentro do input*/
     </script>
 </body>
 </html>
