@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #FF6F00;
+    --cor3: #FFB74D;
+    --cor4: #F5F5F5;
+    --cor5: #424242;
+    --font1: 'Pacifico';
+    --font2: 'Raleway';
+    --font3: 'Nunito';
+}
+
+/*==================================================*/
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.651);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+.Logo {
+    margin: 0px 5px 0px 0px;
+    flex: 2 1 70px;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0) url('Recursos/Logo.png') no-repeat center center / contain;
+}
+header > aside {
+    flex: 4 1 200px;
+    height: 90px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+header > aside > h1, h3 {
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+    color: var(--cor3);
+    font: normal bolder 1.1em var(--font3);
+}
+header > nav {
+    flex: 6 1 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 5px 0px 5px;
+}
+header > nav > a {
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: all 0.25s ease-in-out 0s;
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+    color: var(--cor3);
+    font: normal bolder 1.1em var(--font3);
+}
+#LoginOuCadastro {
+    color: var(--cor3);
+    padding: 5px 15px;
+    border: 2px solid var(--cor3);
+}
+header > nav > a:hover {
+    border-bottom: 2px solid var(--cor3);
+}
+
+/*==================================================*/
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#Sobre {
+    width: 100%;
+    padding: 90px 0px 0px 0px;
+    background: rgba(221, 192, 192, 0) url('Recursos/FundoSobre.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.582);
+}
+#Sobre > article {
+    max-width: 600px;
+    flex: 1 1 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 25px;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.178);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    box-shadow: 0px 0px 25px black;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out 0s;
+}
+#Sobre > article:hover {
+    transform: scale(101%);
+}
+#Sobre > article > h1 {
+    color: var(--cor3);
+    font: normal normal 4em var(--font1), 'arial';
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+}
+#Sobre > article > p {
+    color: var(--cor3);
+    margin: 15px 0px 0px 0px;
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+    font: normal normal 1.25em var(--font3), 'arial';
+}
+#Sobre > aside {
+    flex: 1 1 100px;
+    max-height: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.25s ease-in-out 0s;
+    margin: 0px 0px 25px 0px;
+}
+#Sobre > aside:hover {
+    transform: scale(105%);
+}
+#Sobre > aside > div {
+    transform: scale(125%);
+}
+#Sobre > aside > a {
+    width: 125px;
+    height: 30px;
+    margin: 25px 0px 0px 0px;
+    font: normal bold 1em var(--font3);
+    background: var(--cor1);
+    border: 2px solid var(--cor2);
+    color: var(--cor2);
+    text-align: center;
+    line-height: 27.5px;
+    text-decoration: none;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.486);
+}
+
+/*==================================================*/
+
+
+
+/*==================================================*/
+
+@media (max-width: 1150px) {
+    #Sobre > article {
+        max-width: 450px;
+    }
+    #Sobre > article > h1 {
+        color: var(--cor3);
+        font: normal normal 3em var(--font1), 'arial';
+        text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+    }
+    #Sobre > article > p {
+        color: var(--cor3);
+        margin: 15px 0px 0px 0px;
+        text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+        font: normal normal 1em var(--font3), 'arial';
+    }
+}
