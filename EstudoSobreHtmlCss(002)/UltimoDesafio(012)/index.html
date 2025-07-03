@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Recursos/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Recursos/Favicon.png" type="image/x-icon">
     <title>AmantesDosGatos</title>
 </head>
 <body>
-    <header>
+    <header id="HeaderPrincipal">
         <aside>
             <div class="Logo"></div>
             <h1>Amantes</h1>
@@ -16,23 +16,246 @@
             <h1>Gatos</h1>
         </aside>
         <nav>
-            <a href="#Sobre">Sobre</a>
-            <a href="">Últimas Adoções</a>
-            <a href="">Contato</a>
-            <a href="" id="LoginOuCadastro"><strong>Login</strong> ou <strong>Cadastro</strong></a>
+            <a href="#HeaderPrincipal">Sobre</a>
+            <a href="#GatosAdotados">Últimas Adoções</a>
+            <a href="#Contato">Contato</a>
+            <a href="#form" id="LoginOuCadastro"><strong>Login</strong> ou <strong>Cadastro</strong></a>
         </nav>
     </header>
     <main>
         <section id="Sobre">
             <article>
+                <div id="BolaAmarela"></div>
                 <h1>Quem somos nós</h1>
-                <p>Somos uma organização dedicada à <strong>adoção responsável de gatos</strong>. Acreditamos que todo gato merece um lar seguro, cheio de carinho e respeito. Nosso trabalho vai além do resgate: acolhemos, cuidamos e buscamos famílias que estejam prontas para abrir o coração. <br> Com amor, dedicação e responsabilidade, ajudamos a construir novas histórias entre felinos e humanos.</p>
+                <h2>Transformando miados em lares cheios de amor</h2>
+                <p>Somos uma organização dedicada à <strong>adoção responsável de gatos</strong>. Acreditamos que todo gato merece um lar seguro, cheio de carinho e respeito. Nosso trabalho vai além do resgate: acolhemos, cuidamos e buscamos famílias que estejam prontas para abrir o coração.
+                <aside>
+                    <a href="" id="BtnEsquerdo">Mais sobre a AmantesDosGatos</a>
+                    <a href="" id="BtnDireito">Conheça a nossa história</a>
+                </aside>
             </article>
-            <aside>
-                <div class="Logo"></div>
-                <a href="">Saiba Mais</a>
+            <figure id="BannerSobre">
+                <aside id="MiniTexto">
+                    Este é o Thor, um dos muitos gatinhos que encontraram um lar cheio de amor através da AmantesDosGatos.
+                </aside>
+            </figure>
+        </section>
+        <div class="Divisor"></div>
+        <section id="GatosAdotados">
+            <h1>Histórias Felinas com Final Feliz</h1>
+            <h2>Conheça alguns dos gatinhos que já encontraram um lar cheio de amor através da AmantesDosGatos.</h2>
+            <aside id="OsGatos">
+                <aside class="Card" id="Gato1">
+                    <article class="Conteudo" id="conteudo1">
+                        <h1>Luna</h1>
+                        <p>Uma gatinha carinhosa e brincalhona que conquistou todos na casa nova. Adora se esconder nas cobertas!</p>
+                        <div id="Barrinha1" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato2">
+                    <article class="Conteudo" id="conteudo2">
+                        <h1>Milo</h1>
+                        <p>Antes tímido, agora é o rei da casa! Ganhou uma família amorosa e um irmãozinho felino para brincar.</p>
+                        <div id="Barrinha2" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato3">
+                    <article class="Conteudo" id="conteudo3">
+                        <h1>Cleo</h1>
+                        <p>Encontrada nas ruas, hoje dorme tranquila no colo da sua nova tutora. É fã de carinho e sachê!</p>
+                        <div id="Barrinha3" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato4">
+                    <article class="Conteudo" id="conteudo4">
+                        <h1>Simba</h1>
+                        <p>Adotado por uma família com crianças, se tornou o companheiro de todas as brincadeiras. Muito sociável!</p>
+                        <div id="Barrinha4" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato5">
+                    <article class="Conteudo" id="conteudo5">
+                        <h1>Mel</h1>
+                        <p>Chegou arisca, mas com paciência e amor se transformou em uma gatinha doce e cheia de afeto.</p>
+                        <div id="Barrinha5" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato6">
+                    <article class="Conteudo" id="conteudo6">
+                        <h1>Nino</h1>
+                        <p>O mais travesso da ninhada! Hoje vive em um apartamento com vista para o mundo e muito espaço para correr.</p>
+                        <div id="Barrinha6" class="Barrinha"></div>
+                    </article>
+                </aside>
             </aside>
         </section>
+        <div class="Divisor"></div>
+        <section id="form">
+            <form action="">
+                <p>
+                    <label for="nome">
+                        Nome: <input type="text" name="nome" id="nome" placeholder="Nome Completo Se Possível">
+                    </label>
+                </p>
+                <p>
+                    <label for="idade">
+                        Ano de nascimento: <input type="number" name="idade" id="idade" placeholder="Apenas 4 Dígitos São Aceitos">
+                    </label>
+                </p>
+                <p>
+                    <label for="sexo"> Sexo: 
+                        <input type="radio" name="sexo"> Masculino 
+                        <input type="radio" name="sexo"> Feminino
+                    </label>
+                </p>
+                    Gostaria de <strong>doar</strong> ou <strong>adotar</strong>?
+                    <select name="DoarOuAdotar" id="DoarOuAdotar">
+                        <option value="Adotar">Desejo fazer uma adoção</option>
+                        <option value="Doar">Desejo colocar um gato para adoção</option>
+                    </select>
+                </p>
+                <div id="FundoExplicativo">YOooo</div>
+            </form>
+        </section>
     </main>
+    <script>
+        let gato1 = document.getElementById('Gato1')
+        gato1.addEventListener('mouseenter', Gato1Entrou)
+        gato1.addEventListener('mouseout', Gato1Saiu)
+        gato1.addEventListener('mousemove', Gato1Moveu)
+        function Gato1Entrou() { 
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato1Saiu() {
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato1Moveu() {
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato2 = document.getElementById('Gato2')
+        gato2.addEventListener('mouseenter', Gato2Entrou)
+        gato2.addEventListener('mouseout', Gato2Saiu)
+        gato2.addEventListener('mousemove', Gato2Moveu)
+        function Gato2Entrou() { 
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato2Saiu() {
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato2Moveu() {
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato3 = document.getElementById('Gato3')
+        gato3.addEventListener('mouseenter', Gato3Entrou)
+        gato3.addEventListener('mouseout', Gato3Saiu)
+        gato3.addEventListener('mousemove', Gato3Moveu)
+        function Gato3Entrou() { 
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato3Saiu() {
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato3Moveu() {
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato4 = document.getElementById('Gato4')
+        gato4.addEventListener('mouseenter', Gato4Entrou)
+        gato4.addEventListener('mouseout', Gato4Saiu)
+        gato4.addEventListener('mousemove', Gato4Moveu)
+        function Gato4Entrou() { 
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato4Saiu() {
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato4Moveu() {
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato5 = document.getElementById('Gato5')
+        gato5.addEventListener('mouseenter', Gato5Entrou)
+        gato5.addEventListener('mouseout', Gato5Saiu)
+        gato5.addEventListener('mousemove', Gato5Moveu)
+        function Gato5Entrou() { 
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato5Saiu() {
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato5Moveu() {
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato6 = document.getElementById('Gato6')
+        gato6.addEventListener('mouseenter', Gato6Entrou)
+        gato6.addEventListener('mouseout', Gato6Saiu)
+        gato6.addEventListener('mousemove', Gato6Moveu)
+        function Gato6Entrou() { 
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato6Saiu() {
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato6Moveu() {
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+    </script>
 </body>
 </html>

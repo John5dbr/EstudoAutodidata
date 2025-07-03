@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --cor1: #FFFFFF;
     --cor2: #FF6F00;
@@ -22,19 +26,15 @@
 /*==================================================*/
 
 header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
     width: 100%;
     height: 90px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.651);
     backdrop-filter: blur(10px);
     z-index: 1;
+    margin: 0px 0px 5px 0px;
 }
 .Logo {
     margin: 0px 5px 0px 0px;
@@ -71,7 +71,7 @@ header > nav > a {
     border-bottom: 2px solid rgba(0, 0, 0, 0);
     transition: all 0.25s ease-in-out 0s;
     text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
-    color: var(--cor3);
+    color: var(--cor5);
     font: normal bolder 1.1em var(--font3);
 }
 #LoginOuCadastro {
@@ -80,108 +80,306 @@ header > nav > a {
     border: 2px solid var(--cor3);
 }
 header > nav > a:hover {
-    border-bottom: 2px solid var(--cor3);
+    border-bottom: 2px solid var(--cor5 );
 }
 
 /*==================================================*/
 
 main {
-    width: 100%;
+    position: relative;
+    padding: 415px 0px 0px 0px;
+}
+
+/*==================================================*/
+
+#BolaAmarela {
+    position: absolute;
+    top: 5px;
+    left: -17px;
+    opacity: 0.9;
+    height: 100px;
+    width: 100px;
+    background: var(--cor3);
+    border-radius: 100%;
+}
+#Sobre > article {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    min-width: 50vw;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+#Sobre > article > h1 {
+    z-index: 0;
+    color: var(--cor5);
+    font: normal bolder 5em var(--font3);
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+}
+#Sobre > article > h2 {
+    color: var(--cor5);
+    font: normal bold 1.75em var(--font3);
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+}
+#Sobre > article > p {
+    max-width: 400px;
+    color: var(--cor5);
+    font: normal normal 1em var(--font3);     
+    margin: 15px 0px;
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);                  
+}
+#Sobre > article > aside {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 25px;
+    width: 400px;   
+    height: 72px;
+    border: 2px solid
+    var(--cor2);    
+    background: var(--cor1); 
+    transition: all 0.25s ease-out 0s;        
+}
+#Sobre > article > aside:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.507);
+}
+#Sobre > article > aside > a {
+    flex: 1 1 0px;
+    color: var(--cor2);
+    text-decoration: none;
+    font: normal bold 1em var(--font2);       
+}
+#BtnEsquerdo {
+    border-right: 2px solid var(--cor2);
+}
+#BtnDireito {
+    margin: 0px 0px 0px 25px;
+}
+#BannerSobre {
+    top: 0px;
+    background: black url('Recursos/FundoSobre.jpg') no-repeat center / cover;
+    height: 100%;
+    width: 60vw;
+    position: absolute;
+    right: 0px;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.479);
+    height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#MiniTexto {
+    color: var(--cor4);
+    font: normal normal 1em var(--font3);
+    padding: 10px;
+    background: #424242;
+    text-align: justify;
+    width: 300px;
+}
+.Divisor {
+    width: 100%;
+    height: 2px;
+    background: var(--cor2);
+}
+
+/*==================================================*/
+
+#GatosAdotados {
+    display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    margin: 25px 0px 25px 0px;
 }
-#Sobre {
-    width: 100%;
-    padding: 90px 0px 0px 0px;
-    background: rgba(221, 192, 192, 0) url('Recursos/FundoSobre.jpg') no-repeat center center / cover;
+#GatosAdotados > h1 {
+    text-align: center;
+    color: var(--cor5);
+    font: normal bold 4.5em var(--font3);
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+}
+#GatosAdotados > h2 {
+    text-align: center;
+    color: var(--cor5);
+    font: normal bold 1.5em var(--font3);
+    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.158);
+}
+#OsGatos {
+    margin: 35px 0px 0px 0px;
+    width: 70vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.582);
+    gap: 25px;
 }
-#Sobre > article {
-    max-width: 600px;
-    flex: 1 1 500px;
+.Card {
+    border-radius: 2.5%;
+    height: 300px;
+    width: 230px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+.Conteudo {
+    position: relative;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
     align-items: flex-start;
-    margin: 25px;
-    text-align: justify;
-    background: rgba(0, 0, 0, 0.178);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    box-shadow: 0px 0px 25px black;
+    height: 200%;
+    width: 100%;
+    background: linear-gradient(to top, var(--cor3), rgba(255, 70, 70, 0) 30%);
+    padding: 15px;
+}
+.Barrinha {
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
     border-radius: 10px;
-    transition: all 0.1s ease-in-out 0s;
+    background: var(--cor2);
+    width: 5px;
+    height: 40%;
+    align-self: center;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    animation: MudarCor 2.5s ease-in-out 0s infinite forwards;
+}   
+@keyframes MudarCor {
+    0% {
+        background: var(--cor1);
+    }
+    33.33% {
+        background: var(--cor2);
+    }
+    66.66% {
+        background: var(--cor3);
+    }
+    100% {
+        background: var(--cor1);
+    }
 }
-#Sobre > article:hover {
-    transform: scale(101%);
+.Conteudo > h1 {
+    text-align: left;
+    width: 85%;
+    color: var(--cor1);
+    font: normal bold 2em var(--font3);
+    text-shadow: 4px 4px 3.5px rgba(0, 0, 0, 0.712);
 }
-#Sobre > article > h1 {
-    color: var(--cor3);
-    font: normal normal 4em var(--font1), 'arial';
-    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+.Conteudo > p {
+    text-align: left;
+    width: 85%;
+    color: var(--cor1);
+    font: normal normal 1em var(--font3);
+    text-shadow: 4px 4px 3.25px rgba(0, 0, 0, 0.753);
 }
-#Sobre > article > p {
-    color: var(--cor3);
-    margin: 15px 0px 0px 0px;
-    text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
-    font: normal normal 1.25em var(--font3), 'arial';
+#Gato1 {
+    background: goldenrod url('Recursos/Gato1.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);
 }
-#Sobre > aside {
-    flex: 1 1 100px;
-    max-height: 200px;
-    max-width: 200px;
+#Gato1:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+#Gato2 {
+    background: goldenrod url('Recursos/Gato2.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);    
+}
+#Gato2:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+#Gato3 {
+    background: goldenrod url('Recursos/Gato3.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);    
+}
+#Gato3:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+#Gato4 {
+    background: goldenrod url('Recursos/Gato4.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);    
+}
+#Gato4:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+#Gato5 {
+    background: goldenrod url('Recursos/Gato5.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);    
+}
+#Gato5:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+#Gato6 {
+    background: goldenrod url('Recursos/Gato6.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.527);    
+}
+#Gato6:hover {
+    transform: scale(102.5%);
+    box-shadow: 0px 0px 25px rgb(51, 51, 51);
+}
+
+/*==================================================*/
+
+#form {
+    height: 550px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    transition: all 0.25s ease-in-out 0s;
-    margin: 0px 0px 25px 0px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
 }
-#Sobre > aside:hover {
-    transform: scale(105%);
+#FundoExplicativo {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
 }
-#Sobre > aside > div {
-    transform: scale(125%);
-}
-#Sobre > aside > a {
-    width: 125px;
-    height: 30px;
-    margin: 25px 0px 0px 0px;
-    font: normal bold 1em var(--font3);
-    background: var(--cor1);
-    border: 2px solid var(--cor2);
-    color: var(--cor2);
-    text-align: center;
-    line-height: 27.5px;
-    text-decoration: none;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.486);
-}
-
 /*==================================================*/
 
-
-
-/*==================================================*/
-
-@media (max-width: 1150px) {
-    #Sobre > article {
-        max-width: 450px;
+@media (max-width: 1000px) {
+    main {
+        padding: 490px 0px 0px 0px;
     }
+    #BannerSobre {
+        top: 75px;
+    }
+}
+@media (max-width: 900px) {
+    main {
+        padding: 535px 0px 0px 0px;
+    }
+    #BannerSobre {
+        top: 125px;
+    }
+}
+@media (max-width: 700px) {
     #Sobre > article > h1 {
-        color: var(--cor3);
-        font: normal normal 3em var(--font1), 'arial';
-        text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
+        color: var(--cor5);
+        font: normal bolder 3em var(--font3);
     }
-    #Sobre > article > p {
-        color: var(--cor3);
-        margin: 15px 0px 0px 0px;
-        text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.521);
-        font: normal normal 1em var(--font3), 'arial';
+    #Sobre > article > h2 {
+        color: var(--cor5);
+        font: normal bold 1.25em var(--font3);
+    }
+    #BolaAmarela {
+        top: 5px;
+        left: -10px;
+        height: 60px;
+        width: 60px;
+    }
+    main {
+        padding: 785px 0px 0px 0px;
+    }
+    #BannerSobre {
+        top: 375px;
+    }
+    #OsGatos {
+        gap: 15px;
+        width: 95vw;
     }
 }
