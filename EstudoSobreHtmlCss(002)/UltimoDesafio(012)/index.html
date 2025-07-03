@@ -91,32 +91,53 @@
         </section>
         <div class="Divisor"></div>
         <section id="form">
+            <article>
+                <h1>Quer se conectar com a AmantesDosGatos?</h1>
+                <p>Preencha o formulário ao lado com seus dados e conte pra gente como podemos te ajudar.
+                Se você quer adotar um gatinho, ou se precisa colocar um gato para adoção, este é o espaço certo para iniciar esse processo com carinho, responsabilidade e respeito.</p>
+                <h2>Estamos aqui para te ouvir e caminhar junto com você nessa jornada!</h2>
+            </article>
             <form action="">
                 <p>
                     <label for="nome">
-                        Nome: <input type="text" name="nome" id="nome" placeholder="Nome Completo Se Possível">
+                        Nome: <br> <input type="text" name="nome" id="nome" placeholder="  Nome Completo Se Possível">
                     </label>
                 </p>
                 <p>
                     <label for="idade">
-                        Ano de nascimento: <input type="number" name="idade" id="idade" placeholder="Apenas 4 Dígitos São Aceitos">
+                        Ano de nascimento: <br> <input type="number" name="idade" id="idade" placeholder="  Apenas 4 Dígitos São Aceitos">
                     </label>
                 </p>
                 <p>
                     <label for="sexo"> Sexo: 
-                        <input type="radio" name="sexo"> Masculino 
-                        <input type="radio" name="sexo"> Feminino
+                        <input type="radio" name="sexo" id="Masc" class="InputRadio"> 
+                        <label for="Masc">Masculino</label> 
+                        <input type="radio" name="sexo" id="Femi" class="InputRadio"> 
+                        <label for="Femi">Feminino</label>
                     </label>
                 </p>
+                <p>
+                    <label for="email"> 
+                        Email: <br> <input type="email" name="email" id="email" placeholder="  Email">
+                    </label>
+                </p>
+                <p>
+                    <label for="situacao">
+                        Breve descrição da sua situação: <br> <input type="text" name="situacao" id="situacao" placeholder="  (Máxima de 250 caracteres)">
+                    </label>
+                </p>
+                <p>
                     Gostaria de <strong>doar</strong> ou <strong>adotar</strong>?
                     <select name="DoarOuAdotar" id="DoarOuAdotar">
-                        <option value="Adotar">Desejo fazer uma adoção</option>
-                        <option value="Doar">Desejo colocar um gato para adoção</option>
+                        <option value="Adotar"><p>Desejo fazer uma adoção</p></option>
+                        <option value="Doar"><p>Desejo colocar um gato para adoção</p></option>
                     </select>
                 </p>
-                <div id="FundoExplicativo">YOooo</div>
+                <div id="botao">Enviar formulário</div>
             </form>
+            <div id="FundoExplicativo">YOooo</div>      
         </section>
+        <div class="Divisor"></div>
     </main>
     <script>
         let gato1 = document.getElementById('Gato1')
@@ -255,6 +276,32 @@
             conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
             let barrinha = document.getElementById('Barrinha6')
             barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*//*=====*//*=====*/
+        let ObjectDate = new Date()
+        let anoatual = ObjectDate.getFullYear()
+        let botao = document.getElementById('botao')
+        botao.addEventListener('click', EnviarFormulario)
+        function EnviarFormulario() {
+            let nome = document.getElementById('nome')
+            let nomevalue = nome.value
+            /*=====*/
+            let nasc = document.getElementById('idade')
+            let nascvalue = Number(nasc.value)
+            let nasctamanho = String(nasc.value)
+            if (nasctamanho.length >= 5 || nasctamanho.length <= 0 || anoatual - nascvalue <= 8 || anoatual - nascvalue >= 126) {
+                alert(`[ERRO] Idade Inválida [ERRO]`)
+            } else {
+                /*Irei Providenciar*/
+            }
+            /*=====*/
+            let masc = document.getElementById('Masc')
+            let femi = document.getElementById('Femi')
+            if (masc.checked == false && femi.checked == false) {
+                alert(`[ERRO] Sexo Inválido [ERRO]`)
+            } else {
+                /*Irei Providenciar*/
+            }
         }
     </script>
 </body>
