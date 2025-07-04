@@ -415,6 +415,131 @@ form > p {
 
 /*==================================================*/
 
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-evenly;
+    padding: 35px;
+    background: #424242;
+    gap: 25px;
+}
+footer > section > aside, h1, p, h2 {
+    color: var(--cor4);
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.781);  
+}
+footer > section > aside {
+    font: normal normal 1em var(--font3);
+}
+footer > section > h1 {
+    font: normal bold 1.2em var(--font3);
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.781);  
+}
+footer > section > h2 {
+    font: normal bold 0.9em var(--font3);
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.808);  
+}
+footer > section > p {
+    font: normal normal 1em var(--font3);
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.808);  
+}
+#Localizacao {
+    min-height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    width: 450px;
+}
+#Localizacao > img {
+    width: 35px;
+    margin: 0px 5px 0px 0px;
+}
+#Localizacao > h1 {
+    margin: 5px 0px 0px 0px;
+}
+#MaisOpcoes {
+    text-decoration: none;
+    font: italic normal 1em var(--font3);
+    color: var(--cor4);
+}
+#Seta {
+    transform: rotate(180deg);
+    height: 15px;
+    width: 25px;
+    margin: 0px 5px 0px 0px;
+}
+#Contato {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    align-self: flex-start;
+    height: 175px;
+    padding: 0px 0px 50px 0px;
+    width: 350px;
+}
+#Contato > img {
+    width: 30px;
+    margin: 0px 0px 0px 0px;
+}
+#Contato > h1 {
+    margin: 5px 0px 0px 0px;
+}
+.Contatinho {
+    text-decoration: none;
+    font: italic normal 1em var(--font3);
+    color: var(--cor4);
+}
+#Pessoas {
+    gap: 10px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#Pessoas > figure {
+    gap: 20px;
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#Alguem1 {
+    height: 75px;
+    width: 75px;
+    background: black url('Recursos/Fundadora.jpg') no-repeat top center / cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
+}
+#Alguem4 {
+    height: 75px;
+    width: 75px;
+    background: black url('Recursos/Desenvolvedor.jpg') no-repeat center / cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.616);
+}
+#Linha {
+    width: 100%;
+    height: 2px;
+    background: var(--cor1);
+}
+#Final {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*==================================================*/
+
 @media (max-width: 1000px) {
     main {
         padding: 490px 0px 0px 0px;
@@ -429,6 +554,9 @@ form > p {
     }
     #BannerSobre {
         top: 125px;
+    }
+    footer {
+        justify-content: flex-start;
     }
 }
 @media (max-width: 700px) {
@@ -455,5 +583,17 @@ form > p {
     #OsGatos {
         gap: 15px;
         width: 95vw;
+    }
+}
+@media (max-width: 499px) {
+    header {
+        height: 110px;
+    }
+    header > nav {
+        flex-wrap: wrap-reverse;
+        gap: 0px;
+    }
+    #BannerSobre {
+        width: 90vw;
     }
 }
