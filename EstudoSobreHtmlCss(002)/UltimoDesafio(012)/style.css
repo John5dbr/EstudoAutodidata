@@ -538,6 +538,7 @@ footer > section > p {
     justify-content: space-between;
     align-items: center;
 }
+
 /*==================================================*/
 
 @media (max-width: 1000px) {
@@ -590,10 +591,26 @@ footer > section > p {
         height: 110px;
     }
     header > nav {
-        flex-wrap: wrap-reverse;
-        gap: 0px;
+        gap: 10px;
+    }
+    header > nav > a {
+        font: normal bolder 0.95em var(--font3);
     }
     #BannerSobre {
         width: 90vw;
+    }
+    #Sobre > article > aside {
+        padding: 0px 0px 0px 15px;
+        width: 350px;   
+        height: 62px;
+    }  
+    #GatosAdotados {
+        padding: 0px 10px;
+    } 
+    #GatosAdotados > h1 {
+        font: normal bolder 2.75em var(--font3);
+    }
+    #GatosAdotados > h2 {
+        font: normal bolder 1.05em var(--font3);
     }
 }
