@@ -97,7 +97,7 @@
                 Se você quer adotar um gatinho, ou se precisa colocar um gato para adoção, este é o espaço certo para iniciar esse processo com carinho, responsabilidade e respeito.</p>
                 <h2>Estamos aqui para te ouvir e caminhar junto com você nessa jornada!</h2>
             </article>
-            <form action="">
+            <form action="Envio.php">
                 <p>
                     <label for="nome">
                         Nome: <br> <input type="text" name="nome" id="nome" placeholder="  Nome Completo Se Possível">
@@ -319,61 +319,74 @@
         }
         /*=====*//*=====*//*=====*/
         let bau = []
+        /*
+            bau[0] Nome 
+            bau[1] Idade
+            bau[2] Sexo
+            bau[3] Email 
+            bau[4] Situacao
+            bau[5] Objetivo
+            
+        */
         let ObjectDate = new Date()
         let anoatual = ObjectDate.getFullYear()
         let botao = document.getElementById('botao')
         botao.addEventListener('click', EnviarFormulario)
         function EnviarFormulario() {
-            let nome = document.getElementById('nome')
-            let nomevalue = nome.value
-            bau.push(`${nomevalue}`)
+            bau[0] = document.getElementById('nome').value
+            if (bau[0] == "") {
+                alert(`[ERRO] Nome Inválido [ERRO]`)
+                return
+            }
             /*=====*/
-            let nasc = document.getElementById('idade')
-            let nascvalue = Number(nasc.value)
-            let nasctamanho = String(nasc.value)
+            let nascvalue = Number(document.getElementById('idade').value)
+            let nasctamanho = String(document.getElementById('idade').value)
             if (nasctamanho.length >= 5 || nasctamanho.length <= 0 || anoatual - nascvalue <= 8 || anoatual - nascvalue >= 126) {
                 alert(`[ERRO] Idade Inválida [ERRO]`)
+                return
             } else {
-                bau.push(`${anoatual - nascvalue}`) 
+                bau[1] = (`${anoatual - nascvalue}`) 
             }
             /*=====*/
             let masc = document.getElementById('Masc')
             let femi = document.getElementById('Femi')
             if (masc.checked == false && femi.checked == false) {
                 alert(`[ERRO] Sexo Inválido [ERRO]`)
+                return
             } else if (masc.checked == true) {
-                bau.push(`Masculino`)
+                bau[2] = (`Masculino`)
             } else if (femi.checked == true) {
-                bau.push(`Feminino`)
+                bau[2] = (`Feminino`)
             }
             /*=====*/
-            let email = document.getElementById('email')
-            let emailvalue = email.value
-            bau.push(`${emailvalue}`)
+            bau[3] = document.getElementById('email').value
+            if (bau[3] == "") {
+                alert(`[ERRO] Email Inválido [ERRO]`)
+                return
+            }
             /*=====*/
-            let situacao = document.getElementById('situacao')
-            let sitacaovalue = String(situacao.value)
-            if (sitacaovalue.length >= 256 || sitacaovalue.length <= 0) {
+            bau[4] = String(document.getElementById('situacao').value)
+            if (bau[4].length >= 256 || bau[4].length <= 0) {
                 alert(`[ERRO] Breve Descrição Inválida [ERRO]`)
-            } else {
-                bau.push(`${sitacaovalue}`)
+                return
             }
             /*=====*/
             let op1 = document.getElementById('Op1')
             let op2 = document.getElementById('Op2')
             if (op1.selected == true && op2.selected == false) {
-                bau.push(`Desejo fazer uma adoção`)
+                bau[5] = `Desejo fazer uma adoção`
             } else if (op2.selected == true && op1.selected == false) {
-                bau.push(`Gostaria de fazer uma adoção`)
-            } 
+                bau[5] = `Desejo colocar um gato para adoção`
+            }   
             /*=====*/
             let finalizando = confirm(`Nome: ${bau[0]} \nIdade: ${bau[1]} \nSexo: ${bau[2]} \nEmail: ${bau[3]} \nSituação: ${bau[4]} \nObjetivo: ${bau[5]} \nAo verificar se seus dados salvos estão corretos, gostaria que os mesmos fossem enviados para a equipe da AmantesDosGatos?`)
             if (finalizando == true) {
                 alert(`Obrigado pela confiança, logo entraremos em contato. \nCaso seja apresentado uma demora significativa para nossa resposta, sinta-se a vontade para nos contatar através de outros meios (presente no final do site).`)
+                bau.length = 0
             } else {    
                 bau.length = 0
             }
-            /*É o seguinte, impeça que o código funcione caso os inputs estejam vazios e limpe todos os input caso ele confirme como sim a ultima escolha*/
+            /*É o seguinte, Dá um jeito de fazer o texto ser apagado quando o último confirm for true*/
         }
     </script>
 </body>
