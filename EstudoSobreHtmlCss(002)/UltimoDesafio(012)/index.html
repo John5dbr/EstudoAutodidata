@@ -129,8 +129,8 @@
                 <p>
                     Gostaria de <strong>doar</strong> ou <strong>adotar</strong>?
                     <select name="DoarOuAdotar" id="DoarOuAdotar">
-                        <option value="Adotar"><p>Desejo fazer uma adoção</p></option>
-                        <option value="Doar"><p>Desejo colocar um gato para adoção</p></option>
+                        <option id="Op1" value="Adotar"><p>Desejo fazer uma adoção</p></option>
+                        <option id="Op2" value="Doar"><p>Desejo colocar um gato para adoção</p></option>
                     </select>
                 </p>
                 <div id="botao">Enviar formulário</div>
@@ -318,6 +318,7 @@
             barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
         }
         /*=====*//*=====*//*=====*/
+        let bau = []
         let ObjectDate = new Date()
         let anoatual = ObjectDate.getFullYear()
         let botao = document.getElementById('botao')
@@ -325,6 +326,7 @@
         function EnviarFormulario() {
             let nome = document.getElementById('nome')
             let nomevalue = nome.value
+            bau.push(`${nomevalue}`)
             /*=====*/
             let nasc = document.getElementById('idade')
             let nascvalue = Number(nasc.value)
@@ -332,16 +334,46 @@
             if (nasctamanho.length >= 5 || nasctamanho.length <= 0 || anoatual - nascvalue <= 8 || anoatual - nascvalue >= 126) {
                 alert(`[ERRO] Idade Inválida [ERRO]`)
             } else {
-                /*Irei Providenciar*/
+                bau.push(`${anoatual - nascvalue}`) 
             }
             /*=====*/
             let masc = document.getElementById('Masc')
             let femi = document.getElementById('Femi')
             if (masc.checked == false && femi.checked == false) {
                 alert(`[ERRO] Sexo Inválido [ERRO]`)
-            } else {
-                /*Irei Providenciar*/
+            } else if (masc.checked == true) {
+                bau.push(`Masculino`)
+            } else if (femi.checked == true) {
+                bau.push(`Feminino`)
             }
+            /*=====*/
+            let email = document.getElementById('email')
+            let emailvalue = email.value
+            bau.push(`${emailvalue}`)
+            /*=====*/
+            let situacao = document.getElementById('situacao')
+            let sitacaovalue = String(situacao.value)
+            if (sitacaovalue.length >= 256 || sitacaovalue.length <= 0) {
+                alert(`[ERRO] Breve Descrição Inválida [ERRO]`)
+            } else {
+                bau.push(`${sitacaovalue}`)
+            }
+            /*=====*/
+            let op1 = document.getElementById('Op1')
+            let op2 = document.getElementById('Op2')
+            if (op1.selected == true && op2.selected == false) {
+                bau.push(`Desejo fazer uma adoção`)
+            } else if (op2.selected == true && op1.selected == false) {
+                bau.push(`Gostaria de fazer uma adoção`)
+            } 
+            /*=====*/
+            let finalizando = confirm(`Nome: ${bau[0]} \nIdade: ${bau[1]} \nSexo: ${bau[2]} \nEmail: ${bau[3]} \nSituação: ${bau[4]} \nObjetivo: ${bau[5]} \nAo verificar se seus dados salvos estão corretos, gostaria que os mesmos fossem enviados para a equipe da AmantesDosGatos?`)
+            if (finalizando == true) {
+                alert(`Obrigado pela confiança, logo entraremos em contato. \nCaso seja apresentado uma demora significativa para nossa resposta, sinta-se a vontade para nos contatar através de outros meios (presente no final do site).`)
+            } else {    
+                bau.length = 0
+            }
+            /*É o seguinte, impeça que o código funcione caso os inputs estejam vazios e limpe todos os input caso ele confirme como sim a ultima escolha*/
         }
     </script>
 </body>
