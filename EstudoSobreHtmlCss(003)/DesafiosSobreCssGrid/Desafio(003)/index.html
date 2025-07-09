@@ -1,1 +1,60 @@
-!
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerceiroExercícioSobreCssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: normal bold 1em 'arial';
+        }
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-rows: 1fr 8fr 1fr;
+            grid-template-areas: 
+            'header header header'
+            'aside main section'
+            'footer footer footer';
+            width: 100vw;
+            height: 100vh;
+            gap: 5px;
+            place-items: center center;
+        }
+        header {
+            background: #0fff5f;
+            grid-area: header;
+        }
+        aside { 
+            background: #0fc7ff;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;    
+        }
+        main {
+            background: #e7ff0f;
+            grid-area: main;
+        }
+        section {
+            background: #6422ff;
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;    
+        }
+        footer {
+            background: #ff8f0f;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="Item">Header</header>
+        <aside class="Item">Sidebar</aside>
+        <main class="Item">Main</main>
+        <section class="Item">Stats</section>
+        <footer class="Item">Footer</footer>
+    </div>
+</body>
+</html>
