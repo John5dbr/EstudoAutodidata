@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegundoExercícioSobreCssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: normal bold 1em 'arial';
+        }
+
+        body {
+            background: #2B2E56;
+            padding: 0.5vw;
+            width: 100%;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns:repeat(4 , minmax(90px, 1fr));
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            'd1 d2 d2 d3'
+            'd1 d4 d5 d8'
+            'd1 d6 d7 d8';
+            width: 99vw;
+            height: 97.50vh;  
+            gap: 10px;
+            justify-content: center;    
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .verde {
+            background: #6FBE4F;
+        }
+        .vermelho {
+            background: #EC3437;
+        }
+        .amarelo {
+            background: #FBB22F;
+        }
+        #d1 {
+            grid-area: d1;
+        }
+        #d2 {
+            grid-area: d2;
+        }
+        #d3 {
+            grid-area: d3;
+        }
+        #d4 {
+            grid-area: d4;
+        }
+        #d5 {
+            grid-area: d5;
+        }
+        #d6 {
+            grid-area: d6;
+        }
+        #d7 {
+            grid-area: d7;
+        }
+        #d8 {
+            grid-area: d8;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="d1" class="verde">
+            <p>D-1</p>
+        </div>
+        <div id="d2" class="verde">
+            <p>D-2</p>
+        </div>
+        <div id="d3" class="vermelho">
+            <p>D-3</p>
+        </div>
+        <div id="d4" class="amarelo">
+            <p>D-4</p>
+        </div>
+        <div id="d5" class="vermelho">
+            <p>D-5</p>
+        </div>
+        <div id="d6" class="vermelho">
+            <p>D-6</p>
+        </div>
+        <div id="d7" class="amarelo">
+            <p>D-7</p>
+        </div>
+        <div id="d8" class="verde">
+            <p>D-8</p>
+        </div>
+    </main>
+</body>
+</html>

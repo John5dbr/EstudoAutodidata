@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessãoDeConcentração</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gafata&display=swap');
+        
+        @font-face {
+            font-family: 'Digital';
+            src: url('Recursos/ds_digital/DS-DIGI.TTF');
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --font1: 'Gafata';
+            --font2: 'Digital';
+        }
+
+        body {
+            background: #31a2ff;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 15px 0px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.363);
+            color: white;
+            font: normal bolder 3em var(--font1);
+        }
+        main {
+            color: black;
+            font: normal bolder 3em var(--font1);
+            margin: 15px 0px;
+            padding: 20px 25px;
+            background: white;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.555);
+        }
+        main > h2 {
+            font: normal bolder 1em var(--font1);
+            margin: 10px 0px;
+        }
+        #Hour {
+            font: normal bolder 1em var(--font2);
+            margin: 10px 0px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #Botoes {
+            margin: 10px 0px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            width: 400px;
+        }
+        #Botoes > button {
+            max-width: 175px;
+            height: 35px;
+            padding: 5px 10px;
+        }
+        footer {
+            margin: 15px 0px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+            color: white;
+            font: normal bolder 1em var(--font1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sessão de Concentracão</h1>
+    <main>
+        <h2>Defina o tempo</h2>
+        <div id="Hour">
+            <p id="Hora">00</p>
+            <p id="Divisor">:</p>
+            <p id="Minuto">00</p>
+        </div>
+        <div id="Botoes">
+            <button id="+1H">+ 1 Hora</button>
+            <button id="-1H">- 1 Hora</button>
+            <button id="+1M">+ 1 Minuto</button>
+            <button id="-1M">- 1 Minuto</button>
+            <button id="Contar">Contar !</button>
+        </div>
+    </main>
+    <footer>Hoje é 08/07/2025 às 16:06... daqui dois dias é meu aniversário de 18 anos...</footer>
+    <script>
+        let hora = []
+        let minuto = []
+        let maishoras = document.getElementById('+1H')
+        maishoras.addEventListener('click', ClicouMaisHoras)
+        let menoshoras = document.getElementById('-1H') 
+        menoshoras.addEventListener('click', ClicouMenosHoras)
+        let maisminutos = document.getElementById('+1M')
+        maisminutos.addEventListener('click', ClicouMaisMinutos)
+        let menosminutos = document.getElementById('-1M')  
+        menosminutos.addEventListener('click', ClicouMenosMinutos)
+        let contar = document.getElementById('Contar')  
+        contar.addEventListener('click', ClicouContar)
+        function ClicouMaisHoras() {
+            alert(`+ 1 h`)
+        }
+        function ClicouMenosHoras() {
+            alert(`- 1 h`)
+        }
+        function ClicouMaisMinutos() {
+            alert(`+ 1 m`)
+        }
+        function ClicouMenosMinutos() {
+            alert(`- 1 m`)
+        }
+        function ClicouContar() {
+            alert(`Contar!`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeiroExercícioCssGrid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: normal normal 1em 'arial';
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 11.89% repeat(3, 29%);
+            grid-template-rows: 8.99% 43.39% 33.69% 10% ;
+            grid-template-areas:
+            'header header header header'
+            'aside main main main'
+            'aside section1 section2 section3'
+            'footer footer footer footer';
+            gap: 5px;
+        }
+        .Item {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+        #header {
+            grid-area: header;
+            background: #A7FEEB;
+        }
+        #aside {
+            grid-area: aside;
+            background: #17FFFF;
+        }
+        #main {
+            grid-area: main;
+            background: #84FEFF;
+        }
+        #section1 {
+            grid-area: section1;
+            background: #70FFD2;
+        }
+        #section2 {
+            grid-area: section2;    
+            background: #64FFDB;
+        }
+        #section3 {
+            grid-area: section3;                     
+            background: #73FEB9;
+        }
+        #footer {
+            grid-area: footer;
+            background: #1DE9B6;
+        }
+        @media (max-width: 700px) {
+            body {
+                grid-template-columns: repeat(4, 23.46vw );
+                grid-template-rows: 100px 75px 350px 150px 150px 150px 50px;
+                grid-template-areas:
+                'header header header header'
+                'aside aside aside aside'
+                'main main main main'
+                'section1 section1 section1 section1' 
+                'section2 section2 section2 section2' 
+                'section3 section3 section3 section3'
+                'footer footer footer footer';
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="Item" >Header</header>
+    <aside id="aside" class="Item" >SideBar</aside>
+    <main id="main" class="Item" >Main</main>
+    <section id="section1" class="Item" class="section">Content 1</section>
+    <section id="section2" class="Item" class="section">Content 2</section>
+    <section id="section3" class="Item" class="section">Content 3</section>
+    <footer id="footer" class="Item" >Footer</footer>
+</body>
+</html>
