@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font: normal bold 1em 'Arial';
+    text-shadow: 1px 2px 0px black;
+    color: white;
+}
+#Conteiner {
+    display: grid;
+    grid-template-columns: 1fr minmax(500px, 1fr) 1fr;
+    grid-template-rows:  1fr 3.5fr 1.5fr repeat(3, 1fr);
+    grid-template-areas: 
+    'header     header     header   '
+    '.          main       .        '
+    '.          articles   .        '
+    '.          contentss  .        '
+    'aside      aside      .        '   
+    'footer     footer     footer   ';   
+    width: 100vw;   
+    height: 100vh;
+    gap: 5px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #84CBE8;
+    grid-area: header;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3BB371;
+    grid-area: main;
+}
+#ConjuntoDeArticles {
+    display: flex;
+    flex-flow: row nowrap;
+    grid-area: articles;
+    gap: 5px;
+}
+#ConjuntoDeArticles > article {
+    height: 100%;
+    width: 95%;
+    background: #FF8050;
+}
+#ConjuntoDeArticles > article > p {
+    text-align: center;
+}
+#Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4067DF;
+    grid-area: contentss;
+}
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #BA8C1A;
+    grid-area: aside;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #84CBE8;
+    grid-area: footer;
+}
+
+@media (max-width: 500px) {
+    #Conteiner {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr 3.5fr 2fr repeat(3, 1fr);
+        grid-template-areas: 
+        'header    '
+        'main      '
+        'articles  '
+        'contentss '
+        'aside     '   
+        'footer    ';   
+    }
+    #ConjuntoDeArticles {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30% 30% 30%;
+        justify-items: center;
+    }
+}
