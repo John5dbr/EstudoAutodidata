@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Recursos/Logo.png" type="image/x-icon">
     <title>QuartoExercícioSobreCssGrid</title>
 </head>
 <body>
+    <div id="Menu">
+        <div id="LogoMenu">
+            <h1>BarBeaRia</h1>
+            <h2>Tratto</h2>
+        </div>
+        <nav>
+            <a href="">Início</a>
+            <a href="">Quem Somos</a>
+            <a href="">Serviços</a>
+            <a href="">Localização</a>
+        </nav>
+        <aside>
+            <a href="">
+                <img src="Recursos/LogoInsta.png" alt="LogoMarcaInsta">
+            </a>
+            <a href="">
+                <img src="Recursos/LogoFace.png" alt="LogoMarcaFace">
+            </a>
+            <a href="">
+                <img src="Recursos/LogoIn.png" alt="LogoMarcaIn">
+            </a>
+            <a href="" style="margin: 0px 40px 0px 0px;">
+                <img src="Recursos/LogoX.png" alt="LogoMarcaX">
+            </a>
+            <a class="Contatar" href="">Contatar</a>
+        </aside>
+    </div>
     <header>
         <div id="Logo">
             <h1>BarBeaRia</h1>
@@ -19,14 +47,57 @@
             <a href="">Localização</a>
         </nav>
         <aside>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="">
+                <img src="Recursos/LogoInsta.png" alt="LogoMarcaInsta">
+            </a>
+            <a href="">
+                <img src="Recursos/LogoFace.png" alt="LogoMarcaFace">
+            </a>
+            <a href="">
+                <img src="Recursos/LogoIn.png" alt="LogoMarcaIn">
+            </a>
+            <a href="" style="margin: 0px 40px 0px 0px;">
+                <img src="Recursos/LogoX.png" alt="LogoMarcaX">
+            </a>
+            <a class="Contatar" href="">Contatar</a>
         </aside>
-        <div id="Contatar">
-            <a href="">Contatar</a>
-        </div>
     </header>
+    <div id="MenuBtn" onclick="Menu()"></div>
+    <main>
+        <section id="Introducao">
+            <h1 id="Barbearia">BARBEARIA</h1>
+            <h1 id="Profissional">PROFISSIONAL</h1>
+            <p id="Text1">Estilo e qualidade em cada corte de cabelo e barba.</p>
+            <p id="Text2">Agende seu horário!</p>
+            <section id="Selecao">
+                <div id="btn1">
+                    <a href="">
+                        <p>Agendar Horários</p>
+                    </a>
+                </div>
+                <div id="btn2">
+                    <a href="">
+                        <p>Conhecer</p>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script>
+        let cont = 1;
+        function Menu() {
+            let menu = document.getElementById('Menu');
+            let logo = document.getElementById('Logo');
+            if (cont % 2 == 1) {
+                menu.style = 'transform: translateY(0%);'
+                logo.style = 'position: fixed; left: 20px;'
+                cont++
+            } else if (cont % 2 == 0)  {
+                menu.style = 'transform: translateY(-100%);'
+                logo.style = 'position: static;'
+                cont++
+            }
+        }
+    </script>
 </body>
 </html>
