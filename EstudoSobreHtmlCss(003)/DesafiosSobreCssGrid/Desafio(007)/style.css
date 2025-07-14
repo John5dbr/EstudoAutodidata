@@ -1,0 +1,71 @@
+@charset "UFT-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#Conteiner {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [l1] minmax(178px, 1fr) [l2] 1fr [l3] 2.5fr [l4] 1.5fr [l5];
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    'Meta  Title Title Copy2'
+    'Copy1 Copy1 Copy1 Copy2'
+    'Media Media Media Media'
+    'Aside Aside .     .    ';
+    gap: 5px;
+}
+figure {
+    grid-area: Meta;
+    background: #D3D3D3;
+}
+header {
+    grid-area: Title; 
+    background: #00CED0;
+}
+#Sect1 {
+    grid-area: Copy1;
+    background: #4168E1;
+}
+#Sect2 {
+    grid-area: Copy2;
+    background: #BC8F8E;
+}
+picture {
+    grid-area: Media;
+    background: #F0E68B;
+}
+aside {
+    grid-area: Aside;
+    background: #E47248;
+}
+
+@media (max-width: 678px) {
+    #Conteiner {
+        grid-template-columns: [l1] minmax(178px, 1fr) [l2] 1fr [l3] 2.5fr [l4] 2.5fr [l5] ;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        'Meta  Title Title Title'
+        'Copy1 Copy1 Copy1 Copy1'
+        'Copy2 Copy2 Copy2 Copy2'
+        'Media Media Media Aside';
+    }
+}
+
+@media (max-width: 500px) {
+    #Conteiner {
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        'Title Title Title Title'
+        'Meta  Meta  Meta  Meta'
+        'Copy1 Copy1 Copy1 Copy1'
+        'Copy2 Copy2 Copy2 Copy2'
+        'Media Media Media Media'
+        'Aside Aside Aside Aside'
+        '.     .     .     .    ';
+    }
+}
