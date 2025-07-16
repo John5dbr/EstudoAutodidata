@@ -53,9 +53,14 @@
             width: 100%;
             border-bottom: 1px solid black;
         }
+        p:nth-child(3) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 5px;
+        }
         button {
             width: 150px;
-            margin: 10px 0px 10px 0px;
         }
         #result {
             display: flex;
@@ -63,9 +68,6 @@
             justify-content: center;
             align-items: center;
             margin: 15px 0px 0px 0px;
-        }
-        #result > div {
-            margin: 5px 0px;
         }
         #resp {
             font-weight: bolder;
@@ -92,6 +94,9 @@
                 <button id="botao2">
                     Número De Alunos
                 </button>
+                <button id="botao3">
+                    Apagar Aluno(a)
+                </button>
             </p>
         </section>
         <section id="result">
@@ -100,27 +105,36 @@
         </section>
     </main>
     <script>    
+        const dados = [];
         let aluno = [];
-        let cont = 0;
-        let botao = document.getElementById('botao1');
-        botao.addEventListener('click', Click) 
-        function Click() {
+        let botao1 = document.getElementById('botao1');
+        botao1.addEventListener('click', Click1) 
+        function Click1() {
             const alunoS = document.getElementById('alunos');
             let alunOA = document.createElement('option');
             /*==============*/
-            let nome = document.getElementById('nome');
-            let NMmsm = nome.value
+            let nome = document.getElementById('nome').value;
+            window.alert(`${nome}`)
             let sexoM = document.getElementById('Masc');
             /*==============*/
             alunoS.appendChild(alunOA)
             if (sexoM.checked == true) {
-                aluno.push(NMmsm, "Masculino")
-                alunOA.textContent += `Aluno: ${NMmsm} | Sexo: Masculino`
+                aluno.push(nome, "Masculino")
+                alunOA.innerHTML += `Aluno: ${nome} | Sexo: Masculino`
             } else {
-                aluno.push(NMmsm, "Feminino")
-                alunOA.innerHTML += `Aluna: ${NMmsm} | Sexo: Feminino`
+                aluno.push(nome, "Feminino")
+                alunOA.innerHTML += `Aluna: ${nome} | Sexo: Feminino`
             }
             /*Falta Melhorar alguns detalhes...*/
+        }
+        let botao3 = document.getElementById('botao3');
+        botao3.addEventListener('click', Click3) 
+        function Click3() {
+            for (let cont = 0 ; (cont < aluno.length) ; cont++) {
+                if (alunOA[cont].checked == true) {
+                    aluno.splice(cont, 2)
+                }
+            }
         }
     </script>
 </body>

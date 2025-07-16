@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Recursos/Lato/Lato-Black.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Recursos/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Recursos/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+:root {
+    --color1: white;
+    --color2: black;
+    --color3: #BA9674;
+    --font1: 'Lato';
+    --font2: 'Roboto';
+    --font3: 'Montserrat';
+}
+
+/*========================================*/
+
+header {
+    background: var(--color2);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 85px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #494949;
+}
+
+header > figure > img {
+    width: 150px;
+}
+header > nav {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+header > nav > a {
+    margin: 0px 10px;
+    padding: 5px 0px;
+    color: var(--color1);
+    font: normal normal 1em var(--font3);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color2);
+    transition: all 0.25s ease-out 0s;
+}
+header > nav > a:hover {
+    border-bottom: 2px solid var(--color1);
+}
+header > nav > a:nth-child(2) {
+    display: none;
+}
+header > aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+header > aside > a > img {
+    margin: 0px 5px;
+    width: 40px;
+    height: 40px;
+}   
+
+/*========================================*/
+
+#Home {
+    width: 100%;
+    padding: 166px 0px 0px 0px;
+    background: darkgrey url('Recursos/FundoHome.jpg') no-repeat center center / cover;
+    box-shadow: inset 0px -350px 1000px black;
+    display: grid;
+    grid-template-columns: 0.8fr 5fr 1fr;
+    grid-template-rows: 1fr 0.75fr 1fr;
+    gap: 10px;
+}
+
+#Home > * {
+    color: var(--color1);
+    text-shadow: 2px 2px 5px black;
+}
+#Home > h1 {
+    font: normal bold 2.75em var(--font3);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    
+}
+#Home > p {
+    font: normal normal 1em var(--font3);
+    line-height: 24px;
+    grid-column: 2 / 3;    
+    grid-row: 2 / 3;
+}
+#BotaoHome {
+    font: normal normal 1em var(--font3);
+    background: var(--color3);
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 200px;
+    box-shadow: 5px 5px 10px black;
+    transition: all 0.25s ease-out 0s;
+    margin: 25px 0px 0px 0px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+#BotaoHome > a {
+    color: white;
+    text-decoration: none;
+}
+#BotaoHome:hover { 
+    transform: scale(105%);
+    box-shadow: 5px 5px 25px black;
+}
+
+/*========================================*/
+
+#Sobre {
+    color: white;
+    padding: 35px 0px;
+    background: black;
+    box-shadow: inset 0px -150px 1000px black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
+    justify-items:center;
+}
+#Sobre > h1 {
+    font: normal bold 2em var(--font3);
+    text-align: center;
+}
+#Sobre > article {
+    background: #111319;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    width: 900px;
+}
+#Sobre > article > figure {
+    background: darkgray url('Recursos/FundoSobre.jpg') no-repeat center center / cover;
+}
+#ConteudoSobre {
+    padding: 45px 20px;
+}
+#ConteudoSobre > h2 {
+    font: normal bold 1.5em var(--font3);
+}
+#ConteudoSobre > p {
+    font: normal normal 0.9em var(--font3);
+}
+#BotaoSobre {
+    font: normal normal 1em var(--font3);
+    background: var(--color3);
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 150px;
+}
+#BotaoSobre > a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+}
+
+/*========================================*/
+
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 1.5fr 2fr 0.75fr;
+    }
+    header > nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+    header > aside > a > img {
+        width: 35px;
+        height: 35px;
+    }
+    #Sobre > article > figure {
+        height: 359px;
+    }
+    #Sobre > article {
+        background: #111319;
+        display: flex;
+        flex-flow: column nowrap;   
+        width: 90%;
+    }
+}
