@@ -180,6 +180,10 @@ header > aside > a > img {
     height: 35px;
     width: 150px;
 }
+#BotaoSobre:hover {
+    transform: scale(115%);
+    transition: all 0.3s ease-out 0s;
+}
 #BotaoSobre > a {
     color: white;
     text-decoration: none;
@@ -221,6 +225,20 @@ header > aside > a > img {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    transition: all 0.25s ease-out 0s;
+}
+#OpcoesMenu > aside {
+    padding: 10px 0px 0px 0px;
+    color: white;
+    min-width: 275px;
+    min-height: 300px;
+    border: 1.5px solid #494949;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-out 0s;
 }
 #OpcoesMenu > aside > h2 {
     font: normal bold 1.25em var(--font3);
@@ -236,6 +254,11 @@ header > aside > a > img {
     padding: 10px 25px;
     font: normal normal 1em var(--font3);
     background: #BA9674;
+    transition: all 0.1s ease-out 0s;
+}
+.BotaoMenu:hover {
+    transform: scale(110%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.411);
 }
 .BotaoMenu > a {
     color: white;

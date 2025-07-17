@@ -54,41 +54,41 @@
         <section id="Menu">
             <h1>NOSSO <strong style="color: #BA9674;">MENU</strong></h1>
             <section id="OpcoesMenu">
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Café Coado</h2>
-                    <p>$12.49</p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe1">Café Coado</h2>
+                    <p id="Preco1">$12.49</p>
+                    <div class="BotaoMenu"><a id="pBotao1" href="">Adicione ao carrinho</a></div>
                 </aside>
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Expresso Inicial</h2>
-                    <p>$8.49</p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe2">Expresso Inicial</h2>
+                    <p id="Preco2">$8.49</p>
+                    <div class="BotaoMenu"><a id="pBotao2" href="">Adicione ao carrinho</a></div>
                 </aside>
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Latte Logic</h2>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe3">Latte Logic</h2>
+                    <p id="Preco3">$15.99 <del>$20.99</del></p>
+                    <div class="BotaoMenu"><a id="pBotao3" href="">Adicione ao carrinho</a></div>
                 </aside>
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Café Debugado</h2>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe4">Café Debugado</h2>
+                    <p id="Preco4">$15.99 <del>$20.99</del></p>
+                    <div class="BotaoMenu"><a id="pBotao4" href="">Adicione ao carrinho</a></div>
                 </aside>
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Mocha Compiler</h2>
-                    <p>$9.50 <del>$14.99</del></p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe5">Mocha Compiler</h2>
+                    <p id="Preco5">$9.50 <del>$14.99</del></p>
+                    <div class="BotaoMenu"><a id="pBotao5" href="">Adicione ao carrinho</a></div>
                 </aside>
-                <aside>
+                <aside class="CardsMenu">
                     <figure></figure>
-                    <h2>Break do Dev</h2>
-                    <p>R$ 10,00 <del>$12.50</del></p>
-                    <div class="BotaoMenu"><a href="">Adicione ao carrinho</a></div>
+                    <h2 id="NomeCafe6">Break do Dev</h2>
+                    <p id="Preco6">R$ 10,00 <del>$12.50</del></p>
+                    <div class="BotaoMenu"><a id="pBotao6" href="">Adicione ao carrinho</a></div>
                 </aside>
             </section>
         </section>
@@ -139,5 +139,140 @@
         </a>
         <p></p>
     </footer>
+    <script>
+        let aside = document.getElementsByClassName('CardsMenu');
+
+        /*===============================*/
+
+        aside[0].addEventListener('mouseenter', Entrou1)
+        aside[1].addEventListener('mouseenter', Entrou2)
+        aside[2].addEventListener('mouseenter', Entrou3)
+        aside[3].addEventListener('mouseenter', Entrou4)
+        aside[4].addEventListener('mouseenter', Entrou5)
+        aside[5].addEventListener('mouseenter', Entrou6)
+
+        /*===============================*/
+
+        aside[0].addEventListener('mouseout', Saiu1)
+        aside[3].addEventListener('mouseout', Saiu4)
+        aside[1].addEventListener('mouseout', Saiu2)
+        aside[5].addEventListener('mouseout', Saiu6)
+        aside[2].addEventListener('mouseout', Saiu3)
+        aside[4].addEventListener('mouseout', Saiu5)
+
+        /*===============================*/
+        
+        function Entrou1() { 
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;`
+            let h1 = document.getElementById('NomeCafe1');
+            let p = document.getElementById('Preco1');
+            let pBotao = document.getElementById('pBotao1');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+        function Entrou2() {
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;` 
+            let h1 = document.getElementById('NomeCafe2');
+            let p = document.getElementById('Preco2');
+            let pBotao = document.getElementById('pBotao2');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+        function Entrou3() {
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;` 
+            let h1 = document.getElementById('NomeCafe3');
+            let p = document.getElementById('Preco3');
+            let pBotao = document.getElementById('pBotao3');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+        function Entrou4() { 
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;`
+            let h1 = document.getElementById('NomeCafe4');
+            let p = document.getElementById('Preco4');
+            let pBotao = document.getElementById('pBotao4');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+        function Entrou5() {
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;` 
+            let h1 = document.getElementById('NomeCafe5');
+            let p = document.getElementById('Preco5');
+            let pBotao = document.getElementById('pBotao5');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+        function Entrou6() {
+            this.style = `background: white; box-shadow: inset 0px 0px 25px gray;` 
+            let h1 = document.getElementById('NomeCafe6');
+            let p = document.getElementById('Preco6');
+            let pBotao = document.getElementById('pBotao6');
+            h1.style = `color: black;`
+            p.style = `color: black;`
+            pBotao.style = `color: black;`
+        }
+
+        /*===============================*/
+
+        function Saiu1() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe1');
+            let p = document.getElementById('Preco1');
+            let pBotao = document.getElementById('pBotao1');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+        function Saiu2() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe2');
+            let p = document.getElementById('Preco2');
+            let pBotao = document.getElementById('pBotao2');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+        function Saiu3() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe3');
+            let p = document.getElementById('Preco3');
+            let pBotao = document.getElementById('pBotao3');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+        function Saiu4() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe4');
+            let p = document.getElementById('Preco4');
+            let pBotao = document.getElementById('pBotao4');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+        function Saiu5() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe5');
+            let p = document.getElementById('Preco5');
+            let pBotao = document.getElementById('pBotao5');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+        function Saiu6() {
+            this.style = `background: rgba(0, 0, 0, 0); box-shadow: 0px 0px 0px black;`
+            let h1 = document.getElementById('NomeCafe6');
+            let p = document.getElementById('Preco6');
+            let pBotao = document.getElementById('pBotao6');
+            h1.style = `color: white;`
+            p.style = `color: white;`
+            pBotao.style = `color: white;`
+        }
+    </script>
 </body>
 </html>
