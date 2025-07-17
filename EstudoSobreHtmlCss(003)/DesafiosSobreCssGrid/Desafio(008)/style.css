@@ -13,17 +13,21 @@
 @font-face {
     font-family: 'Roboto';
     src: url('Recursos/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf');
-    font-style: normal;
 }
 @font-face {
     font-family: 'Montserrat';
     src: url('Recursos/Montserrat/Montserrat-VariableFont_wght.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --color1: white;
     --color2: black;
     --color3: #BA9674;
+    --color4: #111319; 
     --font1: 'Lato';
     --font2: 'Roboto';
     --font3: 'Montserrat';
@@ -150,7 +154,7 @@ header > aside > a > img {
     text-align: center;
 }
 #Sobre > article {
-    background: #111319;
+    background: var(--color4);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
@@ -184,7 +188,222 @@ header > aside > a > img {
 
 /*========================================*/
 
-@media (max-width: 900px) {
+#Menu {
+    background: var(--color2);
+    padding: 25px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 105px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+#Menu > h1 {
+    color: var(--color1);
+    font: normal bold 2em var(--font3);
+    text-align: center;
+}   
+#OpcoesMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+} 
+#OpcoesMenu > aside {
+    padding: 10px 0px 0px 0px;
+    color: white;
+    min-width: 275px;
+    min-height: 300px;
+    border: 1.5px solid #494949;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#OpcoesMenu > aside > h2 {
+    font: normal bold 1.25em var(--font3);
+}
+#OpcoesMenu > aside > p {
+    font: normal normal 1em var(--font3);
+}
+#OpcoesMenu > aside > p > del {
+    font: italic normal 0.8em var(--font3);
+}
+.BotaoMenu {
+    margin: 10px 0px;
+    padding: 10px 25px;
+    font: normal normal 1em var(--font3);
+    background: #BA9674;
+}
+.BotaoMenu > a {
+    color: white;
+    text-decoration: none;
+}
+#OpcoesMenu > aside > figure {
+    margin: 0px 0px 10px 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+#OpcoesMenu > aside:nth-child(1) > figure {
+    background: black url('Recursos/Card1.jpg') no-repeat center center / cover;
+}
+#OpcoesMenu > aside:nth-child(2) > figure {
+    background: black url('Recursos/Card2.jpg') no-repeat center center / cover;
+}
+#OpcoesMenu > aside:nth-child(3) > figure {
+    background: black url('Recursos/Card3.jpg') no-repeat center center / cover;
+}
+#OpcoesMenu > aside:nth-child(4) > figure {
+    background: black url('Recursos/Card4.jpg') no-repeat center center / cover;
+}
+#OpcoesMenu > aside:nth-child(5) > figure {
+    background: black url('Recursos/Card5.jpg') no-repeat center center / cover;
+}
+#OpcoesMenu > aside:nth-child(6) > figure {
+    background: black url('Recursos/Card6.jpg') no-repeat center center / cover;
+}
+
+/*========================================*/
+
+#Avaliacoes {
+    padding: 25px 0px 50px 0px;
+    color: white;
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr; 
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#Avaliacoes > h1 {
+    color: var(--color1);
+    font: normal bold 2em var(--font3);
+    text-align: center;
+}
+#Clientes { 
+    margin: 25px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; 
+    gap: 10px;
+}
+#Clientes > aside {
+    width: 280px;
+    padding: 20px 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #494949;
+}
+#Clientes > aside > h2 {
+    font: normal normal 1.25em var(--font3);
+    margin: 0px 0px 5px;
+} 
+#Clientes > aside > p {
+    text-align: center;
+    font: normal normal 0.9em var(--font3);
+    margin: 0px 0px 20px;
+} 
+.Aspas {
+    margin: 0px 0px 20px;
+    height: 100px;
+    width: 150px;
+    background: black url('Recursos/Aspas.png') no-repeat center center / cover;
+}
+#Clientes > aside > img {
+    border-radius: 100px;
+    width: 125px;
+    margin: 0px 0px 10px;
+}
+.Nota {
+    height: 50px;
+    width: 150px;
+    background: rgb(0, 0, 0) url('Recursos/Notas.png') no-repeat center center / contain;
+}
+
+/*========================================*/
+
+#Endereco {
+    padding: 25px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 360px;
+    background: black;
+}
+#Endereco > h1 {
+    color: var(--color1);
+    font: normal bold 2em var(--font3);
+    text-align: center;
+}
+#Local {
+    position: relative;
+}
+#Faixa {
+    background: #111319;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+#IframeLocal {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border: 20px solid #111319;
+}
+
+/*========================================*/
+
+footer {
+    padding: 0px 0px 25px 0px;
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 0.75fr) 4fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--color2);
+} 
+footer > a {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    transition: all 0.3s ease-out 0s;
+}
+footer > a:hover {
+    background: var(--color3);
+}
+footer > a > figure {
+    height: 35px;
+    width: 35px;
+}
+footer > a:nth-child(2) > figure {
+    background: rgba(0, 0, 0, 0) url('Recursos/IconInsta.webp') no-repeat center center / cover;
+}
+footer > a:nth-child(3) > figure {
+    background: rgba(0, 0, 0, 0) url('Recursos/IconFace.webp') no-repeat center center / cover;
+}
+footer > a:nth-child(4) > figure {
+    background: rgba(0, 0, 0, 0) url('Recursos/IconTwitter.png') no-repeat center center / cover;
+}
+/*========================================*/
+
+@media (max-width: 950px) {
+
     header {
         grid-template-columns: 1.5fr 2fr 0.75fr;
     }
@@ -198,6 +417,9 @@ header > aside > a > img {
         width: 35px;
         height: 35px;
     }
+
+    /*========================================*/
+
     #Sobre > article > figure {
         height: 359px;
     }
@@ -206,5 +428,63 @@ header > aside > a > img {
         display: flex;
         flex-flow: column nowrap;   
         width: 90%;
+    }
+
+    /*========================================*/
+
+    #OpcoesMenu {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    /*========================================*/
+
+    #Clientes {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #Clientes > aside:nth-child(3) {
+        justify-self: center;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #OpcoesMenu {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    /*========================================*/
+
+    #Clientes {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #Clientes > aside:nth-child(3) {
+        grid-column: 1 / 2;
+    }
+
+    /*========================================*/
+
+    #Endereco {
+        grid-template-rows: 50px 260px;
+    }
+    #IframeLocal {
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        border: 20px solid #111319;
+    }
+    
+    /*========================================*/
+
+    footer {
+        gap: 20px;
     }
 }
