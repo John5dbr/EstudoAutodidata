@@ -240,6 +240,15 @@ header > aside > a > img {
     gap: 5px;
     transition: all 0.3s ease-out 0s;
 }
+#OpcoesMenu > aside:hover {
+    background: white;
+}
+#OpcoesMenu > aside:hover > * {
+    color: black;
+}
+#OpcoesMenu > aside:hover > div > a {
+    color: black;
+}
 #OpcoesMenu > aside > h2 {
     font: normal bold 1.25em var(--font3);
 }
