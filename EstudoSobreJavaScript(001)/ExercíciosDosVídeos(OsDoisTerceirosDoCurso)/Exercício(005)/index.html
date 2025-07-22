@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muitos Números</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1em 'Quicksand', sans-serif;
+        }
+
+        /*===========*/
+
+        body {
+            padding: 25px 0px 0px 0px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            background: #3E86D9;
+        }
+        header {
+            font: normal bold 2.5em 'Quicksand', sans-serif;
+            color: white;
+            margin: 0px 0px 25px 0px;
+        }
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: white;
+            padding: 25px 25px 25px 25px;
+            height: 460px;
+            width: 450px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.397);
+        } 
+        #form {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0px 0px 25px 0px;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        input {
+            width: 200px;
+        }
+        #SemQuebrarLinha {
+            width: 100%;
+            margin: 20px 0px 20px 0px;
+        }
+        button {
+            padding: 2px 10px;
+        }
+        select {
+            height: 30px;
+            width: 100%;
+        }
+        #result {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0px 0px 0px;
+        } 
+    </style>
+</head>
+<body>
+    <header>Analisador de Números Númericos</header>
+    <main>
+        <section id="form">
+            <label for="number">
+                Número (entre 1 e 100): <input type="number" name="number" id="number" placeholder="Adicione algum número" >
+            </label>
+            <div id="SemQuebrarLinha">
+                <button id="Botao1">Adicionar</button>
+                <button id="Botao2">Resultado</button>
+            </div>
+            <select name="listanumber" id="listanumber"></select>
+        </section>
+        <section id="result">
+        </section>
+    </main>
+    <script>
+        let numero = []
+        let botao1 = document.getElementById(`Botao1`)
+        botao1.addEventListener('click', Clicou1)
+        function Clicou1() {
+            let n = Number(document.getElementById('number').value)
+            if (n <= 0 || n >= 101) {
+                window.alert(`[ERRO] Número Abaixo ou Acima do Permitido [ERRO]`)
+            } else if (numero.indexOf(n) != -1) {
+                window.alert(`[ERRO] Número Repetido [ERRO]`)
+            } else {   
+                numero.push(n)
+                window.alert(`${numero.length} - ${n} - ${numero}`)
+                /*==============================================*/
+                let select = document.getElementById('listanumber')
+                let elemento = document.createElement('option')
+                elemento.innerHTML = `${numero.length}° Número selecionado: ${n}`
+                select.appendChild(elemento)
+            }
+        }
+        let botao2 = document.getElementById(`Botao2`)
+        botao2.addEventListener('click', Clicou2)
+        function Clicou2() {
+            window.alert(`[ERRO] Gay Avistado [ERRO]`)
+        }
+    </script>
+</body>
+</html>
