@@ -72,6 +72,9 @@
             align-items: center;
             margin: 15px 0px 0px 0px;
         } 
+        strong {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -88,22 +91,23 @@
             <select name="listanumber" id="listanumber"></select>
         </section>
         <section id="result">
+            <p id="p"></p>
         </section>
     </main>
     <script>
-        let numero = []
-        let botao1 = document.getElementById(`Botao1`)
+        let numero = [];
+        let botao1 = document.getElementById(`Botao1`);
         botao1.addEventListener('click', Clicou1)
         function Clicou1() {
             let n = Number(document.getElementById('number').value)
+            /* Sessão de Ifs para validação */
             if (n <= 0 || n >= 101) {
                 window.alert(`[ERRO] Número Abaixo ou Acima do Permitido [ERRO]`)
             } else if (numero.indexOf(n) != -1) {
                 window.alert(`[ERRO] Número Repetido [ERRO]`)
             } else {   
+                /* Valores totalmente aceitos */
                 numero.push(n)
-                window.alert(`${numero.length} - ${n} - ${numero}`)
-                /*==============================================*/
                 let select = document.getElementById('listanumber')
                 let elemento = document.createElement('option')
                 elemento.innerHTML = `${numero.length}° Número selecionado: ${n}`
@@ -113,7 +117,28 @@
         let botao2 = document.getElementById(`Botao2`)
         botao2.addEventListener('click', Clicou2)
         function Clicou2() {
-            window.alert(`[ERRO] Gay Avistado [ERRO]`)
+            let text = document.querySelector('p');
+            let maiorNumero = 0;
+            let menorNumero = 0;
+            let somaDosValores = 0;
+            let mediaDosValores = 0;
+            let valorPar = 0;
+            let valorImpar = 0; 
+            for (let cont = 0 ; cont < numero.length ; cont++) {
+                somaDosValores += numero[cont]
+                if (numero[cont] >= numero[cont - 1] ) {
+                    maiorNumero = numero[cont] /* Há um bug por aqui!!! */
+                } else {
+                    menorNumero = numero[cont]
+                }
+            }
+            mediaDosValores = somaDosValores / numero.length
+            text.innerHTML = 
+            (`Ao todo, temos <strong>${numero.length}</strong> números cadastrados. <br> <br>
+              O maior valor informado foi <strong>${maiorNumero}</strong>. <br> <br>
+              O menor valor informado foi <strong>${menorNumero}</strong>. <br> <br>
+              Somando todos os valores temos <strong>${somaDosValores}</strong>. <br> <br>
+              A média dos valores digitados é <strong>${mediaDosValores}</strong>.`)
         }
     </script>
 </body>
