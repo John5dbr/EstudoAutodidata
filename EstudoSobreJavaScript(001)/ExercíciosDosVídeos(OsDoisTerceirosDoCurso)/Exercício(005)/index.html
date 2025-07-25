@@ -28,6 +28,7 @@
         header {
             font: normal bold 2.5em 'Quicksand', sans-serif;
             color: white;
+            text-align: center;
             margin: 0px 0px 25px 0px;
         }
         main {
@@ -37,7 +38,7 @@
             align-items: flex-start;
             background-color: white;
             padding: 25px 25px 25px 25px;
-            height: 460px;
+            height: 480px;
             width: 450px;
             border-radius: 10px;
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.397);
@@ -95,6 +96,8 @@
         </section>
     </main>
     <script>
+        let valorPar = [];
+        let valorImpar = [];
         let numero = [];
         let botao1 = document.getElementById(`Botao1`);
         botao1.addEventListener('click', Clicou1)
@@ -118,12 +121,10 @@
         botao2.addEventListener('click', Clicou2)
         function Clicou2() {
             let text = document.querySelector('p');
-            let maiorNumero = 0;
+            let maiorNumero = numero[numero.length - 1];
             let menorNumero = 0;
             let somaDosValores = 0;
-            let mediaDosValores = 0;
-            let valorPar = 0;
-            let valorImpar = 0; 
+            let mediaDosValores = 0; 
             for (let cont = 0 ; cont < numero.length ; cont++) {
                 somaDosValores += numero[cont]
                 if (numero[cont] >= numero[cont - 1] ) {
@@ -138,7 +139,9 @@
               O maior valor informado foi <strong>${maiorNumero}</strong>. <br> <br>
               O menor valor informado foi <strong>${menorNumero}</strong>. <br> <br>
               Somando todos os valores temos <strong>${somaDosValores}</strong>. <br> <br>
-              A média dos valores digitados é <strong>${mediaDosValores}</strong>.`)
+              A média dos valores digitados é <strong>${mediaDosValores}</strong>. <br> <br>
+              Consta-se que os valores pares são os <strong>${numero.filter( (numero) => { return numero % 2 == 0 } )}</strong>. <br> <br>
+              Consta-se que os valores impares são os <strong>${numero.filter( (numero) => { return numero % 2 == 1 } )}</strong>.`)
         }
     </script>
 </body>
