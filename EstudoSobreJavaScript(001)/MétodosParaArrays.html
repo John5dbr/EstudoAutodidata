@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MétodosJavaScript</title>
+</head>
+<body>
+    <script>
+        const numero = []
+        for ( let cont = 1 ; ( cont <= 10 ) ; cont++ ) {
+            numero.push(cont)
+        }
+        console.log(`Array Original: ${numero}`)
+
+        /*===============================================*/
+
+        let numeroX2 = numero.map( ( elemento ) => elemento * 2 )
+        console.log(`Método Map: ${numeroX2}`)
+
+        /*===============================================*/
+
+        console.log(`Método Find: ` + numero.find( (a) => a != 1 ) )
+
+        /*===============================================*/
+
+        numero.reverse()
+        console.log(`Método reverse: ${numero}`)
+
+        /*===============================================*/
+
+        numeroEmOrdemCrescente = numero.sort( (a, b) => a - b )
+        console.log(`Método sort: ` + numeroEmOrdemCrescente)
+
+        /*===============================================*/
+
+        console.log(`Método filter: ` + numero.filter( (elemento) => elemento > numero[4]))
+
+        /*===============================================*/
+
+        console.log(`Método indexOf: ` + numero.indexOf(10))
+
+        /*===============================================*/
+
+        console.log(`Método findIndex: ` + numero.findIndex( (elemento) => elemento = 1))
+
+        /*===============================================*/
+
+        let somaDosElementos = numero.reduce( (ac, el, ind) => {
+            if (ind <= 4) {
+                return ac += el
+            } else {
+                return ac += 0
+            }
+        }, 0 )
+        console.log(`Método Reduce: ` + somaDosElementos)
+
+        /*===============================================*/
+
+        console.log(`Método Some: ` + numero.some( (elemento) => {
+            return elemento == 10
+        }))
+
+        /*===============================================*/
+
+        console.log(`Método Every: ` + numeroX2.every( (elemento) => {
+            return elemento > 1.99
+        }))
+
+        /*===============================================*/
+    </script>
+</body>
+</html>
