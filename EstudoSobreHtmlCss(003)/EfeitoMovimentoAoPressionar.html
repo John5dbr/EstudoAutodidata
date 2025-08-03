@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EfeitoMovimentoAoPressionar</title>
+    <style>
+        .comparador {
+            width: 600px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #333;
+            cursor: grab;
+        }
+
+        .img-base,
+        .img-topo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .img-corte {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%; /* começa mostrando metade da imagem limpa */
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="comparador" id="comparador">
+        <img src="Colorido.jpg" class="img-base">
+        <div class="img-corte" id="imgCorte">
+            <img src="Preto+Branco.jpg" class="img-topo">
+        </div>
+    </div>
+    <script>
+        const comparador = document.getElementById('comparador');
+        const imgCorte = document.getElementById('imgCorte');
+
+        let arrastando = false;
+
+        comparador.addEventListener('mousedown', (e) => {
+        arrastando = true;
+        comparador.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mouseup', () => {
+        arrastando = false;
+        comparador.style.cursor = 'grab';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+        if (!arrastando) return;
+
+        const rect = comparador.getBoundingClientRect();
+        let pos = e.clientX - rect.left;
+
+        // Limites: 0 até a largura total do container
+        pos = Math.max(0, Math.min(rect.width, pos));
+
+        // Atualiza a largura do corte (div que mostra a imagem limpa)
+        imgCorte.style.width = `${pos}px`;
+        });
+    </script>
+</body>
+</html>

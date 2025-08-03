@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font1: 'Montserrat Alternates';
+    --font2: 'Montserrat';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+/*===============================*/ 
+
+.hdrEspecial {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 95px;
+    background: black;
+    z-index: 1;
+}
+.hdrEspecial > * {
+    display: flex;
+    align-items: center;
+}
+
+.hdrEspecial_fgr {
+    justify-content: space-between;
+    gap: 10px;
+    font: italic normal .75em var(--font2);
+}
+.hdrEspecial_fgr_img {
+    width: 55px;
+    height: 55px;
+}
+.hdrEspecial_fgr_h1 {
+    color: white;
+    text-decoration: none;
+}
+
+.hdrEspecial_nav {
+    justify-content: space-evenly;
+    gap: 10px;
+    font: normal normal 1em var(--font1);
+}
+.hdrEspecial_nav_items {
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s ease-out 0s;
+}
+.hdrEspecial_nav_items::after {
+    color: white;
+    text-decoration: none;
+    content: '  ▼';
+}
+.hdrEspecial_nav_items-hover:hover::after {
+    content: '  ▲';
+}
+
+.hdrEspecial_asd {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    font: normal normal 1em var(--font2);
+}
+.hdrEspecial_asd_login {
+    color: white;
+    text-decoration: none;
+}
+.hdrEspecial_asd_comeceagora {
+    padding: 25px 20px;
+    background: white;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s ease-out 0s;
+}
+.hdrEspecial_asd_comeceagora-hover:hover {
+    box-shadow: inset 0px 0px 25px rgb(143, 143, 143);
+}
+
+/*===============================*/
+
+.templates {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('Recursos/FundoTemplates.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 500px black;
+    padding: 75px 0px 0px 0px;
+}
+.templates_h2 {
+    color: white;
+    text-decoration: none;
+    font: normal normal 2em var(--font2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+}
+.templates_h1 {
+    margin: 0px 0px 45px 0px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font: normal normal 4em var(--font2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+}
+.templates_botao {
+    position: relative;
+    margin: 0px 0px 45px 0px;
+    padding: 20px 30px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font: normal bold 1em var(--font2); 
+}
+.templates_botao > p {
+    position: relative;
+}
+.templates_botao:hover > p {
+    color: white;
+}
+.templates_botao:hover > #Cobertor {
+    transform: translate(-15%, -34%);
+}
+#Cobertor {
+    transform: translate(-115%, -34%);
+    position: absolute;
+    background: #2b2b2b;
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s ease-in-out 0s;
+}
+
+.hdr {
+    position: sticky;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 2.25fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 95px;
+}
+.hdr > * {
+    display: flex;
+    align-items: center;
+}
+
+.hdr_fgr {
+    padding: 12px 25px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    gap: 10px;
+    font: italic normal .75em var(--font2);
+}
+.hdr_fgr_img {
+    width: 55px;
+    height: 55px;
+}
+.hdr_fgr_h1 {
+    color: white;
+    text-decoration: none;
+}
+
+.hdr_nav {
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(10px);
+    justify-content: space-evenly;
+    gap: 10px;
+    font: normal normal 1em var(--font1);
+}
+.hdr_nav_items {
+    padding: 20px 25px;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s ease-out 0s;
+}
+.hdr_nav_items-hover:hover {
+    background-color: #72757570;
+}
+
+.hdr_asd {
+    padding: 27.5px 25px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    font: normal normal 1.15em var(--font2);
+}
+.hdr_asd_a {
+    color: white;
+    text-decoration: none;
+}

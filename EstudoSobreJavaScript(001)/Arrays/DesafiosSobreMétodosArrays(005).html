@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesafiosSobreMétodosArrays(005)</title>
+</head>
+<body>
+    <script>
+        let valores = [
+            1.99, 
+            39.90,
+            59.90, 
+            14.99,
+            1299.90,
+            45.00,
+            120.00,
+            2.50,
+            19.90,
+            59.90,
+            29.90,
+            49.99
+        ];
+        console.log(`Compras igual a 0? ` + valores.some( (el) => el == 0 ))
+        console.log(`Compras acima de 20? ` + valores.filter( (el) => el > 20 ))
+        console.log(`Total das compras: ` + valores.reduce( (ac, el) => ac + el))
+        console.log(`Valores do Maior ao Menor:` + valores.sort( (a, b) => b - a ))
+        console.log(`Menor compra feita: ` + valores.find( (el, ind) => {
+            if ( ind == (valores.length - 1)) {
+                return el
+            }
+        }))
+        console.log(`As 5 maiores compras feitas: ` + valores.slice(0, 4))
+    </script>
+</body>
+</html>

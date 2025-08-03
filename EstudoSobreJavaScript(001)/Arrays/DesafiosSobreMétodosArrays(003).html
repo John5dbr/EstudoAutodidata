@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesafiosSobreMétodosArrays(003)</title>
+</head>
+<body>
+    <script>
+        let numeros = [10,20,30,40,5,1,1,100,1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        let numerosNegativos = numeros.filter( (el) => el <= 0 );
+        let numerosPositivos = numeros.filter( (el) => el >= 1 );
+        let numerosNegativosDobrados = numerosNegativos.map( (el) => el * 2 );
+        let somaDosValoresPares = numeros.reduce( (ac, el) => {
+            if (el % 2 == 0) {
+                return ac + el
+            } else {
+                return ac + 0 
+            }
+        }, 0 );
+        console.log(`Números negativos dobrado: ` + numerosNegativosDobrados)
+        console.log(`Números entre 10 e 100: ` + numeros.filter( (el) => el >= 10 && el <= 100))
+        console.log(`Soma Dos valores pares: ` + somaDosValoresPares)
+        console.log(`Todos os números são múltiplos de 5: ` + numerosPositivos.every( (el) => el % 5 == 0 ))
+        console.log(`Algum numero igual a 0? ` + numeros.some( (el) => el == 0 ))
+        console.log(`Posição do primeiro número negativo: ` + numeros.findIndex( (el) => el <= -1 ))
+        console.log(`Posição do número 100: ` + numeros.findIndex( (el) => el == 100 ))
+    </script>
+</body>
+</html>
