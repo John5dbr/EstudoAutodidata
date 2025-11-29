@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassesComConstrutores(001)</title>
+</head>
+<body>
+    <script>
+        let escolhidas = [];
+        const cartas = [
+            'Mago',
+            'Guerreiro',
+            'Necromante',
+            'Lutador',
+            'Arqueiro',
+            'Lançeiro',
+            'Gigante',
+            'Templário',
+            'Assasino',
+            'Construtor',
+        ];
+        class Decks {
+            constructor(carta1, carta2, carta3, carta4, carta5) {
+                this.carta1 = carta1;
+                this.carta2 = carta2;
+                this.carta3 = carta3;
+                this.carta4 = carta4;
+                this.carta5 = carta5;
+            }
+
+            mostrarDeck() {
+                alert(`Òia teu deck galego ^^ \n 1. ${this.carta1} \n 2. ${this.carta2} \n 3. ${this.carta3} \n 4. ${this.carta4} \n 5. ${this.carta5}`)
+            }
+        };
+        alert(`Selecione 5 das seguintes cartas para seu deck: `)
+        for ( let cont = 0 ; (cont < cartas.length) ; cont++ ) {
+            let decicao = confirm(`Essa?` + cartas[cont])
+            if (decicao == true) {
+                escolhidas.push(cartas[cont])
+            }
+        }
+        let deskCriado = new Decks(escolhidas[0], escolhidas[1], escolhidas[2], escolhidas[3], escolhidas[4]);
+        deskCriado.mostrarDeck()
+    </script>
+</body>
+</html>

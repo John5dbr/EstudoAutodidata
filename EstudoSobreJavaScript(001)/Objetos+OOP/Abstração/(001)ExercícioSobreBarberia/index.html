@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreinandoClassesAbstratas</title>
+</head>
+<body>
+    <script>
+
+        class Servico {
+            constructor(nome, precoBase, descricao) {
+                if (this.constructor === Servico) {
+                    throw new TypeError('A Classe Abstrata (Servico) não pode ser instanciada.')
+                }
+                if (this.calcularTroco === undefined) {
+                    throw new TypeError('O método calcularTroco() da Classe Servico deve ser obrigatoriamente implementado.')
+                }
+                this.nome = nome;
+                this.precoBase = precoBase;
+            }
+
+        };
+
+        class ParaBarba extends Servico {
+            constructor(nome, precoBase, descricao) {
+                super(nome, precoBase, descricao); 
+            }
+
+            infor() {
+                console.log(`-=========- ${this.nome} -=========-`)
+                console.log(`Preço: R$${this.precoBase} \nDescrição do Serviço: ${this.descricao}`)
+                console.log(`-==================================-`)
+            };
+
+            calcularTroco(valorRecebido) {
+                return `R$${valorRecebido - this.precoBase} Para Serem Devolvidos Como Troco.`
+            };
+        }
+
+        let servicoParaBarba001 = new ParaBarba('Cavanhaque', 25, 'Estilização da barba baixa no queixo.');
+
+        servicoParaBarba001.infor();
+        
+        let servicoParaBarba002 = new ParaBarba('Barba Negra', 55, 'Pintura da barba maior e grossa que abrange queixo, maxilar e pescoço.');
+
+        servicoParaBarba002.infor();
+
+        console.log(servicoParaBarba001.calcularTroco(50))
+        console.log(servicoParaBarba002.calcularTroco(110))
+
+    </script>
+</body>
+</html>

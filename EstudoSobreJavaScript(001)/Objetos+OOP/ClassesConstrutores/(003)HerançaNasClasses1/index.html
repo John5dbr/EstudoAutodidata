@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerançaNasClasses(001)</title>
+</head>
+<body>
+    <script>
+        class Veiculos {
+            constructor (marca, modelo, ano) {
+                this.marca = marca; 
+                this.modelo = modelo;
+                this.ano = ano;
+            };
+
+            #TipoDeVeiculo;
+
+            get MostraTipoDeVeiculo() {
+                return this.#TipoDeVeiculo
+            };
+
+            set DefinirTipoDeVeiculo(valor) {
+                this.#TipoDeVeiculo = valor
+            };
+
+            informacoes() {
+                console.log(`Informações do veículo(${this.#TipoDeVeiculo}): \nMarca: ${this.marca} \nModelo: ${this.modelo} \nAno: ${this.ano}`)
+            };
+        };
+
+        class Moto extends Veiculos {
+            constructor (marca, modelo, ano, guidao) {
+                super(marca, modelo, ano)
+                this.guidao = guidao
+            };
+
+            #TipoDeVeiculo;
+
+            get MostraTipoDeVeiculo() {
+                return console.log(this.#TipoDeVeiculo)
+            };
+
+            set DefinirTipoDeVeiculo(valor) {
+                this.#TipoDeVeiculo = valor
+            };
+
+            informacoes() {
+                console.log(`Informações do veículo(${this.#TipoDeVeiculo}): \nMarca: ${this.marca} \nModelo: ${this.modelo} \nAno: ${this.ano} \nNúmero de Portas: ${this.guidao}`)
+            }
+        };
+
+        class Carro extends Veiculos {
+            constructor (marca, modelo, ano, numeroDePortas) {
+                super(marca, modelo, ano)
+                this.numeroDePortas = numeroDePortas
+            };
+
+            #TipoDeVeiculo;
+
+            get MostraTipoDeVeiculo() {
+                return console.log(this.#TipoDeVeiculo)
+            };
+
+            set DefinirTipoDeVeiculo(valor) {
+                this.#TipoDeVeiculo = valor
+            };
+
+            informacoes() {
+                console.log(`Informações do veículo(${this.#TipoDeVeiculo}): \nMarca: ${this.marca} \nModelo: ${this.modelo} \nAno: ${this.ano} \nNúmero de Portas: ${this.numeroDePortas}`)
+            }
+        };
+
+        /* Sessão de returno */
+
+        let motoUm = new Moto('Ronda', 'Kawasaki', 2019, 'Esportiva')
+        motoUm.DefinirTipoDeVeiculo = 'Moto';
+
+        motoUm.MostraTipoDeVeiculo;
+        
+        let carroUm = new Carro('BMW', 'GTR-18', 2025, 4)
+        carroUm.DefinirTipoDeVeiculo = 'Carro';
+
+        carroUm.MostraTipoDeVeiculo;
+
+        motoUm.informacoes();
+
+        carroUm.informacoes();
+
+    </script>
+</body>
+</html>

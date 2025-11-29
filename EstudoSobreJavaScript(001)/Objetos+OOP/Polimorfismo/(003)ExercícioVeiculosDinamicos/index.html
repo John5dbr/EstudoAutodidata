@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiculos Dinamicos</title>
+</head>
+<body>
+    
+    <script type="module">
+
+        /* ========================================= */
+        /* Processamento de Dados */
+
+        import classes from "./classesFilhas.js";
+
+        /* Fim do Processamento de Dados */
+        /* ========================================= */
+        /* Entrada de Dados */
+
+        let viagem001 = new classes.onibusPublico('Ônibus', 'Ônibus Público', 'Veiculo terrestre | Contêm 4 rodas | Tem 3 portas (uma para entrada e 2 para saída)', 70, 5, 0, 120, 5);
+        let viagem002 = new classes.motoPropria('Moto', 'Moto Própria', 'Veiculo terrestre | Contêm 2 rodas | Mantém o piloto exposto, porém em troca de ser perigosa é mais ágil e rápida', 180, 0, 0, 80, 5);
+
+        /* Fim da Entrada de Dados */
+        /* ========================================= */
+        /* Saída de Dados */
+
+        viagem001.inforGerais();
+
+        viagem001.adicionarDetalhesTecnicos = 'Consideravelmente mais seguro que outros transportes terrestres';
+        viagem001.adicionarDetalhesTecnicos = 'Os mais usados são de coloração vermelha e amarela';
+        viagem001.adicionarDetalhesTecnicos = 'Capaz de armazenar grande volume de pessoas';
+        viagem001.mostrarDetalhesTecnicos;
+
+        viagem001.calcPrecoDaViagem(1000);
+        viagem001.calcTempoDeViagem(1000);
+        viagem001.calcTempoMaximoSemReabastecer();
+
+        viagem002.inforGerais();
+
+        viagem002.adicionarDetalhesTecnicos = 'Em custo é bastante elogiada';
+        viagem002.adicionarDetalhesTecnicos = 'Alto consumo de gasolina';
+        viagem002.adicionarDetalhesTecnicos = 'Capaz de levar até 2 pessoas';
+        viagem002.mostrarDetalhesTecnicos;
+
+        viagem002.calcPrecoDaViagem(100);
+        viagem002.calcTempoDeViagem(100);
+        viagem002.calcTempoMaximoSemReabastecer();
+
+        /* Fim Da Saída de Dados */
+        /* ========================================= */
+
+    </script>
+
+</body>
+</html>

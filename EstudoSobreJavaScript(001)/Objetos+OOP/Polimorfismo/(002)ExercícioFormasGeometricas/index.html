@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormasGeometricas</title>
+</head>
+<body>
+    <script>
+
+        class Forma {
+            constructor() {
+                if (this.constructor === Forma) {
+                    throw new TypeError(`Implementação Inválida.`)
+                } else if (this.calcularArea === undefined) {
+                    throw new TypeError(`Ausência de Recurso Obrigatório.`)
+                } else if (this.calcularPerimetro === undefined) {
+                    throw new TypeError(`Ausência de Recurso Obrigatório.`)
+                }
+            } 
+
+            #pi = 3.14;
+
+            get mostrarPi() {
+                return this.#pi
+            };
+        };
+
+        class Quadrado extends Forma {
+            constructor() {
+                super()
+            }
+
+            calcularArea(lado) {
+                console.log(`Área do Quadrado: ${lado ** 2}`)
+            };
+
+            calcularPerimetro(lado) {
+                console.log(`Perímetro do Quadrado: ${lado * 4}`)
+            };
+        }
+
+        class Circulo extends Forma {
+            constructor() {
+                super()
+            }
+
+            calcularArea(raio) {
+                console.log(`Área do Circulo: ${this.mostrarPi * raio ** 2}`)
+            };
+
+            calcularPerimetro(raio) {
+                console.log(`Perímetro do Círculo: ${2 * this.mostrarPi * raio}`)
+            };
+        }
+
+        /*================================================*/
+
+        let calculo001 = new Quadrado();
+        let calculo002 = new Circulo();
+
+        /*================================================*/
+
+        calculo001.calcularArea(5)
+        calculo001.calcularPerimetro(5)
+
+        calculo002.calcularArea(5)
+        calculo002.calcularPerimetro(5)
+
+    </script>
+</body>
+</html>

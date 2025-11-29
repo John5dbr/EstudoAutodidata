@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtributosPrivados+MétodosPrivados(002)</title>
+</head>
+<body>
+    <script>
+        class Usuario {
+            constructor (email, senhaColocada) {
+                this.email = email;
+                this.senhaColocada = senhaColocada;
+            }
+
+            #senha = this.senhaColocada;
+
+            get perfilUsuario() {
+                console.log(`Email: ${this.email.slice(0, 3)}***`)
+            }
+
+            alterarSenha(senhaAtual) {
+                senhaAtual = window.prompt(`Senha Atual: `)
+                if (senhaAtual == this.senhaColocada) {
+                    this.senhaColocada = prompt(`Nova Senha: `)
+                } else {
+                    alert(`Senha Incorreta.`)
+                }
+            }
+        };
+
+        let usuario1 = new Usuario("pedropss20072@gmail.com", "Jonh5dbr");
+
+        usuario1.perfilUsuario;
+
+        usuario1.alterarSenha();
+    </script>
+</body>
+</html>

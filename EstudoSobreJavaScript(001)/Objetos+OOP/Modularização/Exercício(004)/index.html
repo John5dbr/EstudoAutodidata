@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script type="module">
+        import { soma, subtrai, multiplica, divide } from './math.js';
+        import * as operacao from './math.js';
+        let numeroUm = 150;
+        let numeroDois = 5;
+        console.log(`Selecionando Individualmente`)
+        console.log(`Resultado somando: ${soma(numeroUm, numeroDois)}`)
+        console.log(`Resultado subtraindo: ${subtrai(numeroUm, numeroDois)}`)
+        console.log(`Resultado multiplicando: ${multiplica(numeroUm, numeroDois)}`)
+        console.log(`Resultado dividindo: ${divide(numeroUm, numeroDois)}`)
+        console.log(`Selecionando tudo`)
+        console.log(`Resultado somando: ${operacao.soma(numeroUm, numeroDois)}`)
+        console.log(`Resultado subtraindo: ${operacao.subtrai(numeroUm, numeroDois)}`)
+        console.log(`Resultado multiplicando: ${operacao.multiplica(numeroUm, numeroDois)}`)
+        console.log(`Resultado dividindo: ${operacao.divide(numeroUm, numeroDois)}`)
+        let txt = document.getElementsByTagName(`p`)[0]
+        txt.innerHTML = `${soma(numeroUm, numeroDois)} |
+                        ${subtrai(numeroUm, numeroDois)} |
+                        ${multiplica(numeroUm, numeroDois)} |
+                        ${divide(numeroUm, numeroDois)}`
+    </script>
+</body>
+</html>

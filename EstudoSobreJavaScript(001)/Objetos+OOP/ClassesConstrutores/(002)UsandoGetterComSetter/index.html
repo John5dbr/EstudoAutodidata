@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UsandoGetComSet</title>
+</head>
+<body>
+    <script>
+        class Produto {
+            constructor(nome, quantidade) {
+                this.nome = nome;
+                this.quantidade = quantidade;
+            }
+            #preco = 0;
+            valorDesconto = 0;
+
+            get mostrarPreco() {
+                return `R$: ` + this.#preco + `,00`;
+            }
+
+            set definirPreco(valor) {
+                if (valor >= 0) {
+                    this.#preco = valor
+                } else {
+                    console.log(`Valor Inválido.`)
+                }
+            }
+
+            get mostrarDesconto() {
+                return this.valorDesconto;
+            }
+
+            descricao() { 
+                console.log(`Nome: ${this.nome} \nQuantidade: ${this.quantidade} \nPreco(unidade): ${this.#preco} \nDesconto: ${this.valorDesconto}%`)
+            };
+            desconto (percentual) {
+                this.valorDesconto = `${percentual}%`
+                this.#preco = this.#preco * ( percentual / 100 )
+            }
+        }
+
+        let uva = new Produto('Uva', 5);
+        let melancia = new Produto('Melancia', 3);
+
+        uva.definirPreco = 15;
+        melancia.definirPreco = 20;
+
+        /* Preço antes da aplicação dos descontos */
+
+        console.log(uva.mostrarPreco);
+        console.log(melancia.mostrarPreco);
+
+        uva.desconto(50);
+        melancia.desconto(75);
+
+        uva.descricao();
+        melancia.descricao();
+
+        console.log(uva.mostrarDesconto);
+        console.log(melancia.mostrarDesconto);
+
+        /* Descrição + tabela atual*/
+    </script>
+</body>
+</html>

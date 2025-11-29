@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import carros from './carro.js';
+        console.log(`~ Carros Para Venda ~`)
+        carros.listaDeCarros.forEach( (el) => {
+            console.log(`Carro: ${el.marca} \nCor: ${el.cor} \nPreço: ${el.preco}`)
+        })
+        console.log(`~ Carros Com Descontos ~`)
+        carros.funcaoDesconto(carros.listaDeCarros).forEach( (el) => {
+            if (el.desconto != 0) {
+                console.log(`Carro: ${el.marca} \nCor: ${el.cor} \nPreço: ${el.preco}`)
+            }
+        })
+    </script>
+</body>
+</html>
