@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 003</title>
+    <style>
+        #quadrado {
+            width: 200px;
+            height: 200px;
+            background: gray;
+        }
+        .borda {
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado"></div>
+    <br>
+    <input type="button" value="Ativar Borda" id="btnAtivarBorda">
+    <input type="button" value="Pintar de Vermelho" id="btnTrocarCor">
+
+    <script>
+        
+        /*
+            Exercício 3 — Manipulação de Classes e Estilos (classList / style)
+
+            Crie um quadrado (div) 200×200 com fundo cinza.
+            Crie dois botões:
+
+            "Ativar borda" → usar classList.toggle("borda")
+
+            "Pintar de vermelho" → usar style.backgroundColor = "red"
+
+            No CSS, defina:
+
+            .borda {
+            border: 5px solid black;
+            }
+
+            Objetivo: misturar classes + estilos inline.
+        */
+
+        let quadrado = document.getElementById("quadrado");   
+
+        // Para Ativar Borda
+
+        let temBorda = false;
+
+        let btnAtivarBorda = document.getElementById("btnAtivarBorda");   
+        btnAtivarBorda.addEventListener('click', ativarBorda);
+        function ativarBorda() {
+            if ( temBorda == false ) {
+                quadrado.classList.toggle("borda")
+                temBorda = true
+            } else if ( temBorda == true ) {
+                quadrado.classList.toggle("borda")
+                temBorda = false
+            }
+        };
+
+        // Para Trocar Cor
+
+        let mudouCor = false;
+
+        let btnTrocarCor = document.getElementById("btnTrocarCor");   
+        btnTrocarCor.addEventListener('click', trocarCor);
+        function trocarCor() {
+            if ( mudouCor == false ) {
+                quadrado.style = `background: red;`
+                mudouCor = true
+            } else if ( mudouCor == true ) {
+                quadrado.style = `background: gray;`
+                mudouCor = false
+            }
+        };
+
+    </script>
+</body>
+</html>

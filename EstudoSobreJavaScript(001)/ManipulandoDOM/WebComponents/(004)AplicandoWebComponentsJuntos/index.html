@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer type="module"></script>
+    <title>Aplicando Múltiplos Web Components Juntos</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header-pronto>
+        <span data-logo="Recursos/Logo.png"></span>
+        <span slot="tituloParte1">Amantes</span>
+        <span slot="tituloParte2">dos</span>
+        <span slot="tituloParte3">Gatos</span>
+        <span slot="link">
+            <a href="">
+                Our cats
+            </a>
+            <a href="">
+                About
+            </a>      
+            <a href="">
+                Contact Us
+            </a>
+            <a href="">
+                More details
+            </a>
+            <a href="">
+                Send a Message!
+            </a>
+        </span>
+    </header-pronto>
+    <banner-pronto>
+        <span slot="definirFundoBanner" data-fundo="Recursos/fundo.jpg"></span>
+        <span slot="titulo">Nós amamos gatinhos lindos e fofos ^^</span>
+        <span slot="paragrafo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo cupiditate assumenda corporis magni, culpa sit dolorem est ipsum sed. Ea, eos unde?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi ut repellendus fugit asperiores odit!</p>    
+        </span>
+        <span slot="btns">
+            <botao-pronto cor1="#E2791E" cor2="#FFB64D" cor3="#FF914D">
+                <span slot="link">Fazer Doação</span>
+            </botao-pronto>
+            <botao-pronto cor1="#FFB64D" cor2="#FF914D" cor3="#E2791E">
+                <span slot="link">Quero Adotar</span>
+            </botao-pronto> 
+            <botao-pronto cor1="#FFB64D" cor2="#E2791E" cor3="#FF914D">
+                <span slot="link">Enviar Mensagem</span>
+            </botao-pronto> 
+        </span>
+    </banner-pronto>
+    <footer-pronto>
+        <span slot="Localizacao">
+            <strong>Nossos postos de atendimento:</strong> <br>
+            <em>~ Aberto das 07:00 às 18:00 ~</em>
+            <aside>Unidade Centro – Rua das Flores, 123 – Belo Horizonte.</aside>
+            <aside>Unidade Norte – Av. Felinos Unidos, 456 – São Paulo/SP.</aside>
+            <aside>Unidade Leste – Praça dos Gatos, 789 – Rio de Janeiro/RJ.</aside>
+            <aside>Unidade Norte – Av. Felinos Unidos, 456 – São Paulo/SP.</aside>
+            <aside>Unidade Leste – Praça dos Gatos, 789 – Rio de Janeiro/RJ.</aside>
+        </span>
+        <span slot="Contato">
+            <h3>Entre em contato conosco:</h3>
+            <aside>Telefone/WhatsApp: (31) 91234-5678</aside>
+            <aside>E-mail: contato@amantesdosgatos.org</aside>
+            <aside>Instagram: <a href="" class="Contatinho">@Amantes_Dos_Gatos</a></aside>
+            <aside>TikTok: <a href="" class="Contatinho">@amantesdosgatos</a></aside>
+            <aside>E-mail: contato@amantesdosgatos.org</aside>
+        </span>
+        <span slot="txtFinal001">
+            <p>Copyright &copy;2025 Todos os direitos reservados.</p>
+        </span>
+        <span slot="txtFinal002">
+            <p>Esse site foi desenvolvido por <em>Pedro de Souza Santos</em> em 04/07/2025.</p>
+        </span>
+    </footer-pronto>
+    
+    <script>
+        let btns = [...document.getElementsByTagName('botao-pronto')];
+        btns.forEach(el => {
+            el.addEventListener('clicou-em-algum-botao', (event) => {    
+                console.log(event.detail.detalhes)
+            })
+        });
+    </script>
+</body>
+</html>

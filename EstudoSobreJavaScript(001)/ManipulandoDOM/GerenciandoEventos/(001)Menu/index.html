@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO PRÁTICO 1 — Menu Dropdown com Capturing, Bubbling e onclick vs addEventListener</title>
+</head>
+<body>
+
+    <button id="menuBtn">Menu</button>
+
+    <div id="menu" style="display:none; background:#eee; padding:10px; width:150px; border: 2px solid gray; margin: 10px 0px;">
+        <p>Opção 1</p>
+        <p>Opção 2</p>
+    </div>
+
+    <script>
+
+        let menuMostrado = false
+
+        document.getElementById("menuBtn").addEventListener('click', mostrarMenu) 
+        function mostrarMenu() {
+            if (menuMostrado == true) {
+                document.getElementById("menu").style = `display: none; background:#eee; padding:10px; width:150px; border: 2px solid gray; margin: 10px 0px;`
+                menuMostrado = false
+            } else if (menuMostrado == false) {
+                document.getElementById("menu").style = `display: block; background:#eee; padding:10px; width:150px; border: 2px solid gray; margin: 10px 0px;`
+                menuMostrado = true
+            }
+        };
+
+        document.addEventListener('click', esconderMenu, { capture: true })
+        function esconderMenu(event) {
+            if (menuMostrado == true) {
+                document.getElementById("menu").style = `display: none; background:#eee; padding:10px; width:150px; border: 2px solid gray; margin: 10px 0px;`
+                menuMostrado = false
+                event.stopPropagation()
+            }
+        };
+
+    </script>
+
+</body>
+</html>

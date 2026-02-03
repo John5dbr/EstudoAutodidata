@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor1: #E3E0CC;
+    --cor2: #090500;
+    --cor3: #5A833C;
+    --cor4: #5C5D56;
+    --cor5: #FA450A;
+    --cor6: #4D3930; 
+    --font1: 'Montserrat';
+    --font2: 'Share Tech';
+}
+
+.fullConteiner {
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+    width: 100%;
+    background: var(--cor1);
+}
+
+/* ======================================================================== */
+/* Estilização do HEADER */
+
+.hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    border-bottom: 3px solid var(--cor2);
+}
+
+.hdr__h1 {
+    font: normal bold 1.2em var(--font1);
+}
+
+.hdr__nav {
+    padding: 7px 15px 7px 35px;
+    font: normal bold 1em var(--font1);
+    color: var(--cor1);
+    background: var(--cor2);
+}
+
+/* ======================================================================== */
+/* Estilização da Sessão de Banner */
+
+.conteinerBanner {
+    position: relative;
+    height: 60vh;
+    width: 95vw;
+    overflow: hidden;
+    border: 3px solid var(--cor1);
+}
+
+.conteinerBanner__h1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--cor1);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.61);
+    font: italic bold 4em var(--font2);
+    z-index: 1;
+}
+
+.conteinerBanner__Banner {
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    background: url('Recursos/fundoSessaoBanner.jpg') no-repeat center / cover;
+    height: 125%;
+    width: 125%;
+    box-shadow: inset 0px 0px 1000px var(--cor2);
+}
+
+/* ======================================================================== */
+/* Estilização do Main do código */
+
+.mn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    height: auto;
+}
+
+.mn__Infor {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    width: 50%;
+}
+.mn__Infor__h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.mn__Infor__p {
+    font: normal normal 1em var(--font1);
+}
+.mn__Infor__p > a {
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+.mn__User {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    height: 100%;
+    width: 25%;
+}
+.mn__User__lbl__p {
+    font: normal bold 1.05em var(--font1);
+    margin: 0px 0px 5px 0px;
+}
+.mn__User__lbl__inputCep {
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 0px 0px 0px 10px;
+    font: normal bold 1em var(--font1);
+    border: 3px solid var(--cor2);
+}
+.mn__User__lbl__inputCep:focus {
+    outline: none;
+
+}
+.mn__User__img {
+    margin: 25px 0px 0px 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: 3px solid black;
+}
+
+.mn__Result {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 25%;
+    height: 100%;
+}
+
+.mn__Result__art {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.mn__Result__art__h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.mn__Result__art__p {
+    font: normal normal 1em var(--font1);
+}
+
+.elementosColoridos {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;   
+    gap: 10px;
+}
+.elementoColorido {
+    width: 10px;
+    height: 25px;
+}
+.elColor1 {
+    background: var(--cor3);
+}
+.elColor2 {
+    background: var(--cor4);
+}
+.elColor3 {
+    background: var(--cor5);
+}
+.elColor4 {
+    background: var(--cor6);
+}
+
+/* ======================================================================== */
+/* Aplicando responsividade */
+
+@media (max-width: 1250px) {
+    .fullConteiner {
+        padding: 25px 0px 25px 0px;
+    }
+    .mn__Infor {
+        width: 100%;
+    }
+    .mn__User {
+        justify-content: flex-start;
+        width: 40%;
+        height: auto;
+    }  
+    .mn__Result {
+        width: 50%;
+        height: auto;
+    }
+    .mn__Result__art {
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fullConteiner {
+        height: 130vh;
+    }
+    .hdr {
+        width: 90vw;
+    }
+    .conteinerBanner {
+        width: 90vw;
+    }
+    .conteinerBanner__h1 {
+        top: 10px;
+        left: 10px;
+        font-size: 2.5em;
+    }
+    .mn {
+        width: 90vw;
+    }
+    .mn__Infor {
+        width: 100%;
+    }
+    .mn__User {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 20px 0px 0px 0px;
+    }  
+    .mn__Result {
+        width: 100%;
+        height: auto;
+        padding: 10px 0px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+</head>
+<body>
+    <ul id="lista"></ul>
+    <br>
+    <input type="button" value="Adicionar Item" id="btnAdicionarItem">
+    <br> <br>
+    <input type="button" value="Clonar Item" id="btnClonarItem">
+    <br> <br>
+    <input type="button" value="Remover" id="btnRemoverItem">
+
+    <script>
+
+        /*
+            Exercício 4 — Criação/Remoção de Elementos (createElement / append / removeChild / cloneNode)
+
+            Crie uma <ul> vazia e um botão "Adicionar item".
+            
+            Quando clicar:
+            crie um <li> com createElement()
+            insira o texto: "Item criado dinamicamente"
+            use append() para adicionar na lista
+
+            Depois:
+            Adicione outro botão "Duplicar último item"
+            selecione o último <li>
+            use cloneNode(true)
+            adicione o clone com append()
+
+            E outro botão "Remover primeiro"
+            use removeChild() no primeiro <li>
+
+            Objetivo: treinar criação, clonagem e remoção.
+        */
+
+        let lista = document.getElementById("lista");
+        let listaArray = [...lista.children];
+
+        // Para Criar Elementos
+        let cont = 0;
+        let btnAdicionarItem = document.getElementById("btnAdicionarItem");
+        btnAdicionarItem.addEventListener('click', adicionarItem);
+        function adicionarItem() {
+            cont++
+            let novoItem = document.createElement("li");
+            novoItem.innerText = `Item Nº ${cont} criado dinamicamente`
+            lista.append(novoItem);
+        };
+
+        // Para clonar Elementos
+        let btnClonarItem = document.getElementById("btnClonarItem");
+        btnClonarItem.addEventListener('click', clonarItem);
+        function clonarItem() {
+            let ultimoItem = lista.lastElementChild.cloneNode(true);
+            lista.prepend(ultimoItem);
+        };
+
+        // Para clonar Elementos
+        let btnRemoverItem = document.getElementById("btnRemoverItem");
+        btnRemoverItem.addEventListener('click', removerItem);
+        function removerItem() {
+            let ultimoItem = lista.lastElementChild;
+            ultimoItem.remove();
+        };
+
+        </script>
+</body>
+</html>

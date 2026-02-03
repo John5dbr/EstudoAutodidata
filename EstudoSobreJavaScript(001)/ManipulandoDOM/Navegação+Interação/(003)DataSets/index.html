@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003 - DataSets</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos com Atributos</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #container-produtos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .produto-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .produto-card > h3 {
+            font-style: normal;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nossos Produtos</h1>
+
+    <div id="container-produtos">
+        
+        <!-- Produto 1: Atributos de dados para categoria, preço e disponibilidade -->
+        <div class="produto-card" 
+            data-id="101" 
+            data-categoria="eletronicos" 
+            data-preco="1499.99"
+            data-disponibilidade="em-estoque"
+            data-detalheExposto="false">
+            <h3>Smartphone X</h3>
+            <p class="descricao"></p>
+            <input type="button" value="Mostrar Detalhes" class="detalhes"></input>
+        </div>
+
+        <!-- Produto 2: Atributos de dados diferentes -->
+        <div class="produto-card" 
+            data-id="102" 
+            data-categoria="livros" 
+            data-preco="49.90"
+            data-disponibilidade="em-estoque"
+            data-detalheexposto="false">
+            <h3>Livro: Aventura</h3>
+            <p class="descricao"></p>
+            <input type="button" value="Mostrar Detalhes" class="detalhes"></input>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto-card" 
+            data-id="103" 
+            data-categoria="vestuario" 
+            data-preco="89.50"
+            data-disponibilidade="esgotado"
+            data-detalheExposto="false">
+            <h3>Camiseta Casual</h3>
+            <p class="descricao"></p>
+            <input type="button" value="Mostrar Detalhes" class="detalhes"></input>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

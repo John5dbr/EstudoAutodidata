@@ -1,0 +1,127 @@
+Css Grid
+
+* É usado para fazer a distribuição organizada e eficiente dos elementos filhos (elementos agrupados) 
+  dentro de um elemento pai (elemento agrupador).
+
+-> Definição de Linhas e Colunas
+
+grid-template-columns:; Define a quantidade e comprimento das colunas no layout.
+grid-template-rows:; Define a quantidade e comprimento das linhas no layout.
+grid-auto-rows:; Define o comprimento das linhas que surgiram de maneira automática enquanto houver espaço na página.
+
++ Infor. Adicionais 
+
+repeat(4, 250px) = Define 4 colunas/linhas de 250 pixels. 
+repeat(auto-fill, 100px) = "auto-fill" Define que essa configuração se estenderá enquanto ouver espaço na página.
+repeat(auto-fit, 100px) = "auto-fit" Define que essa configuração se estenderá até que todos os elementos filhos sejam posicionados.
+minmax(50px, 250px) = Define um comprimento mínimo de 50 pixels e um comprimento máximo de 250px.
+1fr = Unidade de medida que representa uma fração da página.
+
+Na prática: 
+
+grid-template-columns: minmax(500px, 100vw)
+grid-template-rows: repeat(5, 350px);
+
+Esse layout terá 1 coluna de no mínimo 500px e no máximo 100vw
+Além disso, terá também 5 linhas de 350px
+
+-> Organização do Elementos Filhos
+
+grid-template-areas:; (somente atribuído no elemento pai)
+Define a posição de cada elemento filho no layout
+
+grid-area:; (somente atribuído no elemento filho)
+Define nome referêncial que será usado no grid-template-areas:; 
+
+Na prática: 
+
+grid-template-areas:
+'header header header'
+'aside main main'
+'footer footer footer';
+
+grid-area: header;
+ 
+grid-area: main; 
+
+grid-area: aside;
+
+grid-area: footer;
+
++ Infor. Adicionais 
+
+grid-row: [início] / [fim]; permite definir em que linha o elemento filho começará e terminará
+grid-column: [início] / [fim]; permite definir em que coluna o elemento filho começará e terminará
+
+-> Alinhamento dos elementos
+
+justify-items:; Define o alinhamento horizontal do conteúdo dos elementos filhos
+align-items:; Define o alinhamento vertical do conteúdo dos elementos filhos
+justify-content:; Define o alinhamento horizontal dos elementos filhos
+align-content:; Define o alinhamento vertical dos elementos filhos
+place-items: [alinhamento horizontal] [alinhamento vertical]; Alinha o conteúdo dos elementos filhos nos dois eixos
+justify-self:; Alinha individualmente e horizontalmente o elemento filho
+align-self:; Alinha individualmente e verticalmente o elemento filho
+
++ Infor. Adicionais
+
+gap: [distância entre linhas] [distância entre colunas]; Permite definir uma distância entre as linhas e as colunas
+
+Observações: Para colunas automáticas usa-se o repeat(auto-fill) ou o repeat(auto-fit)
+	     Para linhas automáticas usa-se o grid-auto-rows
+
+======================================================================================================================================================================
+
+BEM - Block Element Modifier
+
+* Trata-se de uma metodologia usada na nomeação de Class e Id (mais usada para Class)
+
+B - Block = Representa o elemento pai que agrupa elementos filhos
+E - Element = Representa o elemento filho que é englobado pelo elemento pai
+M - Modifier = Representa um estado visual que tanto o elemento pai quanto o elemento filho podem ficar
+
++ Infor.
+
+Para Block usa-se um nome simples: class="header"
+Para Element usa-se dois underlines e um nome: class="header__nav"
+Para Modifier usa-se dois traços e um nome: class="header__nav--HoverZoom"
+
+Exemplo prático:
+
+<header class="hdr">
+  	<nav class="hdr__nav">
+    		<a href="#" class="hdr__nav-item hdr__nav-item--zoom">Link 1</a>
+    		<a href="#" class="hdr__nav-item hdr__nav-item--zoom">Link 2</a>
+    		<a href="#" class="hdr__nav-item hdr__nav-item--zoom">Link 3</a>
+  	</nav>
+</header>
+	
+======================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

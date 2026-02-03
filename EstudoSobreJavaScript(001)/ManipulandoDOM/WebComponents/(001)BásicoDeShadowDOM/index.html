@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>(001) - Básico de Shadow DOM</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+        }
+        main {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            padding: 20px 30px;
+        }
+        main > h1 {
+            text-align: center;
+            width: 100%;
+        }            
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Cards</h1>
+        <card-personalizado>
+            <div slot="titulo">Card 01</div>
+            <div slot="paragrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit dolores repudiandae beatae nostrum non nemo nesciunt impedit ducimus maiores tempora in, quidem sequi.</div>
+        </card-personalizado>
+        <card-personalizado>
+            <div slot="titulo">Card 02</div>
+            <div slot="paragrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repellendus architecto est exercitationem nostrum ipsa sed sunt mollitia illo aperiam.</div>
+        </card-personalizado>
+        <card-personalizado>
+            <div slot="titulo">Card 03</div>
+            <div slot="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore quasi laboriosam a eos. Labore asperiores deserunt commodi veritatis consequatur delectus voluptate id laboriosam reprehenderit tenetur?</div>
+        </card-personalizado>
+    </main>
+
+
+</body>
+</html>

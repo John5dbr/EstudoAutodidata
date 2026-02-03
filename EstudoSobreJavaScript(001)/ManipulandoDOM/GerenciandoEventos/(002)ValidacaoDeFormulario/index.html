@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO PRÁTICO 2 — Validação de formulário com eventos de teclado e formulário</title>
+</head>
+<body>
+    <hr>
+    <br>
+    <form id="loginForm">
+        <input id="email" type="email" placeholder="Email">
+        <input id="senha" type="password" placeholder="Senha">
+        <input type="submit" id="btnEntrar" value="Entrar">
+    </form>
+    <br>
+    <hr>
+    <p id="erro"></p>
+    <p id="dica"></p>
+    <p id="status">Status gerais: Nada sendo digitados</p>
+    <p id="forca">Força da senha: Inválida</p>
+
+    <script>
+
+        let inputEmail = document.getElementById("email");
+        inputEmail.addEventListener('keydown', function() {
+            document.getElementById("status").innerText = `Status do email: Digitada`
+        }) 
+        inputEmail.addEventListener('keyup', function() {
+            document.getElementById("status").innerText = `Status do email: Parou de ser digitada`
+        }) 
+        inputEmail.addEventListener('focus', function() {
+            document.getElementById("dica").innerText = `Insira um email válido`
+        }) 
+        inputEmail.addEventListener('blur', function() {
+            document.getElementById("dica").innerText = ``
+        }) 
+        inputEmail.addEventListener('change', function() {
+            alert(`Email Alterado`)
+        })
+
+        let inputSenha = document.getElementById("senha");
+        inputSenha.addEventListener('input', mostrarForca)
+        function mostrarForca() {
+            let temNumero = false;
+            let temEspecial = false;
+            let numeros = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+            let especiais = ['!', '@', '#', '$', '%', '&', '*', '-', '_'];
+            let cont = 0;
+            let caracteresDaSenha = [];
+            while (cont < inputSenha.value.length) {
+                caracteresDaSenha.push(inputSenha.value[cont])
+
+                if ( caracteresDaSenha[cont] == especiais[0] || caracteresDaSenha[cont] == especiais[1] || caracteresDaSenha[cont] == especiais[2] || caracteresDaSenha[cont] == especiais[3] || caracteresDaSenha[cont] == especiais[4] || caracteresDaSenha[cont] == especiais[5] ||caracteresDaSenha[cont] == especiais[6]|| caracteresDaSenha[cont] == especiais[7] || caracteresDaSenha[cont] == especiais[8] ) {
+                    temNumero = true
+                } 
+                if ( caracteresDaSenha[cont] == numeros[0] || caracteresDaSenha[cont] == numeros[1] || caracteresDaSenha[cont] == numeros[2] || caracteresDaSenha[cont] == numeros[3] || caracteresDaSenha[cont] == numeros[4] || caracteresDaSenha[cont] == numeros[5] ||caracteresDaSenha[cont] == numeros[6]|| caracteresDaSenha[cont] == numeros[7] || caracteresDaSenha[cont] == numeros[8] || caracteresDaSenha[cont] == numeros[9] ) {
+                    temEspecial = true
+                }
+
+                cont++
+            }
+            if (temEspecial == true && temNumero == true) {
+                document.getElementById("forca").innerText = `Força da senha: Forte`
+            } else if (temEspecial == true || temNumero == true) {
+                document.getElementById("forca").innerText = `Força da senha: Média`
+            } else if ( inputSenha.value == '' ) {
+                document.getElementById("forca").innerText = `Força da senha: Inválida`
+            } else { 
+                document.getElementById("forca").innerText = `Força da senha: Fraca`
+            }
+        };
+        inputSenha.addEventListener('keydown', function() {
+            document.getElementById("status").innerText = `Status da senha: Digitada`
+        }) 
+        inputSenha.addEventListener('keyup', function() {
+            document.getElementById("status").innerText = `Status da senha: Parou de ser digitada`
+        }) 
+        inputSenha.addEventListener('focus', function() {
+            document.getElementById("dica").innerText = `A senha deve contar pelo menos um número e um caracteres especial para ser considerada uma senha forte`
+        }) 
+        inputSenha.addEventListener('blur', function() {
+            document.getElementById("dica").innerText = ``
+        })
+
+        let form = document.getElementById("loginForm");
+        form.addEventListener('submit', enviarDados) 
+        function enviarDados(event) {
+            if (document.getElementById("forca").textContent == `Força da senha: Fraca` || document.getElementById("forca").textContent == `Força da senha: Inválida` ) {
+                event.preventDefault()
+                document.getElementById("erro").innerText = `Senha Inválida por ser ~ Fraca ~ ou ~ Inválida ~`
+                let temEspaco = false;
+            } else {    
+                alert(`~ Sucesso ~`)
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

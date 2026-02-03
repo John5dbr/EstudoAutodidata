@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO PRÁTICO 3 — Lista dinâmica com Delegação de Eventos + Remover listeners + stopPropagation</title>
+</head>
+<body>
+    <main id="main">
+        <button id="add" class="add">Adicionar item</button>
+        <ul id="lista"></ul>
+        <button id="desativar">Desativar cliques</button>
+        <div id="log"></div>
+    </main>
+
+    <script>
+
+        let cont = 1;
+        let lista = document.getElementById("lista");
+
+        let main = document.getElementById("main");
+        main.addEventListener('click', gerenciarLista)
+        function gerenciarLista(event) {
+            let novoElemento = document.createElement("li");
+            
+            if (event.target.classList.contains("add") == true) {
+                novoElemento.classList.add("lista-item", "ativado")
+                novoElemento.innerText = `Item ${cont}`
+                lista.prepend(novoElemento)
+                cont++
+                event.stopPropagation()
+            }
+
+            if (event.target.classList.contains("lista-item") == true) {
+                // Apenas para teste '-'
+                console.log(`${event.target.textContent} foi clicado.`)
+                console.log(`O ${event.target.parentElement} também foi clicado clicado no processo.`)
+            }
+
+            if (event.target.classList.contains("lista-item") == true && event.target.classList.contains("ativado") == true) {
+                event.target.style = `text-decoration: underline; font-style: italic;` 
+                event.target.classList.remove("ativado")
+                event.target.classList.add("desativado")
+                event.stopPropagation()
+            } else if (event.target.classList.contains("lista-item") == true && event.target.classList.contains("desativado") == true) {
+                event.target.style = `text-decoration: none;` 
+                event.target.classList.remove("desativado")
+                event.target.classList.add("ativado")
+                event.stopPropagation()
+            }
+
+            if (event.target == document.getElementById("desativar")) {
+                main.removeEventListener('click', gerenciarLista);
+            }
+        };
+
+    </script>
+
+</body>
+</html>

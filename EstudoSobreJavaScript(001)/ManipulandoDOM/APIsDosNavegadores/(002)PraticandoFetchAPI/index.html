@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002 - Praticando Fetch API</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('Recursos/fundo.jpg') no-repeat center center / cover;
+        }
+
+        #secClima {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 25px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            border: 5px solid #5E97D2;
+        }
+        #secClima > h1 {
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.411);
+            color: white;
+            font: normal normal 2em 'Montserrat';
+            text-align: center;
+            margin: 0px 0px 25px 0px;
+        }
+        .inputs {
+            height: 30px;
+            padding: 5px 0px 5px 10px;
+            font: normal normal 1.25em 'Montserrat';
+            border-radius: 10px;
+            border: 2px solid #5E97D2;
+        }
+        .erro {
+            border: 2px solid rgb(110, 0, 0);
+        }
+        .sucesso {
+            border: 2px solid #5E97D2;
+        }
+
+        #secClimaResult {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 15px;
+            border: 5px solid #5E97D2;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.685);
+            transition: all 0.25s linear 0s;
+        }
+        .secClimaResult__items {
+            text-align: center;
+            font: normal normal 1.2em 'Montserrat';
+        }
+        #iconResult {
+            height: 100px;
+            width: 100px;
+        }
+        .escondido {
+            opacity: 0;
+        } 
+
+        #btnAnalisar {
+            padding: 0px 10px 0px 10px;
+            font: normal normal 1em 'Montserrat';
+            background: white;
+            border: 2px solid #5E97D2;
+        }
+
+        #btnClima {
+            height: 60px;
+            width: 60px;
+            background: url('Recursos/imgClima.png') no-repeat center center / contain;
+            border-radius: 100%;
+            transition: all 0.5s ease 0s;
+        }
+        #btnClima:hover {
+            transform: scale(105%);
+        }
+    </style>
+</head>
+<body>
+
+    <section id="secClima">
+        <h1>Informações do Clima <br> de seu Estado</h1>
+        <input type="text" name="cidade" id="cidade" class="inputs" placeholder="Estado">
+        <button id="btnAnalisar" class="inputs">Mostrar Clima</button>
+        <article id="btnClima"></article>
+        <section id="secClimaResult" class="escondido">
+            <article class="secClimaResult__items">
+                <p id="cidadeResult">Cidade</p>
+                <strong>
+                    <p id="tempResult">Temperatura</p> 
+                </strong>
+            </article>
+            <img src="Recursos/imgClimaQuenteResult.png" alt="iconParaClima" class="secClimaResult__items" id="iconResult">
+            <article class="secClimaResult__items">
+                <p id="descriptionResult">Descrição</p>
+            </article>
+        </section>
+    </section>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

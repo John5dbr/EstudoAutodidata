@@ -1,0 +1,112 @@
+Git e GitHub
+
+* Git é um software que permite a manipulação de diferentes versões de arquivos/pastas, essas mudanças são apenas
+  locais (na máquina).
+
+* GitHub é uma plataforma que permite a manipulação de diferentes versões de arquivos/pastas de maneira remota.
+
+-> Conceitos principais do Git e do GitHub
+
+1. Repositório = É um conjunto de arquivos que armazenam configurações e é o responsável por rastrear todas 
+   as mudanças nos arquivos/pastas presentes com ele 
+
+2. Branch = Uma branch é semelhante a uma linha do tempo, em que nela está guardada todo o histórico de mudanças
+   feitas no repositório. Além disso, todo repositório tem uma branch principal
+
+3. Merge = Significa juntar duas branchs, combinandos os commits feitos (pode haver conflitos que deverão ser resolvidos 
+   manualmente)
+
+4. Commit = Representa o ato de criar uma nova versão apenas salvando os arquivos desejados
+
+5. Pull Request = É uma ferramenta apenas do GitHub que permite analisar, comparar e discutir duas branchs diferentes antes de 
+   mescla-las (antes de fazer merge), elas podem ser criadas para serem enviadas à outros usuários ou outros usuários podem
+   simplesmente te enviar um pull request (essas branchs não precisam ser necessariamente de um mesmo repositório)
+
+6. Alias = É um atalho para comandos, uma forma de encurtar comandos com apelidos curtos.
+
+7. Remote = Trata-se de uma nomeclatura que substitui o link usado em push, pull e outros comandos para linkar repositórios remotos (por 
+   padrão ao usar o comando clone o alias é origin)
+
+8. Upstream = É uma nomeclatura que substitui o link e o nome de uma branch de um repositório remoto 
+
+9. Fork = É um repositório remoto/local que deriva de outro repositório remoto, sem necessariamente seguir o código original, é basicamente
+   um repositório usado para utilizar/alterar conteúdos já feitos.
+
+10. Fetch = Representa o ato de atualizar o seu repositório local, pois com fetch pode-se puxar um repositório local (trazendo arquivos
+    novos, commits e etc), porém sem alterar o código e conteúdo presente no repositório local.  
+
+-> Comandos Iniciais do Git
+
+git config --global user.name "ExemploDeNome" = Define o nome do usuário
+git config --global user.email "ExemploDeEmail" = Define o email do usuário
+git init = Aplica um repositório no diretório em que estiver
+git status = Expõe todos os arquivos recem-criados, recem-deletados e modificados
+
+-> Comandos para Commits
+
+git add ExemploDeNome = Adiciona os arquivos que serão salvos no commit
+git add . = Adiciona todos os arquivos criados, deletados e com alterações para commit
+git log = Lista todos os commits já feitos detalhadamente
+git log --oneline = Lista todos os commits ja feitos resumidamente
+git commit -m "ExemploDeDescrição" = Salva uma versão do projeto com descrição
+git checkout ExemploDoCódigoDeUmCommit = Se dirige para algum commit salvo
+git revert ExemploDoCódigoDeUmCommit = Cria um commit novo que reverte todas as alterações salvas do commit selecionado
+git reset ExemploDoCódigoDeUmCommit = Apaga todos os commits e suas alterações salvas a partir do commit selecionado
+
+-> Comandos para Branchs
+
+git branch = Lista todas as branchs que existem
+git branch NomeDeUmaBranch = Cria uma branch nova a partir do commit em que estiver
+git switch NomeDeUmaBranchExistente = Se dirige para alguma branch criada
+git merge NomeDeUmaBranch = Combina os commits da branch selecionada com os commits da branch em que se esta, fundindo as branchs
+git branch -D NomeDeUmaBranch = Apaga forçadamente uma branch
+git branch -m NovoNome = Renomeia a branch em que estiver 
+
+-> Ignorando Arquivos
+
+* No Git, ignorar arquivos significa definir para o Git quais arquivos/pastas não devem ser rastreados, em que
+  para que o Git ignorar algum arquivo/pasta, o nome do arquivo/pasta deve estar em um arquivo chamado .gitignore 
+
+type nul > .gitignore = Cria o arquivo .gitignore
+
+* Não será rastreado o arquivo/pasta que tiver seu nome dentro de .gitignore 
+  (a não que seja um arquivo de código e deve ser apenas UM nome por linha)
+
+-> Comandos para o GitHub
+
+git push LinkDeUmRepositórioRemoto NomeDaBranchEnviada = Empurra os arquivos e pastas de um commit em uma branch para um
+  repositório remoto
+git pull LinkDeUmRepositórioRemoto NomeDaBranchQueSeDesejaPuxar = Puxa os arquivos e pastas de uma branch de um repositório
+  remoto para um repositório local
+git clone LinkDeUmRepositórioRemoto = Clona totalmente um repositório do GitHub, trazendo em uma pasta todas as branchs, 
+  commits, arquivos e pastas presentes ali para um repositório local
+
+-> Comandos para configurar um Remote(origin)
+
+* Ao usar git clone antes de definir um origin, o alias origin é automaticamente ligado ao repositório remoto clonado.
+
+git remote add NomeDeUmRemote LinkDeUmRepositórioRemoto = Adiciona um novo remote
+git remote rename NomeAntigo NomeNovo = Renomeia um remote
+git remote rm NomeDeUmRemote = Remove um remote e o link ligado a ele
+git remote -v = Lista todos os remote, upstreams e links salvos
+git remote set-url NomeDeUmRemoteJáSalvo LinkDeUmRepositório = Altera o link ligado ao remote selecionado
+
+-> Comandos configurar um Upstream
+.
+git remote -v = Lista todos os upstreams, remotes e links salvos
+git remote add NomeDoUpstream UrlDoRepositórioRemoto = Adiciona um novo upstream
+git remote rm NomeDoUpstream = Apaga o upstream selecionado
+git remote set-url NomeDoUpstream NovoLink = Altera o link interligado a esse upstream
+git remote rename NomeAntigoDoUpstream NovoNomeDoUpstream = Renomeia o upstream
+git fetch NomeDoUpstream = Puxa as alterações recentes do repositório remoto sem afetar o repositório local
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+1. Variáveis e os tipos de variáveis
+
+2. Comportamentos e os tratamentos para cada tipo de variável
+
+3. Operadores no JavaScript
+ 
+4. Condições 
+   |-> if 
+   |-> if else 
+   |-> switch case
+
+5. Loops/Repetições 
+   |-> while 
+   |-> do while 
+   |-> for 
+
+6. Arrays e seus métodos mais usados 
+
+7. Functions/Funcões e seus tipos ( com ou sem parâmetros )
+
+8. OOP - Programação Orientada a Objetos ( Classes e Construtores )
+   |-> Herança e Encapsulamento 
+   |-> Polimorfismo 
+   |-> Abstração 
+   |-> Modularização 
+   |-> Getters e Setters 
+   |-> Métodos+Atributo Privados/Publicos 
+
+9. Manipulação do DOM (Document Objeto Model)
+   |-> Fluxo de eventos: Capturing > Target > Bubbling
+   |-> Tipos comuns de eventos
+       |-> Para mouse: click, mouseenter, mouseout...
+       |-> Para teclado: keyup, keydown, input...
+       |-> Para formulários: submit, chance...
+   |-> Conhecendo o parâmetro event em funções de eventos
+   |-> Métodos e propriedades do event: target, key, stopPropagation e preventDefault
+   |-> Remoção de eventos com .removeEventListener()
+   |-> Conhecendo/Aplicando a técnica Delegation Events (delegação de eventos)
+
+
+
+
