@@ -1,0 +1,65 @@
+> Variáveis e os tipos de variáveis < 
+
+> Comportamentos e os tratamentos para cada tipo de variável <
+
+> Operadores no JavaScript <
+ 
+> Condições <
+  |
+  |-> if 
+  |-> if else 
+  |-> switch case
+
+> Loops/Repetições <
+  |
+  |-> while 
+  |-> do while 
+  |-> for 
+
+> Arrays e seus métodos mais usados <
+  |
+  |-> forEach()
+  |-> map()
+  |-> filter()
+  |-> reduce()
+  |-> slice()
+  |-> splice()
+  |-> sort()
+  |-> find()
+  |-> findIndex()
+
+> Functions/Funcões e seus tipos ( com ou sem parâmetros ) <
+  |
+  |-> Arrow functions - () => {} 
+  |-> Funções declaradas - function nomeQualquer() {}
+  |-> Função assíncronas - async function nomeQualqer() {}
+  |-> Função armazenada - let funcaoQualquer = nomeDaFuncao() {} 
+  |-> Função autoexecutável - (function nomeQualquer() {})()
+
+> OOP - Programação Orientada a Objetos ( Classes e Construtores ) < 
+  |
+  |-> Herança e Encapsulamento 
+  |-> Polimorfismo 
+  |-> Abstração 
+  |-> Modularização 
+  |-> Getters e Setters 
+  |-> Métodos+Atributo Privados/Publicos 
+
+> Manipulação do DOM (Document Objeto Model) <
+  |
+  |-> Fluxo de eventos: Capturing > Target > Bubbling
+  |-> Tipos comuns de eventos
+      \
+       |-> Para mouse: click, mouseenter, mouseout...
+       |-> Para teclado: keyup, keydown, input...
+       |-> Para formulários: submit, chance...
+      /
+  |-> Conhecendo o parâmetro event em funções de eventos
+  |-> Métodos e propriedades do event: target, key, stopPropagation e preventDefault
+  |-> Remoção de eventos com .removeEventListener()
+  |-> Conhecendo/Aplicando a técnica Delegation Events (delegação de eventos)
+   
+...
+
+
+
