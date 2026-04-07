@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Recursos/Favicon.png" type="image/x-icon">
+    <title>Desvendador de Cep</title>
+</head>
+<body>
+    
+    <div class="fullConteiner">
+
+        <header class="hdr">
+            <h1 class="hdr__h1">DESVENDADOR DE CEP</h1>
+            <nav class="hdr__nav">
+                <p class="hdr__nav__p">Fetch API</p>
+            </nav>
+        </header>
+        
+        <section class="conteinerBanner">
+            <h1 class="conteinerBanner__h1">viaCEP e BrasilAPI</h1>
+            <article class="conteinerBanner__Banner" data-speed="10"></article>
+        </section>
+
+        <main class="mn">
+            <section class="mn__Infor">
+                <h1 class="mn__Infor__h1">
+                    Consulte CEPs de todo o Brasil
+                </h1>
+                <p class="mn__Infor__p">
+                    O webservice gratuito de alto desempenho para consulta de Código de Endereçamento Postal (CEP) do Brasil é uma solução tecnológica, geralmente oferecida por plataformas como a <a href="https://viacep.com.br/" target="_blank"><strong>ViaCEP</strong></a> ou <a href="https://brasilapi.com.br/" target="_blank"><strong>BrasilAPI</strong></a>, que permite a desenvolvedores e sistemas de software consultarem dados de endereçamento postal de forma automatizada e sem custos. 
+                </p>
+            </section>
+            <section class="mn__User">
+                <label for="inputCep" class="mn__User__lbl">
+                    <p class="mn__User__lbl__p">Cep para desvendar:</p>
+                    <input type="text" name="inputCep" id="inputCep" placeholder="Ex: 01001000" class="mn__User__lbl__inputCep">
+                </label>
+                <img src="Recursos/iconLupa.png" alt="iconLupa" class="mn__User__img" id="btnBuscarCep">
+            </section>
+            <article class="mn__Result" id="result">
+                <article class="mn__Result__art">
+                    <h1 class="mn__Result__art__h1">Resultado</h1>
+                    <p class="mn__Result__art__p" id="pCep">Cep: XXXXX</p>
+                    <p class="mn__Result__art__p" id="pRua">Rua: XXXXX</p>
+                    <p class="mn__Result__art__p" id="pBairro">Bairro: XXXXX </p>
+                    <p class="mn__Result__art__p" id="pEstado">Estado: XXXXX </p>
+                </article>
+                <section class="elementosColoridos">
+                    <article class="elementoColorido elColor1"></article>
+                    <article class="elementoColorido elColor2"></article>
+                    <article class="elementoColorido elColor3"></article>
+                    <article class="elementoColorido elColor4"></article>
+                </section>
+            </article>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

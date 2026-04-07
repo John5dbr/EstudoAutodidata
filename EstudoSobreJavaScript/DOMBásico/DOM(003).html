@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TentativaDeUmaCalculadora</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            background: rgb(0, 140, 255);
+        } 
+        main > section {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 450px;
+            background: white;
+            text-align: center;
+            padding: 10px;
+        }
+        main > section > div {
+            margin: 10px 0px;
+            height: 35px;
+            width: 125px;
+            background: black;
+            color: white;
+            line-height: 35px;
+        }
+        #Inicio {
+            position: absolute;
+            z-index: 1;
+        }
+        #Soma {
+            position: absolute;
+            z-index: 0;
+        }
+        #Subtração {
+            position: absolute;
+            z-index: 0;
+        }
+        #Multiplicação {
+            position: absolute;
+            z-index: 0;
+        }
+        #Dividir {
+            position: absolute;
+            z-index: 0;
+        }
+        .voltar {
+            margin: 10px 0px;
+            height: 35px;
+            width: 125px;
+            background: black;
+            color: white;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="Inicio">
+            <h1>Qual das seguintes operações deseja-se fazer?</h1>
+            <div id="Opcao1" onclick="QuerSomar()">Somar</div>
+            <div id="Opcao2" onclick="QuerSubtrair()">Subtrair</div>
+            <div id="Opcao3" onclick="QuerMultiplicar()">Multiplicar</div>
+            <div id="Opcao4" onclick="QuerDividir()">Dividir</div>
+        </section>
+        <section id="Soma">
+            <h1>Faça a sua soma</h1>
+            <input type="number" name="input1" id="n1">
+            <h2>+</h2>
+            <input type="number" name="input2" id="n2">
+            <br>
+            <button class="botao" onclick="Somar()">Somar</button>
+            <h2>
+                Resultado:
+            </h2>
+            <div onclick="Voltar()" class="voltar">Voltar</div>
+        </section>
+        <section id="Subtração">
+            <h1>Faça a sua soma subtração</h1>
+            <input type="number" name="input3" id="n3">
+            <h2>+</h2>
+            <input type="number" name="input4" id="n4">
+            <br>
+            <button class="botao" onclick="Subtrair()">Subtrair</button>
+            <h2>
+                Resultado:
+            </h2>
+            <div onclick="Voltar()" class="voltar">Voltar</div>
+        </section>
+        <section id="Multiplicação">
+            <h1>Faça a sua multiplicação</h1>
+            <input type="number" name="input5" id="n5">
+            <h2>+</h2>
+            <input type="number" name="input6" id="n6">
+            <br>
+            <button class="botao" onclick="Multiplicar()">Multiplicar</button>
+            <h2>
+                Resultado:
+            </h2>
+            <div onclick="Voltar()" class="voltar">Voltar</div>
+        </section>
+        <section id="Divisão">
+            <h1>Faça a sua divisão</h1>
+            <input type="number" name="input7" id="n7">
+            <h2>+</h2>
+            <input type="number" name="input8" id="n8">
+            <br>
+            <button class="botao" onclick="Dividir()">Dividir
+            </button>
+            <h2>
+                Resultado:
+            </h2>
+            <div onclick="Voltar()" class="voltar">Voltar</div>
+        </section>
+    </main>
+    <script>
+        let inicio = document.getElementById('Inicio');
+        let somar = document.getElementById('Soma')
+        let subtrair = document.getElementById('Subtração')
+        let multiplicar = document.getElementById('Multiplicação')
+        let divisao = document.getElementById('Divisão')
+        /*===============*/
+        function QuerSomar() {
+            inicio.style = 'z-index: 0;'
+            somar.style = 'z-index: 1;'
+            subtrair.style = 'z-index: 0;'
+            multiplicar.style = 'z-index: 0;'
+            divisao.style = 'z-index: 0;'
+        }
+        function QuerSubtrair() {
+            inicio.style = 'z-index: 0;'
+            somar.style = 'z-index: 0;'
+            subtrair.style = 'z-index: 1;'
+            multiplicar.style = 'z-index: 0;'
+            divisao.style = 'z-index: 0;'
+        }
+        function QuerMultiplicar() {
+            inicio.style = 'z-index: 0;'
+            somar.style = 'z-index: 0;'
+            subtrair.style = 'z-index: 0;'
+            multiplicar.style = 'z-index: 1;'
+            divisao.style = 'z-index: 0;'
+        }
+        function QuerDividir() {
+            inicio.style = 'z-index: -1;'
+            somar.style = 'z-index: -1;'
+            subtrair.style = 'z-index: -1;'
+            multiplicar.style = 'z-index: -1;'
+            divisao.style = 'z-index: 1;'
+        }
+        function Voltar() {
+            inicio.style = 'z-index: 1;'
+            somar.style = 'z-index: 0;'
+            subtrair.style = 'z-index: 0;'
+            multiplicar.style = 'z-index: 0;'
+            divisao.style = 'z-index: 0;'
+        }
+        function Somar() {
+            let number1 = document.getElementById('n1');
+            let number2 = document.getElementById('n2');
+            let fator = Number(number1.value) + Number(number2.value);
+            let botao = document.getElementsByClassName('botao');
+            let result = document.getElementsByTagName('h2')[1];
+            result.innerHTML = `Resultado: ${fator}`
+        }
+        function Subtrair() {
+            let number1 = document.getElementById('n3');
+            let number2 = document.getElementById('n4');
+            let fator = Number(number1.value) - Number(number2.value);
+            let botao = document.getElementsByClassName('botao');
+            let result = document.getElementsByTagName('h2')[3];
+            result.innerHTML = `Resultado: ${fator}`
+        }
+        function Multiplicar() {
+            let number1 = document.getElementById('n5');
+            let number2 = document.getElementById('n6');
+            let fator = Number(number1.value) * Number(number2.value);
+            let botao = document.getElementsByClassName('botao');
+            let result = document.getElementsByTagName('h2')[5];
+            result.innerHTML = `Resultado: ${fator}`
+        }
+        function Dividir() {
+            let number1 = document.getElementById('n7');
+            let number2 = document.getElementById('n8');
+            let fator = Number(number1.value) / Number(number2.value);
+            let botao = document.getElementsByClassName('botao');
+            let result = document.getElementsByTagName('h2')[7];
+            result.innerHTML = `Resultado: ${fator}`
+        }
+    </script>
+</body>
+</html>

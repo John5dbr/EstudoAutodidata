@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorrendoContraOTempo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font: normal bolder 1em 'Playwrite DK Loopet';
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .Divs {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            transition: all 0.2s linear 0s;
+            border: 2px solid rgba(0, 0, 0, 0);
+            margin: 25px;
+        }
+        #Div1 {
+            background: aquamarine;
+        }
+        #Div1:hover {
+            background: black;
+            color: white;
+            border: 2px solid white;
+            transform: rotate(360deg);
+        }
+        #Div2 {
+            background: aqua;
+        }
+        #Div2:hover {
+            background: black;
+            color: white;
+            border: 2px solid white;
+            transform: rotate(360deg);
+        }
+        #Div3 {
+            background: rgb(0, 151, 151);
+        }
+        #Div3:hover {
+            background: black;
+            color: white;
+            border: 2px solid white;
+            transform: rotate(360deg);
+        }
+        #Div4 {
+            background: rgb(0, 136, 255);
+        }
+        #Div4:hover {
+            background: black;
+            color: white;
+            border: 2px solid white;
+            transform: rotate(360deg);
+        }        
+    </style>
+</head>
+<body>
+    <div id="Div1" class="Divs">1</div>
+    <div id="Div2" class="Divs">2</div>
+    <div id="Div3" class="Divs">3</div>
+    <div id="Div4" class="Divs">4</div>
+</body>
+</html>

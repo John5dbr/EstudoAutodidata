@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM - Block Element Modifier</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: normal normal 1em 'arial';
+        }
+        .hdr {
+            background: #E3E6E9;
+            color: #494A4B;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 2fr 3fr 2fr;
+        }
+        .hdr > * {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-evenly;
+        }
+        .hdr__nav {
+            flex-flow: row wrap;
+            gap: 10px;
+            padding: 10px 0px;
+        }
+        .nav__link {
+            color: #494A4B;
+            text-decoration: none;
+            transition: all 0.4s ease-out 0s;
+        }
+        .nav__link--hover:hover {
+            transform: scale(110%);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="hdr">
+        <figure class="hdr__figure"></figure>
+        <nav class="hdr__nav">
+            <a href="" class="nav__link nav__link--hover">
+                Introdução
+            </a>
+            <a href="" class="nav__link nav__link--hover">
+                Nomeação
+            </a>
+            <a href="" class="nav__link nav__link--hover">
+                Perguntas Frequentes
+            </a>
+        </nav>
+        <aside class="hdr__aside">
+            <a href="">
+
+            </a>
+            <a href="">
+
+            </a>
+            <a href="">
+
+            </a>
+        </aside>
+    </header>
+</body>
+</html>

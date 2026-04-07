@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004 - Manipulação de rolagem</title>
+    <style>
+        h1, h2 {
+            margin: 0px;
+        }
+        header {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0px;
+        }
+        nav {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center; 
+            gap: 15px;
+        }
+        section {
+            display: flex;
+            flex-flow: column nowrap    ;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        footer {
+            height: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>HEADER</h1>
+        <nav id="nav">
+            <div class="sessoes" data-sessao="01">Sessão 01</div>
+            <div class="sessoes" data-sessao="02">Sessão 02</div>
+            <div class="sessoes" data-sessao="03">Sessão 03</div>
+            <div class="sessoes" data-sessao="04">Sessão 04</div>
+        </nav>
+    </header>
+    <hr>
+    <main id="sessoes">
+        <section id="01">
+            <h2>SECTION 01</h2>
+            <br>
+            <input type="button" value="Informações Em Relação o Topo da Página" class="informacoes">
+        </section>
+        <hr>
+        <section id="02">
+            <h2>SECTION 02</h2>
+            <br>
+            <input type="button" value="Informações Em Relação o Topo da Página" class="informacoes">
+        </section>
+        <hr>
+        <section id="03">
+            <h2>SECTION 03</h2>
+            <br>
+            <input type="button" value="Informações Em Relação o Topo da Página" class="informacoes">
+        </section>
+        <hr>
+        <section id="04">
+            <h2>SECTION 04</h2>
+            <br>
+            <input type="button" value="Informações Em Relação o Topo da Página" class="informacoes">
+        </section>
+        <hr>
+        <footer>
+            <input type="button" value="Voltar ao Topo" id="voltarAoTopo">
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

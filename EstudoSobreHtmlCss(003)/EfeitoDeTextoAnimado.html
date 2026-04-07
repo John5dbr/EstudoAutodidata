@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EfeitoDeTextoAnimado</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: 0px;
+        }
+
+        body {
+            padding: 100px 0px 0px 0px;
+            text-align: center;
+        }
+
+        #title {
+            font: normal normal 2.5em 'arial';
+        }
+        #title::after {
+            content: '';
+            white-space: nowrap;
+            animation: escritor 2.5s ease-in-out 1s infinite normal forwards running;
+        }
+
+        @keyframes escritor {
+            0% {
+                content: '';
+            }
+            10% {
+                content: 'T'; 
+            } 
+            30% {
+                content: 'Ti'; 
+            } 
+            50% {
+                content: 'Tit'; 
+            } 
+             70% {
+                content: 'Titl'; 
+            } 
+            90% {
+                content: 'Title'; 
+            } 
+            100% {
+                content: 'Title';
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title"></h1>
+</body>
+</html>

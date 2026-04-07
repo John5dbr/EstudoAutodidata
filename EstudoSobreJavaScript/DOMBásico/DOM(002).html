@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça a sua soma</h1>
+    <input type="number" name="input1" id="n1">
+    <h2>+</h2>
+    <input type="number" name="input2" id="n2">
+    <br>
+    <button id="botao" onclick="Somar()">botão</button>
+    <h2>
+        Resultado: 
+    </h2>
+    <script>
+        function Somar() {
+            let number1 = document.getElementById('n1');
+            let number2 = document.getElementById('n2');
+            let fator = Number(number1.value) + Number(number2.value);
+            let botao = document.getElementsByTagName('button')[0];
+            let result = document.getElementsByTagName('h2')[1];
+            result.innerHTML = `Resultado: ${fator}`
+        }
+    </script>
+</body>
+</html>

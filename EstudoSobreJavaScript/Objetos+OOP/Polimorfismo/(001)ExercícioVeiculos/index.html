@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiculos</title>
+</head>
+<body>
+    <script>
+
+        class Veiculos {
+            constructor() {
+                if (this.constructor === Veiculos) {
+                    throw new TypeError(`Implementação Inválida.`)
+                } else if (this.mover === undefined) {
+                    throw new TypeError(`Ausência de Implementação Obrigatória.`)
+                }
+            }   
+        };
+
+        class Aviao extends Veiculos {
+            constructor() {
+                super()
+            }
+
+            mover() {
+                console.log(`Voando No Céu!`)
+            };
+        };
+
+        class Helicoptero extends Veiculos {
+            constructor() {
+                super()
+            }
+
+            mover() {
+                console.log(`Voando Com Hélices!`)
+            };
+        };
+
+        class Carro extends Veiculos {
+            constructor() {
+                super()
+            }
+
+            mover() {
+                console.log(`Correndo Sobre Rodas!`)
+            };
+        };
+
+        /*===========================================*/
+
+        let veiculos = {
+            veiculo001: new Aviao,
+            veiculo002: new Helicoptero,
+            veiculo003: new Carro
+        };
+
+        /*===========================================*/
+
+        veiculos.veiculo001.mover();
+
+        veiculos.veiculo002.mover();
+                
+        veiculos.veiculo003.mover();
+        
+    </script>
+</body>
+</html>

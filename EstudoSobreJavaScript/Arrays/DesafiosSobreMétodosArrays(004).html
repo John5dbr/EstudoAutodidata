@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesafiosSobreMétodosArrays(004)</title>
+</head>
+<body>
+    <script>
+        let palavras = [
+            'Maria', 
+            'Eduarda', 
+            'Duda', 
+            'Madu', 
+            'Julia', 
+            'Morgana', 
+            'Rafaela', 
+            'Bibiano',
+            'Bibi',
+            'Rafa',
+        ];
+        let palavrasCom5Letras = palavras.filter( (el) => el.length > 6 );
+        let palavrasCapslock = [];
+        for ( let cont = 0 ; (cont != palavrasCom5Letras.length) ; cont++ ) {
+            palavrasCapslock[cont] = palavrasCom5Letras[cont].toUpperCase()
+        }
+        let palavrasIncicialA = palavras.find( (el) => el[0] == 'A')
+        let palavrasTotalDeLetras = palavras.reduce( (ac, el) => { return ac + el.length }, 0)
+        console.log(`Palavras com mais de 5 letras: ` + palavrasCom5Letras)
+        console.log(`Palavras com mais de 5 letras e em Capslock: ` + palavrasCapslock)
+        console.log(`Array invertido: ` + palavras.reverse())
+        console.log(`Palavras nas posições 3 à 7: ` + palavras.reverse().slice(3, 7))
+        console.log(`Palavra com inicial A: ` + palavras.some( () => palavrasIncicialA != null || palavrasIncicialA != undefined ))
+        console.log(`Soma de todos os Caracteres do Array: ` + palavrasTotalDeLetras)
+    </script>
+</body>
+</html>

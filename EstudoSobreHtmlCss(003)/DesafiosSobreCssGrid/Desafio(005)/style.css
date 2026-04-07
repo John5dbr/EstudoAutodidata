@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font: normal bold 1em 'Arial';
+    text-shadow: 1px 2px 0px black;
+    color: white;
+}
+#Conteiner {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr 1fr;
+    grid-template-rows: 1fr 6fr 2fr 1fr;
+    grid-template-areas: 
+    'header  header  header  header '
+    '.       main    sidebar .      '
+    '.       section section .      '  
+    'footer  footer  footer  footer ';
+    width: 100vw;   
+    height: 100vh;
+    gap: 5px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+    background: #84CBE8;
+    grid-area: header;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+    background: #FF8861;
+    grid-area: main;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+    background: #5875E2;
+    grid-area: sidebar;
+}
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    grid-area: section;
+}
+section > aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #6D4C99;
+    border: 1px solid black;
+    width: 49%;
+    height: 100%;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+    background: #84CBE8;
+    grid-area: footer;
+}
+
+@media (max-width: 768px) {
+    #Conteiner {    
+        grid-template-rows: 1.5fr 0.5fr 5fr 2fr 1fr ;
+        grid-template-areas: 
+        'header  header  header  header  '
+        'sidebar sidebar sidebar sidebar '
+        'main    main    main    main    '  
+        'section section section section '
+        'footer  footer  footer  footer  ';
+    }
+}

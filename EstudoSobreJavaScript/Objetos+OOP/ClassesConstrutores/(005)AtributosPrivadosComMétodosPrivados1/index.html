@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtributosPrivados+MétodosPrivados(001)</title>
+</head>
+<body>
+    <script>
+        class Funcionario {
+            constructor (nome, sexo, cargo, cod) {
+                this.nome = nome;
+                this.sexo = sexo;
+                this.cargo = cargo;
+                this.cod = cod;
+            }
+
+            #salario = 1518;
+
+            get mostrarSalario() {
+                console.log(`Nome: ${this.nome} \nSálario: R$ ${this.#salario}`)
+            };
+
+            set aumentarSalario(valor) {
+                this.#salario += valor
+            };
+
+            mostrarDados() {
+                console.log(`Informação Geral \nNome: ${this.nome} \nSexo: ${this.sexo} \nCargo: ${this.cargo} \nCód. do Funcionário(a): ${this.cod}`)
+            };
+        }
+
+        let pessoa1 = new Funcionario("Maria Eduarda Ferreira Araújo", "Feminino", "Secretária", 1);
+
+        let pessoa2 = new Funcionario("Pedro de Souza Santos", "Masculino", "Porteiro", 2);
+
+        pessoa1.mostrarDados();
+        pessoa1.mostrarSalario;
+        pessoa1.aumentarSalario = 12;
+        pessoa1.mostrarSalario;
+
+        pessoa2.mostrarDados();
+        pessoa2.mostrarSalario;
+        pessoa2.aumentarSalario = 32;
+        pessoa2.mostrarSalario;
+    </script>
+</body>
+</html>

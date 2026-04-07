@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EfeitoAnimadoEmBotao</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: 0px;
+        }
+        .mn {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mn__sec {
+            height: 50%;
+            height: 50%;
+        }
+        #btn {
+            height: 40px;
+            width: 140px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            transition: all 0.45s ease-in-out 0s;
+            overflow: hidden;
+        }
+        #btn:hover {
+            transform: scale(110%);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.897);
+            border-radius: 5px;
+        }
+        #btn:hover > .btn__items {
+            transform: translateY(0%);
+        }
+        .btn__items__1 {
+            background: blue;
+            transition: all 0.45s ease-in-out 0s;
+        }
+        .btn__items__2 {
+            background: red;
+            transition: all 0.2s ease-in-out 0s;
+        }
+        .btn__items__3 {
+            background: rgb(48, 161, 123);
+            transition: all 0.35s ease-in-out 0s;
+        }
+        #btn > p {  
+            height: 40px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font: normal bold 1em 'arial';
+            color: white;
+        }
+        .btn__items {
+            width: 33.33%;
+            height: 100%;
+            transform: translateY(100%);
+        }
+    </style>
+</head>
+<body>
+    <main class="mn">
+        <section class="mn__sec">
+            <div id="btn">
+                <div class="btn__items btn__items__1"></div>
+                <div class="btn__items btn__items__2"></div>
+                <div class="btn__items btn__items__3"></div>
+                <p>LinkExemplo</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

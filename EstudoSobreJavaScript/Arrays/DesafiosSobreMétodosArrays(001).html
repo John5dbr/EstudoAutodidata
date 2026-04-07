@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesafiosSobreMétodosArrays(001)</title>
+</head>
+<body>
+    <script>
+        let notas = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        notas.sort( ( a, b ) => b - a )
+        let notasInvalidas = notas.filter( (el) =>  el < 0 || el > 10 );
+        let notasAbaixoDeTres = notas.filter( (el) => el < 4 && el > -1 );
+        let notasAcimaDeSete = notas.reduce( (ac, el) => { if (el >= 7 && el <= 10) { return ac + 1 } else { return ac + 0 } }, 0);
+        let mediaDaTurma = notas.reduce( (ac, el) => ac + el );
+        let notasAoQuadrado = notas.map( (el) => el ** 2 );
+        let notas5Melhores = [];
+        for ( let cont = 1 ; ( cont <= 15 ) ; cont++ ) {
+            if ( notas[cont] >= 1 && notas[cont] <= 10 ) {
+                notas5Melhores.push(notas[cont])
+            } 
+        }
+        console.log(`Notas aplicadas: ` + notas)
+        console.log(`~ Analise ~`)
+        console.log(`Notas Invalidas (0 - 10): ${notasInvalidas} \nNotas Abaixo de tres: ${notasAbaixoDeTres} \nNotas Acima de sete: ${notasAcimaDeSete} \nMédia da turma: ${mediaDaTurma / notas.length} \nNotas elevadas ao quadrado (x²): ${notasAoQuadrado}\n`)
+        console.log(`~ 5 melhores notas: ` + notas5Melhores.slice(0, 4) + ` ~`);
+    </script> 
+</body>
+</html>

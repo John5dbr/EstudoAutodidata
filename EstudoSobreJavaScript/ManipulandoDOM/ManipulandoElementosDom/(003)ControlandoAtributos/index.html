@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 002</title>
+    <style>
+        img {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img001.png" alt="IMAGEM" id="img"> 
+    <br>
+    <input type="button" value="Trocar imagem" id="btnTrocarImg">
+    <input type="button" value="Desabilitar imagem" id="btnDesabImg">
+
+    <script>
+        /*
+            Exercício 2 — Manipulação de Atributos (setAttribute / getAttribute / booleanos)
+
+            Coloque uma imagem no HTML.
+            Crie dois botões: "Trocar imagem" e "Desabilitar imagem".
+
+            Ao clicar:
+
+            Trocar imagem
+
+            use getAttribute("src") para ler o valor atual
+
+            use setAttribute("src", "...") para trocar a imagem
+
+            Desabilitar imagem
+
+            use um atributo booleano:
+
+            se a imagem NÃO tiver hidden, adicione hidden
+
+            se tiver, remova com removeAttribute("hidden")
+
+            Objetivo: treinar leitura/escrita e alternância de atributos.
+        */
+
+        let img = document.getElementById("img");   
+
+        // Para trocar Img
+        let listaDeImg = ["img001.png", "img002.png", "img003.png"] ;
+        let imgSelecionada = listaDeImg[0];
+        let btnTrocarImg = document.getElementById("btnTrocarImg");
+        btnTrocarImg.addEventListener('click', trocarImg);
+        function trocarImg() {
+            if (imgSelecionada == listaDeImg[0]) {
+                img.setAttribute("src", listaDeImg[1])
+                imgSelecionada = listaDeImg[1]
+            } else if (imgSelecionada == listaDeImg[1]) {
+                img.setAttribute("src", listaDeImg[2])
+                imgSelecionada = listaDeImg[2]
+            } else if (imgSelecionada == listaDeImg[2]) {
+                img.setAttribute("src", listaDeImg[0])
+                imgSelecionada = listaDeImg[0]
+            }
+        };
+
+        // Para Desabilitar Img
+
+        let btnDesabImg = document.getElementById("btnDesabImg"); 
+        btnDesabImg.addEventListener('click', DesabilitarImg);
+        function DesabilitarImg() {
+            if (img.hasAttribute("hidden") == false) {
+                img.setAttribute("hidden", "true");
+            } else if (img.hasAttribute("hidden") == true) {
+                img.removeAttribute("hidden", "false");
+            }
+        };
+
+    </script>
+</body>
+</html>

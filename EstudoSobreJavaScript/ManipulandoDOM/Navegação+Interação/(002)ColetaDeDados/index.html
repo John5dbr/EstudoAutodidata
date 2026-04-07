@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002 - Coleta de Dados</title>
+    <style>
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informações Pessoais</h1>
+    <hr>
+    <label for="nome">
+        Nome:
+        <input type="text" name="nome" id="nome">
+    </label>
+    <br>
+    <label for="CurteSexo">
+        Tu curte sexo:
+        <input type="checkbox" name="CurteSexo" id="CurteSexo">
+    </label>
+    <br>
+    <label for="sexo">
+        Sexo:
+        <br> Mulher:
+        <input type="radio" name="sexo" id="feminino"> 
+        <br> Homem:
+        <input type="radio" name="sexo" id="masculino">
+    </label>
+    <br>
+    <p>Região de Nascença: </p>
+    <select name="regiao" id="regiao">
+        <option value="Norte">Norte</option>
+        <option value="Nordeste">Nordeste</option>
+        <option value="Centroeste">Centroeste</option>
+        <option value="Sul">Sul</option>
+        <option value="Sudeste">Sudeste</option>
+    </select>
+    <br>
+    <input type="button" value="Verificar Dados" id="btnVerificar">
+
+    <hr>
+    <p id="resultado"></p>
+    <script src="script.js"></script>
+</body>
+</html>

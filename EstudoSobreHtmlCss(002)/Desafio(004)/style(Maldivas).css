@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font1: 'Montserrat';
+    --cor1: #FDA47E;
+}
+
+/*======================================*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    box-sizing: border-box;
+    background: white url('Recursos/FundoGG.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    width: 100%;   
+    height: 175vh;
+}
+
+    /*
+    ------------------------------
+    |   LOGO (Fixed no topo)     |
+    ------------------------------
+    | Menu Lateral (Sticky)      |  -> gruda na lateral
+    |                            |
+    |   Conteúdo Principal          -> com seções (usando relative)
+    |                            |
+    |   Box Flutuante (Absolute) |  -> dentro do conteúdo
+    |                            |
+    |   Rodapé (Static)          |  -> normal no final
+    ------------------------------
+    */
+
+/*======================================*/
+
+main {
+    background: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(7.5px);
+    min-width: 450px;
+    max-width: 60vw;
+    min-height: 500px;
+    transform: translate(-50%, -25%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.411);
+    border-radius: 5px;
+}
+
+/*======================================*/
+
+#HeaderPrincipal {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 0px 0px 20px 0px;
+}
+#Logo {
+    background: rgba(0, 0, 0, 0) url('Recursos/Logo.png') no-repeat center center / cover;
+    text-align: left;
+    width: 42.5%;
+    height: 100%;
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+}
+#HeaderPrincipal > nav {
+    text-align: right;
+    width: 57.5%;
+    position: absolute;
+    right: 0px;
+}
+#HeaderPrincipal > nav > a {
+    text-align: center;
+    color: var(--cor1);
+    font: normal bold 0.85em 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height: 60px;
+    margin: 0px 15px 0px 2.5%;
+    padding: 0px 0px 2px 0px;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+}
+#HeaderPrincipal > nav > a:hover {
+    border-bottom: 2.5px solid var(--cor1);
+}
+
+/*======================================*/
+
+article {
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+article > h1 {
+    text-align: center;
+    color: var(--cor1);
+    font: normal bold 1.75em 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+    margin: 0px 0px 15px 0px;
+}
+article > h2 {
+    text-align: center;
+    color: var(--cor1);
+    font: normal bold 1em 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+    margin: 0px 0px 30px 0px;
+}
+article > a {
+    width: auto;
+    text-align: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font: normal bold 0.8em 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+article > a:hover {
+    border: 2px solid white;
+}
+#a1 {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8EC5FC;
+}
+
+/*======================================*/
+
+#Resultado > section > article > h3 {
+    color: white;
+    font: normal bold 1em 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+    text-align: left;
+    padding: 5px 5px;
+    margin: 0px 10px 0px 0px;
+} 
+#Resultado > section > article > p {
+    color: white;
+    font: normal bold 0.73em 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.568);
+    text-align: left;
+    padding: 5px 5px;
+    margin: 0px 10px 0px 0px;
+} 
+#Resultado > section > article > a {
+    width: 60%;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8EC5FC;
+} 
+#Resultado > section > article > a:hover {
+    border: 1px 1px solid white;
+} 
+#Hotel1 {
+    position: relative;
+    height: 220px;
+}
+#Hotel1 > article    {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 220px;
+    width: 43%;
+}
+#ConteinerFT1 {
+    height: 200px;
+    width: 50%;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    margin: 0px 0px 0px 25px;
+    overflow: hidden;
+}
+#FtHotelMaldivas1 {
+    width: 100%;
+    height: 100%;
+    background: black url('Recursos/Hotel1Maldivas.jpeg') no-repeat center center / cover;
+}
+
+#FtHotelMaldivas1:hover {
+    transform: scale(120%);
+    transition: 0.2s;
+}
+
+/*=======*/
+
+#Hotel2 {
+    position: relative;
+    height: 220px;
+}
+#Hotel2 > article    {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 220px;
+    width: 43%;
+}
+#ConteinerFT2 {
+    height: 200px;
+    width: 50%;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    margin: 0px 0px 0px 25px;
+    overflow: hidden;
+}
+#FtHotelMaldivas2 {
+    width: 100%;
+    height: 100%;
+    background: black url('Recursos/Hotel2Maldivas.jpeg') no-repeat center center / cover;
+}
+#FtHotelMaldivas2:hover {
+    transform: scale(120%);
+    transition: 0.2s;
+}
+
+/*=======*/
+
+#Hotel3 {
+    position: relative;
+    height: 220px;
+}
+#Hotel3 > article    {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 220px;
+    width: 43%;
+}
+#ConteinerFT3 {
+    height: 200px;
+    width: 50%;
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    margin: 0px 0px 0px 25px;
+    overflow: hidden;
+}
+#FtHotelMaldivas3 {
+    width: 100%;
+    height: 100%;
+    background: black url('Recursos/Hotel3Maldivas.jpeg') no-repeat center center / cover;
+}
+#FtHotelMaldivas3:hover {
+    transform: scale(120%);
+    transition: 0.2s;
+}
+
+/*======================================*/
+
+@media (orientation: portrait) {
+    body {
+        background: white url('Recursos/FundoPQ.jpg') no-repeat top center / cover;
+        background-attachment: fixed;
+    }
+}
+

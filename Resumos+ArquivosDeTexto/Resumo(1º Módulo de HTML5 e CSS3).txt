@@ -1,0 +1,266 @@
+LISTAS BÁSICAS E MISTAS
+
+Tags
+<ol> Lista ordenada
+<ul> Lista desodernada
+<li> Item da lista
+
+Atributos
+type="" Atributo válido apenas para ol e usado para mudar o tipo de marcador de item da lista
+
+Propriedades CSS válidas para listas
+list-style-type: Muda o tipo de marcador
+list-style-position: Muda a posição do marcador
+list-style-image: Muda o marcador por uma imagem
+
+Observação: O <li> deve englobar todos as tags de uma lista para uma estrutura mais semântica
+
+========================================================================================================
+
+LINK PARA NAVEGAÇÃO
+		
+Tags
+<a> Usado para fazer links
+
+Atributos
+href="" Origem do link, vulgo "destinatário"
+target="" Se o link abrirá em uma nova guia ou não
+rel="" utilizado para especificar a relação entre a página atual e o destino do link
+
+========================================================================================================
+
+CONTEÚDOS EXTERNOS
+
+Tags
+<link> Define que será extraído o conteúdo de um arquivo externo para o arquivo atual
+
+Atributos
+rel="" A relação entre o arquivo extraído e o arquivo atual
+href="" Origem do link, vulgo "destinatário"
+type="" Esclarece o tipo de arquivo e seu formato
+
+========================================================================================================
+
+TEXTOS BÁSICOS
+
+Tags
+<h1> Título Principal
+<h2> Sub-título do h1
+<h3> Sub-título do h2
+<h4> Sub-título do h3
+<h5> Sub-título do h4
+<h6> Sub-título do h5
+<p> Parágrafo
+<br> Quebrar-Linha
+
+========================================================================================================
+
+FORMATAÇÃO TEXTUAL
+
+Tags
+<strong> Negrito
+<em> Itálico
+<q> Citação entre aspas duplas ""
+<blockquote> Citação em bloco
+<mark> Marca o texto com um fundo colorido, que por padrão é amarelo
+<code> Formata o texto semelhante a formatação usada em códigos
+<pre> Leva em extrema consideração as quebras de linhas e identação vindas do arquivo em código
+<sup> Diminui o texto para cima ²²²
+<sub> Diminui o texto para baixo ₂₂₂
+
+========================================================================================================
+	
+LINKS PARA DOWNLOAD
+
+Tags
+<a> Será usado como botão para download de algum conteúdo 
+
+Atributos
+href="" Possível origem do arquivo para download 
+download="" Torna a tag <a> um botão de download e também é a principal origem do arquivo para download
+
+Observação: A tag <a> não funcionará como um link de navegação, ou seja, para mudar de página
+	    A tag baixará preferencialmente o arquivo que estiver no download=""
+	    Caso download="" esteja vazio, será baixado a origem que estiver em href=""
+
+========================================================================================================
+
+LISTA PARA DEFINIÇÃO
+
+Tags
+<dl> (Definition List) Inicia a lista de definições
+<dt> (Definition Term) Adiciona um tópico na lista
+<dd> (Definition Description) É a definição referente ao tópico da lista
+
+========================================================================================================
+
+SÍMBOLOS OU EMOJIS
+
+Para símbolos que são vistos como comando: 
+&lt; [Comando] &gt; 
+
+&lt;  representa <
+&gt;  representa >
+&amp; representa &
+
+Para símbolos ou emojis com códigos númericos:
+&# [Código] ;
+
+Para símbolos ou emojis com códigos hexadecimais:
+&#x [Código] ;
+
+========================================================================================================
+
+ABREVIAÇÃO
+
+Tags
+<abbr> Adiciona um comportamento ao conteúdo do site 
+       Sempre que o mouse parar em cima desse conteúdo aparecerá um texto
+
+Atributos
+title="" É o texto que aparecerá 
+
+========================================================================================================
+
+IMAGENS BÁSICAS
+
+Formatos
+PNG - ideal para imagens grandes
+JPEG - ideal para imagens pequenas
+WEBP - ideal tanto para imagens grandes quanto pequenas
+
+Tags
+<img> Onde surgirá a imagem
+
+Atributos
+src="" A origem da imagem que aparecerá
+alt="" Texto que aparecerá no lugar da imagem caso ela não carregue
+
+========================================================================================================
+
+Imagens Dinâmicas
+
+Tags
+<picture> É onde ficará todas das imagens de tamanhos variados
+<source>  (source:media) Representa cada imagem com um tamanho específico
+<img>	  Representa a última imagem a aparecer caso as outras não apareçam
+
+Atributos
+media="(max-width: )" É usado para definir a largura máxima da página para surgir determinada imagem
+srcset="" A origem da imagem de tamanho específico
+
+Observação: Os atributos media e srcset devem estar dentro de <source>
+	    Os tamanhos em pixels devem estar do menor para o maior começando de cima até em baixo
+	    Como o tamanho da imagem muda, considera-se que o desempenho do site muda junto
+
+========================================================================================================
+
+ÁUDIOS
+
+Formatos
+MP3 - Altíssima compatibilidade e qualidade boa
+OGG - Alta compatibilidade e qualidade boa
+
+Tags
+<audio> Usado para adicionar áudios em um site
+<source> (source:src) Representa um áudio específico
+
+Atributos
+controls Permite o usuário controlar livremente o áudio
+muted Deixa o som do áudio automaticamente silenciado
+autoplay Dá play no áudio automaticamente
+loop Faz o conteúdo rodar infinitamente
+type="" Tipo de arquivo e seu formato
+src="" Origem do arquivo de áudio
+preload="" Serve para informar ao navegador o quanto do audio deve ser carregado automacamente
+
+Observações: O source:src é usado para dar mais de uma opção de áudio a depender do seu formato
+	     A seleção de source dentro da tag <audio> é de cima para baixo
+	     Na maioria dos navegadores, o autoplay só funciona se houver junto a ele o muted 
+	     Controls, Muted e Autoplay, loop e preload="" são usados no <audio>
+	     src="" e type="" são usado no source:src
+	     Colocar um texto abaixo do último <source> faz desse texto um texto alternativo
+
+========================================================================================================
+
+VÍDEOS INTERNOS
+
+Formatos
+MP4 - Altíssima compatibilidade e qualidade muito boa, ideal para uso geral
+WebM - Alta compatibilidade e qualidade muito boa, ótimo para sites que querem economizar largura de banda
+Ogg/Theora - Baixa compatibilidade e qualidade regular, tem um uso limitado nos navegadores recentes
+
+Tags
+<video> Usado para adicionar videos em um site
+<source> (source:src) Representa um video específico
+
+Atributos
+width="" Define a largura da caixa que contém o vídeo
+height="" Define a altura da caixa que contém o vídeo
+controls Permite o usuário controlar livremente o video
+muted Deixa o som do video automaticamente silenciado
+autoplay Dá play no video automaticamente
+loop Faz o conteúdo rodar infinitamente
+type="" Tipo de arquivo e seu formato
+src="" Origem do arquivo de video
+preload="" Serve para informar ao navegador o quanto do video deve ser carregado automacamente
+
+Observações: O source:src é usado para dar mais de uma opção de video a depender do seu formato
+	     A seleção de source dentro da tag <video> é de cima para baixo
+	     Na maioria dos navegadores, o autoplay só funciona se houver junto a ele o muted 
+	     Controls, Muted, Autoplay, loop, preload="", height="" e width="" são usados no <video>
+	     src="" e type="" são usado no source:src
+	     Colocar um texto abaixo do último <source> faz desse texto um texto alternativo
+
+========================================================================================================
+
+VÍDEOS EXTERNOS
+
+Tags
+<iframe> Usado para mostrar o conteúdo de outra página na sua por meio de uma "janela"
+
+Atributos
+src="" Define a origem da página que será exposta
+height="" Define a altura do iframe
+width="" Define a largura do iframe
+frameborder="" Define a grossura da borda automatica do iframe (Está em desuso)
+title="" Usado para acessibilidade, como por exemplo, ser usado por um leitor de tela para deficientes
+allow="" Dá permissões ao iframe, evitando que funcionalidades da página carregada sejam ocultas por segurança
+referrerpolicy="" Define quais informações sobre o site atual serão enviadas ao site externo que está sendo carregado dentro do iframe
+allowfullscreen Permite que o usuário deixe o vídeo em tela cheia
+
+Propriedades CSS válidas para iframes
+Border: Muda a estética da borda do iframe
+Border-radius: Permite arredondar o iframe	
+
+Observações: Páginas externas podem recusar o acesso do iframe
+	     Sendo necessário um link de origem específico (link de incorporação) no src="" para funcionar
+	     
+========================================================================================================
+
+CSS INLINE, CSS INTERNO E CSS EXTERNO
+
+Métodos para mudar a estética do site por meio de CSS
+
+CSS Inline  > Colocar o atributo style="" em alguma tag para modificá-la
+CSS Interno > Colocar a tag <style> dentro da tag <head> e modificar o site pelos seletores
+CSS Externo > Colocar a tag <link> (link:css) e modifica a estética do site por meio de um arquivo CSS externo
+
+Observação: No CSS Externo deve ser usado o comando @charset "UTF-8" no início e sem espaço
+	    @charset serve para definir como o navegador deve ler e interpreta o CSS
+	    "UTF-8" define que o navegador lerá até simbolos e caracteres especiais
+
+========================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+

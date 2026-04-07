@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 001</title>
+</head>
+<body>
+    <input type="button" value="Trocar Texto" id="btn">
+    <p id="texto">Madu... sexo...</p>
+
+    <script>
+        
+        /*  
+            Crie um botão com o texto "Trocar texto".
+            Quando o usuário clicar, o parágrafo abaixo deve:
+
+            1. usar textContent para alterar o texto para: "Texto alterado com textContent!"
+
+            2. depois de 2 segundos, trocar novamente usando innerHTML para:
+            "<strong>Texto alterado com innerHTML!</strong>"
+
+            Objetivo: perceber visualmente a diferença entre texto puro e HTML renderizado.
+        */
+
+        let txt = document.getElementById("texto");
+
+        let cont = 0;
+
+        let btn = document.getElementById("btn");
+        btn.addEventListener('click', trocarTexto);
+        function trocarTexto() {
+            if (cont == 0) {
+                txt.textContent = `Texto alterado com textContent!`
+                cont++
+            } else if (cont == 1) {
+                txt.innerHTML = `<strong>Texto alterado com innerHTML!</strong>`
+                cont++
+            } else if (cont == 2) {
+                setTimeout(() => {
+                    txt.innerText = `Madu... sexo...` 
+                }, 5000)
+                cont = 0
+            }
+        };
+    </script>
+</body>
+</html>

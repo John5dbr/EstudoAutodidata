@@ -1,0 +1,113 @@
+
+ ___________________________________ 
+|				    |
+| Variáveis e os tipos de variáveis | 
+|___________________________________|
+
+ ____________________________________________________________
+| 							     |			
+| Comportamentos e os tratamentos para cada tipo de variável |
+|____________________________________________________________|
+
+ __________________________
+|                          |
+| Operadores no JavaScript |
+|__________________________|
+
+ ___________
+|           |
+| Condições |
+|___________|
+|
+|-> if 
+|-> if else 
+|-> switch case
+
+ __________________
+|                  |
+| Loops/Repetições |
+|__________________|
+|
+|-> while 
+|-> do while 
+|-> for 
+
+ ___________________________________
+|                                   |
+| Arrays e seus métodos mais usados |
+|___________________________________|
+|
+|-> forEach()
+|-> map()
+|-> filter()
+|-> reduce()
+|-> slice()
+|-> splice()
+|-> sort()
+|-> find()
+|-> findIndex()
+
+ __________________________________________________________
+|                 					   |
+| Functions/Funcões e seus tipos ( com ou sem parâmetros ) |
+|__________________________________________________________| 
+|
+|-> Arrow functions - () => {} 
+|-> Funções declaradas - function nomeQualquer() {}
+|-> Função assíncronas - async function nomeQualqer() {}
+|-> Função armazenada - let funcaoQualquer = nomeDaFuncao() {} 
+|-> Função autoexecutável - (function nomeQualquer() {})()
+
+ __________________________________________________________________
+|     								   |
+| OOP - Programação Orientada a Objetos ( Classes e Construtores ) |
+|__________________________________________________________________|
+|
+|-> Herança e Encapsulamento 
+|-> Polimorfismo 
+|-> Abstração 
+|-> Modularização 
+|-> Getters e Setters 
+|-> Métodos+Atributo Privados/Publicos 
+
+ ____________________________________________
+|					     |
+| Manipulação do DOM (Document Objeto Model) |
+|____________________________________________|
+|
+|-> Fluxo de eventos: Capturing > Target > Bubbling
+|-> Tipos comuns de eventos
+    \
+     |-> Para mouse: click, mouseenter, mouseout...
+     |-> Para teclado: keyup, keydown, input...
+     |-> Para formulários: submit, chance...
+    /
+|-> Conhecendo o parâmetro event em funções de eventos
+|-> Métodos e propriedades do event: target, key, stopPropagation e preventDefault
+|-> Remoção de eventos com .removeEventListener()
+|-> Conhecendo/Aplicando a técnica Delegation Events (delegação de eventos)
+|-> Aprendendo a usar o Web Components (+ Shadow DOM)
+|-> Comunicação entre arquivo JS com CustomEvent
+|-> Aplicando requestAnimationFrame e setTimeOut
+|-> Otimização de código
+    \
+     |-> Como evitar código repetido
+     |-> Lazy loading
+     |-> Templates/Clones
+     |-> DocumentFragmentNodes
+    /
+|-> Navegação interna e entre páginas
+    \
+     |-> Na própria página: element.scrollIntoView - window.scrollTo - window.scrollBy
+     |-> Entre páginas: window.location.href - window.location.assign
+    /
+|-> Como usar algumas ferramentas do DevTools
+|-> Meios de estilização via JS (ClassList ou style.cssText)
+|-> Manipulação de atributos (setAttribute...)
+|-> Manipulação de elementos HTML (createElement, remove...)
+
+
+
+
+
+

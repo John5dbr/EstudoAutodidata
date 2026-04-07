@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gringo ou estrangeiro</h1>
+    Em que país vc nasceu? <input type="text" placeholder="País de origem" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let pais = document.getElementById('input1')
+        let nascionalidade = pais.value
+        let botao = document.getElementsByTagName('button')[0]
+        let resp = document.querySelector('#resposta')
+        botao.addEventListener('click', Click)
+        function Click() {
+            window.alert(`Hm... ${nascionalidade}`)
+            if (pais.value == 'Brasil' || pais.value == 'Br') {
+                resp.innerHTML = 'Vc é <strong>brasileiro</strong>... <br> Meus pesames'
+            } else {
+                resp.innerHTML = 'Gringo tchola...'
+            }
+        }
+</script>
+</body>
+</html>

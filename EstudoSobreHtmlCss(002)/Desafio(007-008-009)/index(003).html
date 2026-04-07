@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação(003)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font: normal normal 1em 'Playwrite DK Loopet';
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            margin: 10px;
+            height: 55px;
+            width: 425px;
+            background: lightseagreen;
+            transition: all 0.1s ease-out 0s;
+            border: 2px solid rgba(255, 255, 255, 0);
+            animation: EsquerdaDireita 5s ease 0s infinite normal backwards ;
+        }
+        @keyframes EsquerdaDireita {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        div:hover {
+            animation-play-state: paused;
+            background: black;
+            color: white;
+            border: 2px solid rgb(114, 114, 114);
+        }
+        h1 {
+            text-align: center;
+            line-height: 55px;
+        }
+        @keyframes Notificação {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            ME PARE PASSANDO O MOUSE POR MIM
+        </h1>
+    </div>
+</body>
+</html>

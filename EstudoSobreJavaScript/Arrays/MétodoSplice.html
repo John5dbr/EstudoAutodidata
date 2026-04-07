@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MétodoSplice</title>
+</head>
+<body>
+    <script>
+        let numeros = [1, 2, 3, 4, 5, 6];
+        console.log(`Antes do .splice(): ` + numeros)
+        numeros.splice(2, 2, 99, 100)
+        console.log(`Após o .splice(): ` + numeros)
+        let bondeDosFudidos = numeros.splice(0, 6, "Um", "Dois", "Três", "Quatro", "Cinco", "Seis")
+        console.log(`Alterando para string e escrita: ` + numeros)
+        console.log(`Valores que tomaram BAN: ` + bondeDosFudidos)
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <main class="mn">
+        <section class="mn__secCalculo" id="AreaDeContas">
+            <img id="Hist" class="mn__secCalculo_img" src="recursos/icon-historico.svg" alt="icone-de-historico"></img>
+            <p id="RegiaoParaCalculo"></p>
+        </section>
+        <section class="mn__secBotoes">
+            <article class="mn__secBotoes__botoes botoesNumeros" id="7">7</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="8">8</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="9">9</article>
+            <article class="mn__secBotoes__botoes botoesOperadores" id="Div">/</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="4">4</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="5">5</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="6">6</article>
+            <article class="mn__secBotoes__botoes botoesOperadores" id="Mult">*</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="1">1</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="2">2</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="3">3</article>
+            <article class="mn__secBotoes__botoes botoesOperadores" id="Soma">+</article>
+            <article class="mn__secBotoes__botoes botoesNumeros" id="0">0</article>
+            <article class="mn__secBotoes__botoes botaoDeletar" id="Del">Del</article>
+            <article class="mn__secBotoes__botoes botaoCalcular" id="Calc">=</article>
+            <article class="mn__secBotoes__botoes botoesOperadores" id="Sub">-</article>
+        </section>
+    </main>
+
+    <aside class="asdHist" id="AbaHistorico">
+        <h1 class="asdHist__h1">Histórico de Calculos</h1>
+        <article class="asdHist__Historico" id="espacoParaSlotsDeCalculos"></article>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html> 

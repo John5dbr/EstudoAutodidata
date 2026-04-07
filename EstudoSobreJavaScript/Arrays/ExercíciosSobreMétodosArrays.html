@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExercíciosSobreMétodosArray</title>
+</head>
+<body>
+    <script>
+        // Exercício 001 .forEach()
+        /*
+        let numero = [1,2,3,4,5]
+        console.log(`O número nessa posição é: ` + numero.forEach( (valor, indice) => console.log(`O número na posição ${indice} é... ${valor}`)))  
+        */
+        /*======================================================*/
+        // Exercício 002 .map()
+        /*
+        let numero = [1,2,3,4,5,6]
+        let numero2X = numero.map( (valor) => valor * 2 )
+        console.log(`Arrays original: ${numero}`)
+        console.log(`Arrays dobrado: ${numero2X}`)
+        */
+        /*======================================================*/
+        // Exercício 003 .filter()
+        /*
+        let numero = []
+        for ( let cont = 1 ; (cont < 16) ; cont++ ) {
+            numero.push(cont)
+        }
+        let numeroPorTres = numero.filter( (valor) => valor % 3 == 0 )
+        console.log(`Números divisíveis por 3: ` + numeroPorTres) 
+        */
+        /*======================================================*/
+        // Exercício 004 .find()
+        /*
+        let numero = []
+        for ( let cont = 1 ; (cont < 21) ; cont++ ) {
+            if (cont % 2 == 0) {
+                numero.push(cont)
+            }
+        } console.log(`Número maior que 10 no array: ` + numero.find( (valor) => valor > 10)) 
+        */
+        /*======================================================*/
+        // Exercício 005 .findIndex()
+        /*
+        let numero = []
+        for ( let cont = 10 ; (cont < 21) ; cont++ ) {
+            numero.push(cont)
+        } 
+        console.log(`Array/Vetor: ${numero}`)
+        console.log(`Posição do elemento múltiplo de 4 no array: ` + numero.findIndex( (valor, indice) => { valor % 4 == 0 } ))
+        */
+        /*======================================================*/
+        // Exercício 006 .some()
+        /*
+        let numero = []
+        for ( let cont = -5 ; (cont < 6) ; cont++ ) {
+            if (cont != 0) {
+                numero.push(cont)
+            }
+        } 
+        console.log(`Array/Vetor: ${numero}`)
+        console.log(`Há valor = 0? ${numero.some( (valor) => valor == 0 )}`)
+        */
+        /*======================================================*/
+        // Exercício 007 .every()
+        /*  
+        let numero = []
+        for ( let cont = 1 ; (cont < 7) ; cont++ ) {
+            numero.push(cont)
+        } 
+        console.log(`Valores do array maior que zero: ${numero.every( (valor) => valor > 0 )}`)
+        */
+        /*======================================================*/
+        // Exercício 008 .recuce()
+        /*
+        let numero = []
+        for ( let cont = 1 ; (cont < 5) ; cont++ ) {
+            numero.push(cont)
+        } 
+        console.log(`Array original: ` + numero)
+        console.log(`Multiplicação dos valores do array: ${numero.reduce( (ac, valor) => 
+            ac *= valor
+        )}`)
+        */
+        /*======================================================*/
+        // Exercício 009 .indexOf()
+        /*
+        let letras = ['a', 'b', 'c', 'd', 'e', 'c']
+        console.log(`Array original: ` + letras)
+        console.log(`Posição do primeiro C: ${letras.indexOf('c')}`)
+        */
+        /*======================================================*/
+        // Exercício 010 .reverse()
+        /*
+        let numero = []
+        for ( let cont = 1 ; (cont < 11) ; cont++ ) {
+            numero.push(cont)
+        }
+        console.log(`Array original: ${numero}`)
+        console.log(`Array invertido: ${numero.reverse()}`)
+        */
+        /*======================================================*/
+        // Exercício 011 .sort()
+        /*
+        let numero = []
+        for ( let cont = 1 ; (cont < 21) ; cont++ ) {
+            numero.push(cont)
+        }
+        console.log(`Array original: ` + numero)
+        let NumeroImpar = numero.sort( (a, b) => { 
+            if (a % 2 == 0) {
+                return a - b
+            } else {
+                return b - a 
+            }
+        } )
+        let NumeroPar = numero.sort( (a, b) => { 
+            if (a % 2 == 0) {
+                return b - a
+            } else {
+                return a - b 
+            }
+        } )
+        console.log(`Valores Impares: ` + NumeroImpar.slice(10, 20))
+        console.log(`Valores Pares: ` + NumeroPar.slice(0, 10))
+        */
+
+        /*
+            80% de desenhpenho, preciso melhorar no .reduce(), no .sort() e no .forEach() além de dar uma olhada em .slice()
+        */
+    </script>
+</body>
+</html>

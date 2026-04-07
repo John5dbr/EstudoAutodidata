@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*========================================================*/
+
+/* Configurações Gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor1: #EBEBEB;
+    --cor2: #2C3E50;
+    --cor3: #ECF0F1;
+    --cor4: #34495E;
+    --cor5: #FFFFFF;
+    --cor6: #3498DB;
+    --font1: 'Montserrat Alternates';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font: normal normal 1em var(--font1);    
+}
+
+/*========================================================*/
+
+/* Configuração do Corpo da Calculadora */
+
+body {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*========================================================*/
+
+/* Configuração da Região de Calculo e Ademais... */
+
+.mn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 15px;
+    width: 275px;
+    height: 450px;
+    background: var(--cor2);
+    border-radius: 10px;
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.322);
+}
+
+.mn__secCalculo {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background: var(--cor3);
+    color: var(--cor6);
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid rgba(255, 0, 0, 0);
+}
+
+.mn__secCalculo_img {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    height: 25%;
+}
+
+#RegiaoParaCalculo {
+    font: normal bold 1.25em var(--font1);
+    margin: 0px 15px 15px 0px;
+}
+
+#RegiaoParaCalculo > * {
+    margin: 0px 5px;
+}
+
+/*========================================================*/
+
+/* Configuração da Região dos Botões da Calculadora e dos Botões em si */
+
+.mn__secBotoes {
+    width: 100%;
+    height: 65%;
+    display: grid;
+    align-items: space-evenly;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.mn__secBotoes__botoes {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    background: var(--cor4);
+    color: var(--cor5);
+    border-radius: 10px;
+    transition: all 0.25s 0s ease-in-out;
+}
+
+.mn__secBotoes__botoes:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.226);
+}
+
+/*========================================================*/
+
+/* Configuração do Histórico e Afins */
+
+.asdHist {
+    position: absolute;
+    right: 25px;
+    min-height: 90vh;
+    width: 300px;
+    padding: 15px;
+    background: var(--cor2);
+    border-radius: 10px;
+    transition: all 0.35s 0s ease-in;
+    transform: translateX(125%);
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.322);
+}
+
+.asdHist__h1 {
+    font: normal bold 1.4em var(--font1);
+    border-bottom: 2px solid var(--cor4);
+    height: 35px;
+    color: var(--cor5);
+    margin: 0px 0px 25px 0px;
+}
+
+.asdHist__Historico {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.slotCalculo {
+    background: var(--cor4);
+    padding: 10px 10px;
+    color: var(--cor5);
+    border-radius: 5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
+    transition: all 0.10s 0s ease-in;
+}
+
+.slotCalculo:hover {
+    background: #425a72;
+}
+
+.slotCalculo:first-of-type::before {
+    content: '➯ ';
+}

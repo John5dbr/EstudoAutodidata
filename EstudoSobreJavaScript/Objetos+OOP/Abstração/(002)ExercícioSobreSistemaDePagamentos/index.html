@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaisTreinoSobreAbstração</title>
+</head>
+<body>
+    <script>
+
+        /*====================================*/
+        /* Processamento das informações */
+
+        class Pagamento {
+            constructor(valorTotal, descricao) {
+                if (this.constructor === Pagamento) {
+                    throw new TypeError(`A classe abstrata {Pagamento} não pode ser instânciada.`)
+                } else if (this.processarPagamento === undefined) {
+                    throw new TypeError(`É obrigatório a implementação do método processarPagamento()`)
+                }
+                this.valorTotal = valorTotal
+                this.descricao = descricao
+            }
+        
+            exibirResumo() {
+                console.log(`Pagamento referente a: ${this.descricao}\nValor total: R$${this.valorTotal.toFixed(2)}`)
+            };   
+        };
+
+        class PagamentoCartao extends Pagamento{
+            constructor(numeroCartao, parcelas, valorTotal, descricao) {
+                super(valorTotal, descricao)
+                this.numeroCartao = numeroCartao
+                this.parcelas = parcelas
+            }
+
+            processarPagamento() {
+                console.log(`Pagamento processado com o Cartão: \nNúmero do cartão: ${this.numeroCartao} \nParcelas: ${this.parcelas}x de ${this.valorTotal / this.parcelas}`)
+            };
+        };
+
+        class PagamentoPix extends Pagamento{
+            constructor(chavePix, valorTotal, descricao) {
+                super(valorTotal, descricao)
+                this.chavePix = chavePix
+            }
+
+            processarPagamento() {
+                console.log(`Pagamento via Pix: \nChave Da Origem: ${this.chavePix} \nValor enviado: ${this.valorTotal}`)
+            };
+        };
+
+        class PagamentoDinheiro extends Pagamento{
+            constructor(valorRecebido, valorTotal, descricao) {
+                super(valorTotal, descricao)
+                this.valorRecebido = valorRecebido
+            }
+
+            processarPagamento() {
+                console.log(`Pagamento em dinheiro: \nValor pago: ${this.valorRecebido} \nTroco: ${this.valorRecebido - this.valorTotal}`)
+            };
+        };
+
+        /*====================================*/
+        /* Entrada de dados */
+
+        let pagamentos001 = new PagamentoCartao(3739, 4, 2000, 'Compra do Sofá');
+
+        let pagamentos002 = new PagamentoPix('192.168.104.24-74', 12, '2 coxinhas e 1 Dolly');
+
+        let pagamentos003 = new PagamentoDinheiro(200, 110, 'Mensalidade da academia');
+    
+        /*====================================*/
+        /* Resultado */
+
+        pagamentos001.exibirResumo();
+        pagamentos001.processarPagamento();
+
+        pagamentos002.exibirResumo();
+        pagamentos002.processarPagamento();
+
+        pagamentos003.exibirResumo();
+        pagamentos003.processarPagamento();
+
+    </script>
+</body>
+</html>

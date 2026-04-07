@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        let cont = 0;
+        let historico = [''];
+        let somaResultado = null;  
+        let soma = function(el=[], escolha) {
+            el[0] = Number(prompt(`1° Valor = `))
+            el[1] = Number(prompt(`2° Valor = `))
+            escolha = confirm(`Deseja adicionar mais valores? `)
+            while (escolha == true) {
+                if (escolha == true) {
+                    el.push(Number(prompt(`Valor ${el.length} = `)))
+                } 
+                escolha = confirm(`Deseja adicionar mais valores? `) 
+            }
+            cont++
+            return somaResultado = el.reduce( (ac, el) => ac + el )
+        };
+        let subtracaoResultado = null;  
+        let subtracao = function(el=[], escolha) {
+            el[0] = Number(prompt(`1° Valor = `))
+            el[1] = Number(prompt(`2° Valor = `))
+            escolha = confirm(`Deseja adicionar mais valores? `)
+            while (escolha == true) {
+                if (escolha == true) {
+                    el.push(Number(prompt(`Valor ${el.length} = `)))
+                } 
+                escolha = confirm(`Deseja adicionar mais valores? `)
+            }  
+            cont++      
+            return subtracaoResultado = el.reduce( (ac, el) => ac - el )
+        };
+        let multiplicacaoResultado = null;  
+        let multiplicacao = function(el=[], escolha) {
+            el[0] = Number(prompt(`1° Valor = `))
+            el[1] = Number(prompt(`2° Valor = `))
+            escolha = confirm(`Deseja adicionar mais valores? `)
+            while (escolha == true) {
+                if (escolha == true) {
+                    el.push(Number(prompt(`Valor ${el.length} = `)))
+                } 
+                escolha = confirm(`Deseja adicionar mais valores? `)
+            }  
+            cont++   
+            return multiplicacaoResultado = el.reduce( (ac, el) => ac * el )
+        };
+        let divisaoResultado = null;  
+        let divisao = function(el=[], escolha) {
+            el[0] = Number(prompt(`1° Valor = `))
+            el[1] = Number(prompt(`2° Valor = `))
+            escolha = confirm(`Deseja adicionar mais valores? `)
+            while (escolha == true) {
+                if (escolha == true) {
+                    el.push(Number(prompt(`Valor ${el.length} = `)))
+                } 
+                escolha = confirm(`Deseja adicionar mais valores? `)
+            }
+            cont++
+            return divisaoResultado = el.reduce( (ac, el) => ac / el )
+        };
+        let opcaoContinuar = null;
+        do {
+            let operador = prompt(`~ Calculadora ~ \n1 - Soma \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n5 - Histórico`);
+            switch (operador) {
+                case '1':
+                    soma()
+                    opcaoContinuar = confirm(`Resultado = ${somaResultado} \nDeseja continuar usando a calculadora?`)
+                    historico.push(`${cont}° Operação: Soma | Resultado: ${somaResultado} \n`)
+                    break
+                case '2':
+                    subtracao()
+                    opcaoContinuar = confirm(`Resultado = ${subtracaoResultado} \nDeseja continuar usando a calculadora?`)
+                    historico.push(`${cont}° Operação: Subtração | Resultado: ${subtracaoResultado} \n`)
+                    break
+                case '3':
+                    multiplicacao()
+                    opcaoContinuar = confirm(`Resultado = ${multiplicacaoResultado} \nDeseja continuar usando a calculadora?`)
+                    historico.push(`${cont}° Operação: Multiplicação | Resultado: ${multiplicacaoResultado} \n`)
+                    break
+                case '4':
+                    divisao()
+                    opcaoContinuar = confirm(`Resultado = ${divisaoResultado} \nDeseja continuar usando a calculadora?`)
+                    historico.push(`${cont}° Operação: Divisão | Resultado: ${divisaoResultado} \n`)
+                    break
+                case '5':
+                    opcaoContinuar = confirm(`${historico} \nDeseja continuar usando a calculadora?`)
+                    break
+                default: 
+                    opcaoContinuar = confirm(`[ERRO] Valor inválido \nDeseja continuar usando a calculadora?`)
+                    break
+            }
+        } while (opcaoContinuar == true)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+        #Botão {
+            background: black;
+            color: white;
+            font: normal normal 1em arial;
+            height: 35px;
+            width: 125px;
+            text-align: center;
+            line-height: 35px;
+            border: 2px solid rgb(75, 75, 75);
+            transition: all 0.3s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body>
+    <div id="Botão">
+        Toque Saporra
+    </div>
+    <script>
+        let botao = document.getElementById('Botão')
+        botao.addEventListener('click', Clicou)
+        botao.addEventListener('mouseenter', Entrou)
+        botao.addEventListener('mouseout', Saiu)
+        function Clicou() {
+            botao.style = 'transform: scale(110%); box-shadow: 0px 0px 15px black;'
+        }
+        function Entrou() {
+            botao.style = "color: black; background: linear-gradient(to top, rgba(255, 255, 255, 0.979), rgb(59, 59, 59) 90%);"
+        }
+        function Saiu() {
+            botao.style = 'background: black;'
+        }
+    </script>
+</body>
+</html>

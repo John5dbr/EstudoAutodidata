@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cor1: #f5f5f5;
+    --cor2: #e9e9e9;
+    --cor3: #006666;
+    --cor4: #008584;
+    --cor5: #cccccc;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#HeaderPrincipal {
+    padding: 25px 0px 0px 0px;
+    text-align: center;
+    background: var(--cor4);
+    height: 150px;
+    width: 100%;
+    box-shadow: 0px 10px 15px rgb(119, 119, 119);
+}
+#HeaderPrincipal > h1 {
+    color: var(--cor1);
+    font: normal normal 2.5em 'Bebas Neue', sans-serif;
+}
+#HeaderPrincipal > nav {
+    padding: 45px 0px 0px 0px;
+}
+#HeaderPrincipal > nav > a {
+    text-align: center;
+    padding: 5px;
+    font: normal normal 1.25em 'Karla', sans-serif;
+    color: var(--cor2);
+    text-decoration: none;
+    margin: 2.5vw;
+}
+#HeaderPrincipal > nav > a:hover {
+    border-bottom: 2.5px solid rgb(255, 255, 255);
+    transition: 0.05s;
+}
+
+/*=================================*/
+
+main {
+    width: 100%;
+    box-shadow: inset 0px 0px 15px rgb(0, 0, 0);
+}
+#Section1 {
+    padding: 200px 0px 0px 0px;
+    background: black url('Imagens/Arvores.jpeg') no-repeat center center / cover ;
+    width: 100%;
+    box-shadow: inset 0px 0px 15px rgb(0, 0, 0);
+    background-attachment: fixed;
+}
+#Section1 > article {
+    color: var(--cor2);
+    margin: 0px 0px 0px auto;
+    background: var(--cor4);
+    width: 45%;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px 0px 0px 0px;
+}
+#Section1 > article > h2 {
+    font: normal normal 2em 'Bebas Neue', sans-serif;
+    margin: 0px 0px 5px 0px;
+}
+#Section1 > article > p {
+    font: normal normal 1em 'Karla', sans-serif;
+    text-indent: 35px;
+}
+#Section2 {
+    background: var(--cor4);
+    height: 20px;
+    width: 100%;
+}
+#Section3 {
+    padding: 0px 0px 75px 0px ;
+    background: black url('Imagens/Buraco.jpeg') no-repeat center center / cover ;
+    background-attachment: fixed;
+    width: 100%;
+    box-shadow: inset 0px 0px 15px rgb(0, 0, 0);
+}
+#Section3 > article {
+    color: var(--cor2);
+    background: var(--cor4);
+    width: 45%;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.527);
+    padding: 15px;
+    border-radius: 0px 0px 10px 0px;
+}
+#Section3 > article > h2 {
+    font: normal normal 2em 'Bebas Neue', sans-serif;
+    margin: 0px 0px 5px 0px;
+}
+#Section3 > article > p {
+    font: normal normal 1em 'Karla', sans-serif;
+    text-indent: 35px;
+}
+
+/*=================================*/
+
+footer {
+    text-align: center;
+    background: var(--cor4);
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 10px 15px rgb(119, 119, 119);
+}
+footer > #aside1 {
+    padding: 10px;
+    height: 50%;
+    width: 100%;
+    color: var(--cor1);
+    font: normal normal 0.75em 'Karla', sans-serif;
+}
+footer > #aside1 > img {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px 0px 10px;
+    color: var(--cor1);
+    font: normal normal 1em 'Karla', sans-serif;
+}
+footer > #aside2 {
+    height: 50%;
+    width: 100%;
+    color: var(--cor1);
+    font: normal normal 1em 'Karla', sans-serif;
+}
+footer > aside > p {
+    margin: 5px;
+    color: var(--cor1);
+    font: normal normal 0.75em 'Karla', sans-serif;
+}
+footer > aside > a {
+    margin: 10px;
+    color: var(--cor1);
+    text-decoration: none;
+    font: normal normal 1em 'Karla', sans-serif;
+}
+footer > aside > a:hover {
+    text-transform: uppercase;
+}
+
+@media (max-width: 499px) {
+    #Section1 > article, #Section3 > article {
+        width: 80vw;
+    }
+}

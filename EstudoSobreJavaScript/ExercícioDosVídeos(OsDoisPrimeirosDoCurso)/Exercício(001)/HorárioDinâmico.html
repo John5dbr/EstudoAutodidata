@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário Dinâmico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="Hora()">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <main>
+        <h2 id="Hrs">Texto... Texto... Texto...</h2>
+        <div id="Imgs"></div>
+    </main>
+    <footer>&copy; CursoEmVideo</footer>
+    <script>
+        let Infors = new Date()
+        let hora = Number.parseInt(Infors.getHours())
+        function Hora() {
+            let Hrs = document.getElementById('Hrs')
+            let Imgs = document.getElementById('Imgs')
+            let body = document.querySelector('body')
+            if (hora >= 6 && hora <= 13) {
+                Hrs.innerHTML = `Agora são ${hora}`
+                body.style.background = '#BBAB82'
+                Imgs.style.background = "black url('Recursos/Dia.jpg') no-repeat center center / cover"
+            } else if (hora >= 14 && hora <= 18) {
+                Hrs.innerHTML = `Agora são ${hora}`
+                body.style.background = '#A77762'
+                Imgs.style.background = "black url('Recursos/Tarde.jpg') no-repeat center center / cover"
+            } else {
+                Hrs.innerHTML = `Agora são ${hora}`
+                body.style.background = '#4A4C4C'
+                Imgs.style.background = "black url('Recursos/Noite.jpg') no-repeat center center / cover"
+            }
+        }
+    </script>
+</body>
+</html>

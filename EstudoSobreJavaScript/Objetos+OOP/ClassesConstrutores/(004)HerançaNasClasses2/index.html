@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerançaNasClasses(002)</title>
+</head>
+<body>
+    <script type="module">
+        import { numeroDeContasCriadas } from "./ClassesRecursos.js";
+        import Classes from "./ClassesRecursos.js";
+
+        /* Manipulando Conta Corrente */
+
+        let contaCorrente001 = new Classes.ContaCorrente('Pedro Souza', 1550);
+
+        contaCorrente001.informacoes()
+        contaCorrente001.depositar(450)
+        contaCorrente001.definirLimiteDeCredito = -500
+        contaCorrente001.mostrarLimiteDeCredito
+        contaCorrente001.informacoes()
+
+        /* Manipulando Conta Poupança */ console.log(`=======================================`)
+
+        let contaPoupanca001 = new Classes.ContaPoupanca('Júlia Morgana', 1050);
+
+        contaPoupanca001.informacoes()
+        contaPoupanca001.depositar(450)
+        contaPoupanca001.definirTaxaAnual = 10
+        contaPoupanca001.mostrarTaxaAnual
+        contaPoupanca001.informacoes()
+        contaPoupanca001.sacar(250)
+        contaPoupanca001.informacoes()
+
+        /* Conta já geradas */ console.log(`=======================================`)
+
+        console.log(`Contas Já Geradas: ${numeroDeContasCriadas}`)
+
+    </script>
+</body>
+</html>

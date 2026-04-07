@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h1>You passed of velocidade ?</h1>
+    Qual a velocidade do carro? 
+    <input type="number" placeholder="velocidade do carro" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0];
+        let resp = document.querySelector('p#resposta');
+        botao.addEventListener('click', Click)
+        function Click() {
+            let velocidade = document.getElementById('input1');
+            let speed = Number(velocidade.value);
+            window.alert(`${speed}`)
+            if (speed >= 60) {
+                resp.innerHTML = 'Vc será <strong>Multado</strong>...'
+            } else {
+                resp.innerHTML = 'Está dentro do limite.'
+            }
+        }
+</script>
+</body>
+</html>

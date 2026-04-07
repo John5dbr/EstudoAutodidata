@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Recursos/Favicon.png" type="image/x-icon">
+    <title>AmantesDosGatos</title>
+</head>
+<body>
+    <header id="HeaderPrincipal">
+        <aside>
+            <div class="Logo"></div>
+            <h1>Amantes</h1>
+            <h3>dos</h3>
+            <h1>Gatos</h1>
+        </aside>
+        <nav>
+            <a href="#HeaderPrincipal">Sobre</a>
+            <a href="#GatosAdotados">Últimas Adoções</a>
+            <a href="#Contato">Contato</a>
+            <a href="#form" id="LoginOuCadastro"><strong>Login</strong> ou <strong>Cadastro</strong></a>
+        </nav>
+    </header>
+    <main>
+        <section id="Sobre">
+            <article>
+                <div id="BolaAmarela"></div>
+                <h1>Quem somos nós</h1>
+                <h2>Transformando miados em lares cheios de amor</h2>
+                <p>Somos uma organização dedicada à <strong>adoção responsável de gatos</strong>. Acreditamos que todo gato merece um lar seguro, cheio de carinho e respeito. Nosso trabalho vai além do resgate: acolhemos, cuidamos e buscamos famílias que estejam prontas para abrir o coração.
+                <aside>
+                    <a href="" id="BtnEsquerdo">Mais sobre a AmantesDosGatos</a>
+                    <a href="" id="BtnDireito">Conheça a nossa história</a>
+                </aside>
+            </article>
+            <figure id="BannerSobre">
+                <aside id="MiniTexto">
+                    Este é o Thor, um dos muitos gatinhos que encontraram um lar cheio de amor através da AmantesDosGatos.
+                </aside>
+            </figure>
+        </section>
+        <div class="Divisor"></div>
+        <section id="GatosAdotados">
+            <h1>Histórias Felinas com Final Feliz</h1>
+            <h2>Conheça alguns dos gatinhos que já encontraram um lar cheio de amor através da AmantesDosGatos.</h2>
+            <aside id="OsGatos">
+                <aside class="Card" id="Gato1">
+                    <article class="Conteudo" id="conteudo1">
+                        <h1>Luna</h1>
+                        <p>Uma gatinha carinhosa e brincalhona que conquistou todos na casa nova. Adora se esconder nas cobertas!</p>
+                        <div id="Barrinha1" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato2">
+                    <article class="Conteudo" id="conteudo2">
+                        <h1>Milo</h1>
+                        <p>Antes tímido, agora é o rei da casa! Ganhou uma família amorosa e um irmãozinho felino para brincar.</p>
+                        <div id="Barrinha2" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato3">
+                    <article class="Conteudo" id="conteudo3">
+                        <h1>Cleo</h1>
+                        <p>Encontrada nas ruas, hoje dorme tranquila no colo da sua nova tutora. É fã de carinho e sachê!</p>
+                        <div id="Barrinha3" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato4">
+                    <article class="Conteudo" id="conteudo4">
+                        <h1>Simba</h1>
+                        <p>Adotado por uma família com crianças, se tornou o companheiro de todas as brincadeiras. Muito sociável!</p>
+                        <div id="Barrinha4" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato5">
+                    <article class="Conteudo" id="conteudo5">
+                        <h1>Mel</h1>
+                        <p>Chegou arisca, mas com paciência e amor se transformou em uma gatinha doce e cheia de afeto.</p>
+                        <div id="Barrinha5" class="Barrinha"></div>
+                    </article>
+                </aside>
+                <aside class="Card" id="Gato6">
+                    <article class="Conteudo" id="conteudo6">
+                        <h1>Nino</h1>
+                        <p>O mais travesso da ninhada! Hoje vive em um apartamento com vista para o mundo e muito espaço para correr.</p>
+                        <div id="Barrinha6" class="Barrinha"></div>
+                    </article>
+                </aside>
+            </aside>
+        </section>
+        <div class="Divisor"></div>
+        <section id="form">
+            <article>
+                <h1>Quer se conectar com a AmantesDosGatos?</h1>
+                <p>Preencha o formulário ao lado com seus dados e conte pra gente como podemos te ajudar.
+                Se você quer adotar um gatinho, ou se precisa colocar um gato para adoção, este é o espaço certo para iniciar esse processo com carinho, responsabilidade e respeito.</p>
+                <h2>Estamos aqui para te ouvir e caminhar junto com você nessa jornada!</h2>
+            </article>
+            <form action="Envio.php">
+                <p>
+                    <label for="nome">
+                        Nome: <br> <input type="text" name="nome" id="nome" placeholder="  Nome Completo Se Possível">
+                    </label>
+                </p>
+                <p>
+                    <label for="idade">
+                        Ano de nascimento: <br> <input type="number" name="idade" id="idade" placeholder="  Apenas 4 Dígitos São Aceitos">
+                    </label>
+                </p>
+                <p>
+                    <label for="sexo"> Sexo: 
+                        <input type="radio" name="sexo" id="Masc" class="InputRadio"> 
+                        <label for="Masc">Masculino</label> 
+                        <input type="radio" name="sexo" id="Femi" class="InputRadio"> 
+                        <label for="Femi">Feminino</label>
+                    </label>
+                </p>
+                <p>
+                    <label for="email"> 
+                        Email: <br> <input type="email" name="email" id="email" placeholder="  Email Para Entrarmos em Contato">
+                    </label>
+                </p>
+                <p>
+                    <label for="situacao">
+                        Breve descrição da sua situação: <br> <input type="text" name="situacao" id="situacao" placeholder="  (Máxima de 250 caracteres)">
+                    </label>
+                </p>
+                <p>
+                    Gostaria de <strong>doar</strong> ou <strong>adotar</strong>?
+                    <select name="DoarOuAdotar" id="DoarOuAdotar">
+                        <option id="Op1" value="Adotar"><p>Desejo fazer uma adoção</p></option>
+                        <option id="Op2" value="Doar"><p>Desejo colocar um gato para adoção</p></option>
+                    </select>
+                </p>
+                <div id="botao">Enviar formulário</div>
+            </form>    
+        </section>
+        <div class="Divisor" style="box-shadow: 0px 0px 15px black;"></div>
+    </main>
+    <footer>
+        <section id="Localizacao">
+            <img src="Recursos/Local.png" alt="Localização" id="icon1">
+            <h1>Nossos postos de atendimento:</h1>
+            <h2>~ Aberto das 07:00 às 18:00 ~</h2>
+            <aside>Unidade Centro – Rua das Flores, 123 – Belo Horizonte.</aside>
+            <aside>Unidade Norte – Av. Felinos Unidos, 456 – São Paulo/SP.</aside>
+            <aside>Unidade Leste – Praça dos Gatos, 789 – Rio de Janeiro/RJ.</aside>
+            <aside>
+                <a href="" id="MaisOpcoes">
+                    <img src="Recursos/Seta.png" alt="Seta" id="Seta"> Mais Opções
+                </a>
+            </aside>
+        </section>
+        <section id="Contato">
+            <img src="Recursos/Contato.png" alt="Contato" id="icon2">
+            <h1>Entre em contato conosco:</h1>
+            <aside>Telefone/WhatsApp: (31) 91234-5678</aside>
+            <aside>E-mail: contato@amantesdosgatos.org</aside>
+            <aside>Instagram: <a href="" class="Contatinho">@Amantes_Dos_Gatos</a></aside>
+            <aside>TikTok: <a href="" class="Contatinho">@amantesdosgatos</a></aside>
+        </section>
+        <section id="Pessoas">
+            <h1>Fundadora da AmantesDosGatos</h1>
+            <p>Girlene da Conceição Tavares</p>
+            <figure>
+                <div id="Alguem1"></div><div id="Alguem2"></div><div id="Alguem3"></div>
+            </figure>
+            <h1>Desenvolvedor do Site</h1>
+            <p>Pedro de Souza Santos</p>
+            <figure>
+                <div id="Alguem4"></div><div id="Alguem5"></div><div id="Alguem6"></div>  
+            </figure>
+        </section> 
+        <div id="Linha"></div>
+        <section id="Final">
+            <p>Copyright &copy;2025 Todos os direitos reservados.</p>
+            <p>Esse site foi desenvolvido por <em>Pedro de Souza Santos</em> em 04/07/2025.</p>
+        </section>
+    </footer>
+    <div class="Divisor" style="box-shadow: 0px 0px 15px black;"></div>
+    <script>
+        let gato1 = document.getElementById('Gato1')
+        gato1.addEventListener('mouseenter', Gato1Entrou)
+        gato1.addEventListener('mouseout', Gato1Saiu)
+        gato1.addEventListener('mousemove', Gato1Moveu)
+        function Gato1Entrou() { 
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato1Saiu() {
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato1Moveu() {
+            let conteudo = document.getElementById('conteudo1')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha1')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato2 = document.getElementById('Gato2')
+        gato2.addEventListener('mouseenter', Gato2Entrou)
+        gato2.addEventListener('mouseout', Gato2Saiu)
+        gato2.addEventListener('mousemove', Gato2Moveu)
+        function Gato2Entrou() { 
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato2Saiu() {
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato2Moveu() {
+            let conteudo = document.getElementById('conteudo2')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha2')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato3 = document.getElementById('Gato3')
+        gato3.addEventListener('mouseenter', Gato3Entrou)
+        gato3.addEventListener('mouseout', Gato3Saiu)
+        gato3.addEventListener('mousemove', Gato3Moveu)
+        function Gato3Entrou() { 
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato3Saiu() {
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato3Moveu() {
+            let conteudo = document.getElementById('conteudo3')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha3')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato4 = document.getElementById('Gato4')
+        gato4.addEventListener('mouseenter', Gato4Entrou)
+        gato4.addEventListener('mouseout', Gato4Saiu)
+        gato4.addEventListener('mousemove', Gato4Moveu)
+        function Gato4Entrou() { 
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato4Saiu() {
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato4Moveu() {
+            let conteudo = document.getElementById('conteudo4')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha4')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato5 = document.getElementById('Gato5')
+        gato5.addEventListener('mouseenter', Gato5Entrou)
+        gato5.addEventListener('mouseout', Gato5Saiu)
+        gato5.addEventListener('mousemove', Gato5Moveu)
+        function Gato5Entrou() { 
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato5Saiu() {
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato5Moveu() {
+            let conteudo = document.getElementById('conteudo5')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha5')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*/
+        let gato6 = document.getElementById('Gato6')
+        gato6.addEventListener('mouseenter', Gato6Entrou)
+        gato6.addEventListener('mouseout', Gato6Saiu)
+        gato6.addEventListener('mousemove', Gato6Moveu)
+        function Gato6Entrou() { 
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        function Gato6Saiu() {
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(0%);`
+        }
+        function Gato6Moveu() {
+            let conteudo = document.getElementById('conteudo6')
+            conteudo.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(-50%);`
+            let barrinha = document.getElementById('Barrinha6')
+            barrinha.style = `transition: all 0.3s ease-in-out 0s; transform: translateY(125%);`
+        }
+        /*=====*//*=====*//*=====*/
+        let bau = []
+        /*
+            bau[0] Nome 
+            bau[1] Idade
+            bau[2] Sexo
+            bau[3] Email 
+            bau[4] Situacao
+            bau[5] Objetivo
+            
+        */
+        let ObjectDate = new Date()
+        let anoatual = ObjectDate.getFullYear()
+        let botao = document.getElementById('botao')
+        botao.addEventListener('click', EnviarFormulario)
+        function EnviarFormulario() {
+            bau[0] = document.getElementById('nome').value
+            if (bau[0] == "") {
+                alert(`[ERRO] Nome Inválido [ERRO]`)
+                return
+            }
+            /*=====*/
+            let nascvalue = Number(document.getElementById('idade').value)
+            let nasctamanho = String(document.getElementById('idade').value)
+            if (nasctamanho.length >= 5 || nasctamanho.length <= 0 || anoatual - nascvalue <= 8 || anoatual - nascvalue >= 126) {
+                alert(`[ERRO] Idade Inválida [ERRO]`)
+                return
+            } else {
+                bau[1] = (`${anoatual - nascvalue}`) 
+            }
+            /*=====*/
+            let masc = document.getElementById('Masc')
+            let femi = document.getElementById('Femi')
+            if (masc.checked == false && femi.checked == false) {
+                alert(`[ERRO] Sexo Inválido [ERRO]`)
+                return
+            } else if (masc.checked == true) {
+                bau[2] = (`Masculino`)
+            } else if (femi.checked == true) {
+                bau[2] = (`Feminino`)
+            }
+            /*=====*/
+            bau[3] = document.getElementById('email').value
+            if (bau[3] == "") {
+                alert(`[ERRO] Email Inválido [ERRO]`)
+                return
+            }
+            /*=====*/
+            bau[4] = String(document.getElementById('situacao').value)
+            if (bau[4].length >= 256 || bau[4].length <= 0) {
+                alert(`[ERRO] Breve Descrição Inválida [ERRO]`)
+                return
+            }
+            /*=====*/
+            let op1 = document.getElementById('Op1')
+            let op2 = document.getElementById('Op2')
+            if (op1.selected == true && op2.selected == false) {
+                bau[5] = `Desejo fazer uma adoção`
+            } else if (op2.selected == true && op1.selected == false) {
+                bau[5] = `Desejo colocar um gato para adoção`
+            }   
+            /*=====*/
+            let finalizando = confirm(`Nome: ${bau[0]} \nIdade: ${bau[1]} \nSexo: ${bau[2]} \nEmail: ${bau[3]} \nSituação: ${bau[4]} \nObjetivo: ${bau[5]} \nAo verificar se seus dados salvos estão corretos, gostaria que os mesmos fossem enviados para a equipe da AmantesDosGatos?`)
+            if (finalizando == true) {
+                alert(`Obrigado pela confiança, logo entraremos em contato. \nCaso seja apresentado uma demora significativa para nossa resposta, sinta-se a vontade para nos contatar através de outros meios (presente no final do site).`)
+                bau.length = 0
+            } else {    
+                bau.length = 0
+            }
+            /*É o seguinte, Dá um jeito de fazer o texto ser apagado quando o último confirm for true*/
+        }
+    </script>
+</body>
+</html>

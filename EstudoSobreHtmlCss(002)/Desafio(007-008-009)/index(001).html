@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação(001)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+            background: radial-gradient(circle, rgb(97, 0, 97), rgb(255, 71, 255));
+            animation: pulsar 1.5s linear 1s 1 normal forwards;
+        }
+        @keyframes pulsar {
+            from {
+                height: 150px;
+                width: 150px;
+                background: radial-gradient(circle, rgb(97, 0, 97), rgb(255, 71, 255));
+            }
+            to {
+                height: 200px;
+                width: 200px;
+                background: radial-gradient(circle,rgb(255, 71, 255), rgb(97, 0, 97));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

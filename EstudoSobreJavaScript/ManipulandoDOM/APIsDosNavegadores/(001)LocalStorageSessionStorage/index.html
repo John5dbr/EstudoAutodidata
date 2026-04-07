@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001 - Praticando localStorage e sessionStorage</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #user {
+            margin: 20px 0px 0px 20px;
+            font: normal bold 1em 'arial';
+            color: black;
+            text-shadow: 5px 5px 5px black;
+        }
+        .escuro {
+            color: white;
+            text-shadow: 0px 0px 10px black;
+        }
+        .ocultar {
+            display: none;
+        }
+        div {
+            margin: 0px 0px 0px 20px;
+        }
+        div > p {
+            margin: 20px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="user">
+        <p id="nomeDoUsuario">Pedro</p>
+    </div>
+    <form action="" id="form">
+        <div>
+            <p>Alterar para modo Claro/Escuro:</p>
+            <input type="button" data-modo="claro" value="Alterar para modo Escuro" id="modo">
+        </div>
+        <div for="tamanhoFonte">
+            <p>Tamanho da Fonte:</p>
+            <input type="number" name="tamanhoFonte" id="tamanhoFonte">
+        </div>
+        <div for="mostrarOcultar">
+            <p>Ocultar nome do Usuário:</p>
+            <input type="checkbox" name="mostrarOcultar" id="mostraUsuario">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

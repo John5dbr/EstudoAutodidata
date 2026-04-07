@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContadorContativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Vamos Contar!
+    </header>
+    <main>
+        <form action="algum.php" method="GET" id="form">
+            <p>
+                <label for="n1">
+                    Início: <input type="number" name="numero" id="inicio" required placeholder="  primeiro número">
+                </label>
+            </p>
+            <p>
+                <label for="n2">
+                    Fim: <input type="number" name="numero" id="fim" required placeholder="  último número">
+                </label>
+            </p>
+            <p>
+                <label for="n3">
+                    Passo: <input type="number" name="numero" id="passo" required placeholder="  intervalo de números">
+                </label>
+            </p>
+            <p>
+                <input type="button" value="Contar" id="botao">
+            </p>
+        </form>
+        <section id="result">
+            <p id="resp">
+                Contando: <br>  
+            </p>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>

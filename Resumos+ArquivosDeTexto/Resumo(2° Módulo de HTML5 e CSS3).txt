@@ -1,0 +1,333 @@
+DEGRADÊS
+
+Propriedades CSS
+
+É usado para degradês lineares/retos
+background: linear-gradient(to left, white, black)
+
+É usado para degradês circulares ou elípticos
+background: radial-gradient(circle, white, black)
+
+========================================================================================================
+
+MODIFICANDO TEXTOS
+
+Propriedades CSS
+
+É usado para mudar a fonte do texto
+font-family: Arial, sans-serif; 
+
+É usado para mudar o tamanho
+font-size: 16px;
+
+É usado para mudar o peso (negrito)
+font-weight: bolder;
+
+É usado para mudar o estilo (itálico)
+font-style: italic;
+
+É usado para mudar a cor do texto
+color: black;
+
+É usado para adicionar ou remover decorações do texto
+text-decoration: none;
+
+É usado para transformar o texto
+text-transform: uppercase;
+
+É usado para alinhar o texto (em relação ao elemento pai)
+text-align: center;
+
+========================================================================================================
+
+MODIFICANDO TEXTOS POR MEIO DE SHORTHANDS
+
+*Shorthands são propriedades que resumem um conjunto de propriedades
+
+font: [font-style] [font-weight] [font-size] [font-family] ; 
+
+Observação: A ordem de propriedade importa
+	    Font-size e font-family são obrigatórias para o funcionamento da shorthand
+
+========================================================================================================
+
+USANDOS FONTES EXTERNAS
+
+Para usar fontes externas, há duas opções:
+
+<link> É usado para importar conteúdos externos para o arquivo HTML atual
+       É usado dentro de <head> no arquivo HTML 
+       Para usá-lo é apenas utilizar o nome presente no link de incorporação
+
+Exemplo:
+<link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Underdog&display=swap" rel="stylesheet">
+
+@import É usado para importar conteúdos externos para o arquivo CSS atual 
+       	É usado no arquivo CSS 
+	Para usá-lo é apenas utilizar o nome presente no link de incorporação
+
+Exemplo:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+Observação: É necessário um link específico (link de incorporação) para acessar esses conteúdos externos
+	    Os links podem ser acessados pelos sites oficiais desses conteúdos como o google fonts 
+
+========================================================================================================
+
+FONTES LOCAIS (BAIXADAS)
+
+@font-face É usado para adicionar fontes locais ao arquivo CSS atual
+
+Exemplo:
+@font-face { font-family: 'mono';
+             src: url('Fonts/Monofett/Monofett-Regular.ttf') format('truetype');
+             font-weight: normal; 
+	     font-style: normal; }
+
+font-family: '[Nome da Fonte]';
+src: url('[Origem da Fonte]') format('[Formato da Fonte]');
+font-weight: [Aparecerá em Negrito ou Não];
+font-style: [Aparecerá em Itálico ou não];
+
+Observação: No SRC pode ser colocado mais de uma URL e FORMAT para mais compatibilidade, caso uma fonte não funcione
+
+========================================================================================================
+
+PROPRIEDADES POSITIONS
+
+Usado para atribuir comportamento de movimento a elementos HTML
+
+Position: Absolute;
+1. Não ocupa espaço no layout da página
+2. Está sempre relativo ao documento html ou à um elemento pai com position: relative;
+3. É possível movimentá-lo
+
+Position: Relative;
+1. Ocupa espaço no layout da página
+2. Está sempre relativo a ele mesmo (Se movementa a partir dele mesmo)
+3. É possível movimentá-lo
+
+Position: Fixed;
+1. Não ocupa espaço no layout da página
+2. Está sempre relativo a viewport 
+3. Deixa o elemento permanentemente fixado na viewport
+3. É possível movimentá-lo
+	
+Position: Sticky;
+1. Ocupa espaço no layout da página
+2. Está geralmente relativo a ele mesmo
+3. É possível movimentá-lo
+4. "Gruda" na viewport
+5. Para que o elemento "grude" na viewport, é necessário ter uma distância definida (top > right > bottom > left)
+
+Position: Static;
+1. Ocupa espaço no layout
+2. Position padrão para todos os elementos html
+3. Não é possível movimentá-lo
+
+Para movimentar os elementos é usado as propriedades:
+top: 0px;    Define quanto de distância o elemento deve ter DO TOPO do seu elemento pai/viewport/documento html
+right: 0px;  Define quanto de distância o elemento deve ter DO LADO DIREITO do seu elemento pai/viewport/documento html
+bottom: 0px; Define quanto de distância o elemento deve ter DO PONTO MAIS BAIXO do seu elemento pai/viewport/documento html
+left: 0px;   Define quanto de distância o elemento deve ter DO LADO ESQUERDO do seu elemento pai/viewport/documento html
+
+Camadas no CSS:
+z-index: 0;    Define em qual camada de sobreposição o elemento deverá ficar (Por padrão é sempre 0)
+
+Modificação do eixo central do elemento:
+Transform: TranslateX(); Define a posição do eixo X do elemento
+Transform: TranslateY(); Define a posição do eixo Y do elemento
+
+Obs: Por padrão o eixo central geralmente fica no canto superior esquerdo do elemento
+
+========================================================================================================
+
+Flex-Box
+
+É uma propriedade CSS que define como se organizará os elementos filhos dentro de um elemento pai
+
+Propriedades para o elemento pai
+flex-direction:;  Define em que direção se organizará os elementos filhos (Em linha ou em coluna) 
+flex-wrap:;       Define se haverá quebra de linha/coluna caso não tenha espaço para o elementos filhos
+flex-flow:;	  Shorthand que define o flex-direction e o flex-wrap respectivamente
+justify-content:; Define o alinhamento do eixo principal dos elementos filhos
+align-items:;     Define o alinhamento do eixo transversal dos elementos filhos
+align-content:;   Define o alinhamento do eixo transversal das múltiplas linha/colunas quando há quebra de linha
+gap:;             Define o espaço que terá entre os elementos filhos
+
+Propriedades para os elementos filhos 
+flex-grow:;   Define o quanto esse elemento filho deve ocupar do espaço de toda a linha/coluna disponível 
+flex-shrink:; Define o quanto esse elemento filho deve diminuir de tamanho caso não haja espaço nem quebra de linha/coluna
+flex-basis:;  Define o tamanho inicial do eixo principal que o elemento filho deve ter
+flex:;        Shorthand que faz atalho para as propriedades [flex-grow] [flex-shrink] [flex-basis] respectivamente
+order:;       Define em que ordem os elementos filhos surgiram dentro do elemento pai
+align-self:;  Define o alinhamento do eixo transversal do elemento filho selecionado
+
+Observação: Valores específicos: space-between (Não deixa espaço nas extremidade dos elementos filhos)
+				 space-around  (Deixa metade do espaço entre os elementos filhos nas extremidades)
+				 space-evenly  (Divide os espaços entre os filhos e as extremidades igualmente)
+
+========================================================================================================
+
+Transition
+
+É uma propriedade que configura como funcionará as transições que acontecerão com determinado elemento
+
+transition-property:;        Define a propriedade que estará mudando
+transition-duration:;         Define a duração da transição
+transition-timing-function:; Define o ritmo/velocidade da transição 
+transition-delay:; 	     Define o tempo que leva para a transição começar após ser ativada
+
+* Shorthand usada para resumir as propriedades acima
+transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+
+* Valores aplicáveis em transition-timing-function:; 
+
+ease = começa devagar, acelerar no meio, desacelerar no final
+linear =  velocidade constante	     
+ease-in = começa devagar
+ease-out = termina devagar
+ease-in-out = começa e termina devagar
+
+========================================================================================================
+
+Animações no CSS
+
+Para aplicar animações no CSS usa-se as propriedades animations (Para configuração geral da animação) 
+e as @keyframes (Para definir o que acontecerá no decorrer da animação)
+
+1. animation-name:; Define o nome da animação
+2. animation-duration:; Define a duração da animação
+3. animation-timing-function:; Define o ritmo/velocidade da animação
+4. animation-delay:; Define o tempo que leva para a animação começar
+5. animation-iteration-count:; Define quantas vezes a animação se repetirá (infinite ou números como 1, 2, 3)
+6. animation-direction:; Define se as @keyframes são lidas de baixo pra cima (animação reversa), de cima pra baixo (animação padrão) ou alternando entre essas formas
+7. animation-fill-mode:; Define o estado visual do elemento animado após a animação acabar
+8. animation-play-state:; Define se a animação ocorre (running) ou não (paused)
+-> animation:; Shorthand que resume todas as propriedades acima conforme suas numerações (1. 2. 3.)
+
+@keyframes são usadas para definir como o elemento mudará conforme a animação ocorre 
+
+Exemplo (utilizando from e to):
+
+@keyframes [nome da animação] {
+	from {
+		background: blue;
+	}	
+	to {
+		background: yellow;
+	}	
+}
+
+Exemplo (utilizando %):
+
+@keyframes [nome da animação] {
+	0% {
+		transform: scale(100%);	
+	}
+	50% {
+		transform: scale(125%);	
+	}
+	100% {
+		transform: scale(100%);	
+	}
+}
+
+Observação: Tanto as porcentagens quanto o from e to definem como o elemente deverá estar no determinado
+	    ponto da animação.
+	    Transformações(transforms) como transform: translateX(); ou transform: scale(); se baseam
+	    no estado original do elemento. 
+	    Valores aplicáveis à animation-fill-mode:; 
+	    none = o elemento volta ao estado original; 
+	    forwards = o elemento mantém o estilo do último frame definido;
+	    backwards =	o elemento mantém o estilo do primeiro frame definino (a mudança ocorre no delay);
+            both = mistura características de forwards e backwards.
+
+========================================================================================================
+
+Unidades do CSS
+
+* Unidades Absolutas: São fixas e nunca mudam em nenhum contexto.
+
+* Unidades Relativas: Mudam conforme o contexto que são usadas.
+
+Unidades Absolutas
+
+1. px = representa os pixels da tela do dispositivo
+2. pt = representa um ponto (unidade usada nas fontes dos programas do pacote office, como o word e excell)
+3. cm = representa o centímetro
+4. mm = representa o milímetro
+
+Unidades Relativas
+
+1. em = é relativo ao tamanho da fonte do seu elemento pai
+2. vw = equivale a 1% da largura da viewport
+3. vh = equivale a 1% da altura da viewport
+4. % (porcentagem) = é relativo ao seu elemento pai
+5. rem = é relativo ao tamanho da fonte da tag <html> (por padrão é 16px)
+
+Observação: Para margins, paddings e textos: px, em ou rem
+	    Para tornar elementos responsivos: vw, vh ou %
+ 
+========================================================================================================
+
+Pseudo-Classes e Pseudo-Elementos
+
+* Pseudo-Classes (:) nos permite modificar propriedades e conteúdos que são apenas aplicadas em momentos
+  específicos ou quando o elemento html se encontra em um determinado estado.
+
+* Pseudo-Elementos (::) nos permite modificar propriedades e conteúdos específicos do elemento html 
+  selecionado.
+
+Exemplo do uso de uma Pseudo-Classe:
+
+:hover = aplica apenas quando o mouse estiver em cima
+
+div#botao:hover {
+	transform: scale(105%);
+	box-shadow: 0px 0px 25px black;
+}
+
+Exemplo do uso de um Pseudo-Elemento:
+
+::before = aplica a modificação antes/frente do elemento
+
+div#botao::before {
+	content: '->';
+}
+
+========================================================================================================
+
+Variáveis no CSS
+
+* São usadas para armazenar valores de diversas propriedades permitindo serem 
+  reutilizadas a qualquer momento.
+
+Declaração da variável:
+
+:root = seletor especial (que representa a raiz do documento) com utilidade
+	semelhante à usar html, porém com mais prioridade. 
+
+--[nome da variável]: [valor armazenado]; = o nome da variável sempre deve ter o prefixo --
+
+:root {
+	--cor1: black;
+	--cor2: white;
+}
+
+Reutilização da variável:
+
+var(--[nome da variável]) = reutilização de uma variável representado por var() com o nome
+			    da variável dentro dos parenteses. 
+
+main {
+	background: var(--cor1);
+}
+section {
+	background: var(--cor2);
+}
+	
+========================================================================================================
+
+
+

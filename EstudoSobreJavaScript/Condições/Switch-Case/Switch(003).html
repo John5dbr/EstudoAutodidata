@@ -1,0 +1,47 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Idioma por país</h1>
+    <h2>Qual seu país?</h2>
+    <input style="width: 125px;" type="text" placeholder="país" name="text1" id="input1">
+    <button>Resposta</button>
+    <p id="resposta"></p>
+    <script>
+        let botao = document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', Click) 
+        function Click() {
+            let Cardapio = document.querySelector('input#input1')
+            let NumberCardapio = Cardapio.value
+            let resp = document.querySelector('p#resposta')
+            switch (NumberCardapio) {
+                case ('Brasil'):
+                    resp.innerHTML = 'Português'
+                    break
+                case ('EUA'):
+                    resp.innerHTML = 'Inglês'
+                    break
+                case ('Canada'):
+                    resp.innerHTML = 'Ingles'
+                    break
+                case ('França'):
+                    resp.innerHTML = 'Françês'
+                    break
+                case ('Japão'):
+                    resp.innerHTML = 'Japones'
+                    break
+                case ('Russia'):
+                    resp.innerHTML = 'Russo'
+                    break
+                default:
+                    resp.innerHTML = '[ERRO] País inválido'
+                    break
+
+            }
+        }
+    </script>
+</body>
+</html>

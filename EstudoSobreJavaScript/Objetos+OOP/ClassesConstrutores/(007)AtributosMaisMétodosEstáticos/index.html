@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtributosMaisMétodosEstáticos</title>
+</head>
+<body>
+    <script>
+        let historico = [];
+        let cont = null;
+
+        class Historico {
+            constructor(resultado, equacao, numero) {
+                this.resultado = resultado;
+                this.equacao = equacao;
+                this.numero = numero; 
+            }
+
+            mostrarHistorico() {
+                console.log(`Número: ${this.numero}\nEquação: ${this.equacao} \nResultado: ${this.resultado}`)
+            };
+        };
+
+        class Matematica {
+            constructor () {
+            }
+
+            static pi = 3.14;
+
+            static areaDoCirculo(raio) {
+                cont++
+                historico.push(new Historico(this.pi * ( raio ** 2 ) ,`3.14 x ${raio}²`, cont))
+                return this.pi * raio ** 2
+            };
+
+            static hipotenusa(cateto1, cateto2) {
+                cont++
+                historico.push(new Historico(Math.sqrt(( cateto1 ** 2 ) + ( cateto2 ** 2 )),`√${cateto1}² + ${cateto2}²`, cont))
+                return Math.sqrt(( cateto1 ** 2 ) + ( cateto2 ** 2 ))
+            };
+        };
+
+        console.log(`Àrea do círculo: ` + Matematica.areaDoCirculo(5))
+        console.log(`Àrea do círculo: ` + Matematica.areaDoCirculo(10))
+
+        console.log(`Hipotenusa do triângulo retângulo: ` + Matematica.hipotenusa(5, 5))
+        console.log(`Hipotenusa do triângulo retângulo: ` + Matematica.hipotenusa(6, 8))
+
+        for ( let ind = 0 ; ( ind < historico.length ) ; ind++ ) {
+            historico[ind].mostrarHistorico()
+        };
+        
+    </script>
+</body>
+</html>

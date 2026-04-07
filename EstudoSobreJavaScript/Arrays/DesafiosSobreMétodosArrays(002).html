@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesafiosSobreMétodosArrays(002)</title>
+</head>
+<body>
+    <script>
+        let tarefas = [
+            'Lavar roupa',
+            'Estudar',
+            'Programar',
+            'Treinar muay thai',
+            'Correr',
+            'Arrumar a casa',
+            'Tocar teclado',
+            'Pagar',
+            'Comer',
+            'Dormir e acordar'
+        ];
+        tarefas.forEach( (el, ind) => { 
+            console.log(`${ind}° tarefa: ${el}`)
+        })
+        let tarefasPagar = null
+        if ( tarefas.some( (el) => el == 'Pagar') == true ) {
+            tarefasPagar = 'Sim'
+        } else {
+            tarefasPagar = 'Não'
+        }
+        let tarefasComplexas = tarefas.filter( (el) => el.length > 9 ) 
+        console.log(`'Estudar' é a ${tarefas.indexOf('Estudar')}° tarefa.`)
+        console.log(`Existe a tarefa 'Pagar'? ` + tarefasPagar)
+        tarefas.reverse()
+        console.log(`Ùltimas 5 tarefas com array invertido: ` + tarefas.slice(5,10))
+        tarefas.sort()
+        console.log(`Primeiras 3 tarefas com array em ordem alfabetica: ` + tarefas.slice(0, 3))
+        console.log(`Tarefas com 2 palavras ou mais: ` + tarefasComplexas)
+
+    </script>
+</body>
+</html>
